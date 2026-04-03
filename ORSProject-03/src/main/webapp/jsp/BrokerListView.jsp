@@ -96,6 +96,7 @@
 					<th><input type="checkbox" id="select_all"> Select All</th>
 					<th>S.No</th>
 					<th>Broker Name</th>
+					<th>Contact Number</th>
 					<th>Company</th>
 					<th>Edit</th>
 				</tr>
@@ -111,6 +112,7 @@
 					</td>
 					<td><%=index++%></td>
 					<td><%=dto.getBrokerName()%></td>
+					<td><%=dto.getContactNumber()%></td>
 					<td><%=dto.getCompany()%></td>
 					<td>
 						<a class="btn btn-sm btn-info"

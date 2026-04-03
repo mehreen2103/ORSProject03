@@ -26,6 +26,7 @@ i.css {
 /* 	box-shadow: 5px 8px 7px #001a33; */
 
 /* } */
+
 .p4{
 background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 background-repeat: no-repeat;
@@ -41,6 +42,7 @@ background-repeat: no-repeat;
     color: white;
     border-radius: 10px;
 }
+
 h3.text-center {
     color: black !important;
 }

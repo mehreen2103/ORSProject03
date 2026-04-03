@@ -82,8 +82,7 @@ h3.text-center {
 					<div class="card input-group-addon">
 						<div class="card-body">
 
-							<h3 class="text-center default-text text-success pb-2">User
-								Registration</h3>
+							<h3 class="text-center default-text text-success pb-2">User Registration</h3>
 							<!--Body-->
 							<div>
 

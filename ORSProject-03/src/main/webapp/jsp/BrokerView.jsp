@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
+
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
@@ -19,6 +20,18 @@
 	background-size: cover;
 	padding-top: 75px;
 }
+
+.card-body {
+    background-image: linear-gradient(to bottom right, #472372,#e4d0ff);
+    box-shadow: 5px 8px 7px #001a33;
+    color: white;
+    border-radius: 10px;
+}
+
+h3.text-center {
+    color: black !important;
+}
+
 </style>
 </head>
 

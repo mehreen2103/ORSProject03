@@ -18,9 +18,8 @@
 	/* padding-left: 30%; */
 }
 
-
 .hm {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/wallp.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;
@@ -28,13 +27,24 @@
 	
 }
 
-
 i.css {
 	border: 2px solid #8080803b;
 	padding-left: 10px;
 	padding-bottom: 7px;
 	background-color: #ebebe0;
+} 
+
+.card-body {
+    background-image: linear-gradient(to bottom right, #472372,#e4d0ff);
+    box-shadow: 5px 8px 7px #001a33;
+    color: white;
+    border-radius: 10px;
 }
+
+h3.text-center {
+    color: black !important;
+}
+
 </style>
 </head>
 <body class="hm">

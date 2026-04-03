@@ -241,29 +241,29 @@
 <%--                             <a class="dropdown-item" href="<%=ORSView.PROFILE_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>profile List</a> --%>
 <!--                         </div></li>  -->
 
-				<%-- <li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;">Maintenance</a>
+<!-- 			<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;">Maintenance</a> -->
 
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="<%=ORSView.MAINTENANCE_CTL%>">
-							<i class="fa fa-calculator"></i>Maintenance
-						</a> <a class="dropdown-item" href="<%=ORSView.MAINTENANCE_LIST_CTL%>">
-							<i class="fa fa-sort-amount-down"></i>Maintenance List
-						</a>
-					</div></li> --%>
+<!-- 					<div class="dropdown-menu"> -->
+<%-- 						<a class="dropdown-item" href="<%=ORSView.MAINTENANCE_CTL%>"> --%>
+<!-- 							<i class="fa fa-calculator"></i>Maintenance -->
+<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.MAINTENANCE_LIST_CTL%>"> --%>
+<!-- 							<i class="fa fa-sort-amount-down"></i>Maintenance List -->
+<!-- 						</a> -->
+<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;">Client</a>
+<!-- 				<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;">Client</a> -->
 
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="<%=ORSView.CLIENT_CTL%>">
-							<i class="fa fa-calculator"></i> Add Client
-						</a> <a class="dropdown-item" href="<%=ORSView.CLIENT_LIST_CTL%>">
-							<i class="fa fa-sort-amount-down"></i> Client List
-						</a>
-					</div></li>
+<!-- 					<div class="dropdown-menu"> -->
+<%-- 						<a class="dropdown-item" href="<%=ORSView.CLIENT_CTL%>"> --%>
+<!-- 							<i class="fa fa-calculator"></i> Add Client -->
+<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.CLIENT_LIST_CTL%>"> --%>
+<!-- 							<i class="fa fa-sort-amount-down"></i> Client List -->
+<!-- 						</a> -->
+<!-- 					</div></li> -->
 					
 					<li class="nav-item dropdown"><a
 	                      class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
