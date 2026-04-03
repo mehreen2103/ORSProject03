@@ -22,7 +22,7 @@
 }
 
 .hm {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/wallp.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -101,13 +101,13 @@
 			<div class="row">
 
 				<div class="col-sm-2"></div>
-				<span><b>Name :</b></span>
+				<span style="color: white"><b>Name :</b></span>
 				<div class="col-sm-2">
 					<input class="form-control" type="text" name="name"
 						placeholder="Enter name" class="p1"
 						value="<%=ServletUtility.getParameter("name", request)%>">
 				</div>
-				<span><b>Roll No:</b></span>
+				<span style="color: white"><b>Roll No:</b></span>
 				<div class="col-sm-3"><%=HTMLUtility.getList("rollId", String.valueOf(dto.getId()), list1)%></div>
 				<div class="col-sm-2">
 					<input type="submit" class="btn btn-primary btn-md"

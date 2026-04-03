@@ -11,9 +11,9 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   color: navy;
+   color: white;
    text-align: center;
-   background-image: linear-gradient(to bottom right, white, #4f879a);
+   background-image: linear-gradient(to bottom right, #D8BFD8, #2C0E3A);
 }
 
 </style>

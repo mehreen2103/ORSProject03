@@ -29,7 +29,7 @@
 }
 
 body {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/marks.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/Login.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;
@@ -49,7 +49,7 @@ body {
 
 
 			<div align="center">
-				<h1 style="font-size: 40px; padding-top: 24px; color: #162390;">Get
+				<h1 style="font-size: 40px; padding-top: 24px; color: white;">Get
 					Marksheet</h1>
 			</div>
 			<div class="row">
@@ -94,7 +94,7 @@ body {
 			</br>
 			<div class="row">
 				<div class="col-md-4"></div>
-				<span style="margin-left: 15px"><b>Roll No:</b></span>
+				<span style="margin-left: 15px; color: white;"><b>Roll No:</b></span>
 				<div class="col-md-2">
 					<input type="text" name="rollNo" class="form-control"
 						placeholder="Enter Roll Number"

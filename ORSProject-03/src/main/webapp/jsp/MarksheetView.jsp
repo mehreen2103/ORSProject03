@@ -18,7 +18,7 @@
 }
 
 .hm {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/wallp.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;
@@ -28,7 +28,7 @@
 }
 
 .grad {
-	background-color: linear-gradient(to bottom right, blue, white);
+	background-image: linear-gradient(to bottom right, #472372,#e4d0ff);
 }
 
 .input-group-addon {
@@ -40,6 +40,10 @@ i.css {
 	padding-left: 10px;
 	padding-bottom: 11px;
 	background-color: #ebebe0;
+}
+
+h3.text-center {
+    color: black !important;
 }
 </style>
 </head>

@@ -33,7 +33,7 @@
 }
 
 .grad {
-	background-image: linear-gradient(to bottom right, white, grey);
+	background-image: linear-gradient(to bottom right, #7c4691f2, #808080);
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -46,7 +46,7 @@ i.css {
 }
 
 .p4 {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/loginhere.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/Login.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;

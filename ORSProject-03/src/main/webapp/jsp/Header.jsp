@@ -23,7 +23,8 @@
 
 <style>
 .aj {
-	background-image: linear-gradient(to bottom right, white, #4f879a);
+	background-image: linear-gradient(to bottom right, #D8BFD8, #2C0E3A);
+	/* background-image: linear-gradient(to bottom right, white, #4f879a); */
 }
 
 .student-nav-fix .navbar-nav {
@@ -286,7 +287,7 @@
 				<!-- ✅ WELCOME DROPDOWN -->
 				<li class="nav-item dropdown ml-3"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-						<span style="color: navy;"><b><%=welcomeMsg%></b></span>
+						<span style="color: white;"><b><%=welcomeMsg%></b></span>
 				</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<%

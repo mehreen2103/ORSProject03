@@ -33,7 +33,7 @@ i.css {
 	 background-color: #ebebe0;
 }
 .hm {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/password.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/CP.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;
