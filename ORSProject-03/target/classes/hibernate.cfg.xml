@@ -11,7 +11,7 @@
 
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
-
+ 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>   
 
 		<property name="hbm2ddl.auto">update</property>   
@@ -37,23 +37,16 @@
 
 
 		<mapping resource="in/co/rays/project_3/hbm/UserDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/StudentDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/CollegeDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/StudentDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/CollegeDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/CourseDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/RoleDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/MarksheetDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/TimetableDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/FacultyDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
-
-        <mapping
-			resource="in/co/rays/project_3/hbm/BrokerDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/MarksheetDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/TimetableDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/FacultyDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/BrokerDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/PhotographerDTO.hbm.xml" />
         
 
 	</session-factory>

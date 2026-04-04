@@ -26,7 +26,6 @@
 	
 	/* background-size: 100%; */
 }
-
 .p1 {
 	padding: 8px;
 }
