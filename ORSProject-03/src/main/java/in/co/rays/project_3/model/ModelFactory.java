@@ -310,5 +310,26 @@ public final class ModelFactory {
 		return brokerModel;
 		
 	}
+	public PhotographerModelInt getPhotographerModel() {
+
+	    PhotographerModelInt photographerModel =
+	            (PhotographerModelInt) modelCache.get("photographerModel");
+
+	    if (photographerModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            photographerModel = new PhotographerModelHibImpl();
+	        }
+
+	        if ("JDBC".equals(DATABASE)) {
+	            // yaha tum JDBC implementation de sakti ho future me
+	            // photographerModel = new PhotographerModelJDBCImpl();
+	        }
+
+	        modelCache.put("photographerModel", photographerModel);
+	    }
+
+	    return photographerModel;
+	}
 	
 }

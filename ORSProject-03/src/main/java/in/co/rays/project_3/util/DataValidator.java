@@ -229,6 +229,15 @@ public class DataValidator {
 						}	
 	    		}
 	 
+	 public static boolean isDouble(String val) {
+		    try {
+		        Double.parseDouble(val);
+		        return true;
+		    } catch (Exception e) {
+		        return false;
+		    }
+		}
+	 
 	
 	public static void main(String[] args) {
 		System.out.println("Not Null 2"+isNotNull("ABC"));

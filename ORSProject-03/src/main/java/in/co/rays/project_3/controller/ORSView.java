@@ -149,5 +149,11 @@ public interface ORSView {
 	public String BROKER_VIEW = PAGE_FOLDER + "/BrokerView.jsp";
 	public String BROKER_LIST_VIEW = PAGE_FOLDER + "/BrokerListView.jsp";
 	
+	public String PHOTOGRAPHER_CTL = APP_CONTEXT + "/ctl/PhotographerCtl";
+	public String PHOTOGRAPHER_LIST_CTL = APP_CONTEXT + "/ctl/PhotographerListCtl";
+
+	public String PHOTOGRAPHER_VIEW = PAGE_FOLDER + "/PhotographerView.jsp";
+	public String PHOTOGRAPHER_LIST_VIEW = PAGE_FOLDER + "/PhotographerListView.jsp";
+	
 
 }

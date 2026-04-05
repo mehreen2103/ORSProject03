@@ -193,4 +193,14 @@ public class DataUtility {
 			return 0;
 		}
 	}
+	
+	public static Double getDouble(String val) {
+	    if (DataValidator.isDouble(val)) {
+	        return Double.parseDouble(val);
+	    } else {
+	        return (double) 0;
+	    }
+	}
+
+	
 }
