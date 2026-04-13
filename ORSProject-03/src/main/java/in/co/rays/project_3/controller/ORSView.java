@@ -155,5 +155,10 @@ public interface ORSView {
 	public String PHOTOGRAPHER_VIEW = PAGE_FOLDER + "/PhotographerView.jsp";
 	public String PHOTOGRAPHER_LIST_VIEW = PAGE_FOLDER + "/PhotographerListView.jsp";
 	
+	public String DASHBOARD_CTL = APP_CONTEXT + "/ctl/DashboardCtl";
+	public String DASHBOARD_LIST_CTL = APP_CONTEXT + "/ctl/DashboardListCtl";
+
+	public String DASHBOARD_VIEW = PAGE_FOLDER + "/DashboardView.jsp";
+	public String DASHBOARD_LIST_VIEW = PAGE_FOLDER + "/DashboardListView.jsp";
 
 }

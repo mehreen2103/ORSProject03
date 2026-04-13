@@ -312,8 +312,7 @@ public final class ModelFactory {
 	}
 	public PhotographerModelInt getPhotographerModel() {
 
-	    PhotographerModelInt photographerModel =
-	            (PhotographerModelInt) modelCache.get("photographerModel");
+	    PhotographerModelInt photographerModel = (PhotographerModelInt) modelCache.get("photographerModel");
 
 	    if (photographerModel == null) {
 
@@ -330,6 +329,25 @@ public final class ModelFactory {
 	    }
 
 	    return photographerModel;
+	}
+	
+	public DashboardModelInt getDashboardModel() {
+		
+	DashboardModelInt dashboardModel =(DashboardModelInt) modelCache.get("dashboardModel");
+	
+	if (dashboardModel == null) {
+		
+		
+		if ("Hibernate".equals(DATABASE)) {
+			dashboardModel = new DashboardModelHibImpl();
+		}
+		if ("JDBC".equals(DATABASE)) {
+			
+		}
+		modelCache.put("dashboardModel", dashboardModel);
+		
+	}
+	return dashboardModel;
 	}
 	
 }

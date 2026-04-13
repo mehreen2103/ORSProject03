@@ -285,6 +285,18 @@
                          <i class="fa fa-list"></i> Photographer List</a>
                         </div>
                    </li>
+                   
+                   <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Dashboard</a>
+
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="<%=ORSView.DASHBOARD_CTL%>">
+                              <i class="fa fa-tachometer-alt"></i> Add Dashboard</a> 
+
+                              <a class="dropdown-item" href="<%=ORSView.DASHBOARD_LIST_CTL%>">
+                              <i class="fa fa-list"></i> Dashboard List</a>
+                          </div>
+                    </li>
 
 				<%
 					}

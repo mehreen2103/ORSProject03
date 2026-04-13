@@ -47,6 +47,7 @@
 		<mapping resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/BrokerDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/PhotographerDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/DashboardDTO.hbm.xml" />
         
 
 	</session-factory>
