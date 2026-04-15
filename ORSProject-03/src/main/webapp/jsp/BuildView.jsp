@@ -1,4 +1,4 @@
-<%@page import="in.co.rays.project_3.controller.DashboardCtl"%>
+<%@page import="in.co.rays.project_3.controller.BuildCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Dashboard View</title>
+<title>Build View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
@@ -42,7 +42,7 @@ h3.text-center {
 	</div>
 
 	<main>
-	<form action="<%=ORSView.DASHBOARD_CTL%>" method="post">
+	<form action="<%=ORSView.BUILD_CTL%>" method="post">
 
 		<div class="row pt-3 pb-3">
 			<div class="col-md-4 mb-4"></div>
@@ -50,7 +50,7 @@ h3.text-center {
 			<div class="col-md-4 mb-4">
 
 				<jsp:useBean id="dto"
-					class="in.co.rays.project_3.dto.DashboardDTO"
+					class="in.co.rays.project_3.dto.BuildDTO"
 					scope="request"></jsp:useBean>
 
 				<div class="card">
@@ -60,11 +60,11 @@ h3.text-center {
 							long id = DataUtility.getLong(request.getParameter("id"));
 							if (dto.getId() != null && dto.getId() > 0) {
 						%>
-						<h3 class="text-center text-primary">Update Dashboard</h3>
+						<h3 class="text-center text-primary">Update Build</h3>
 						<%
 							} else {
 						%>
-						<h3 class="text-center text-primary">Add Dashboard</h3>
+						<h3 class="text-center text-primary">Add Build</h3>
 						<%
 							}
 						%>
@@ -93,66 +93,49 @@ h3.text-center {
 
 						<input type="hidden" name="id" value="<%=dto.getId()%>">
 
-						<!-- Dashboard Code -->
-						<span><b>Dashboard Code</b><span style="color:red;">*</span></span>
+						<!-- Build Code -->
+						<span><b>Build Code</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="dashboardCode"
-								placeholder="Enter Dashboard Code"
-								value="<%=DataUtility.getStringData(dto.getDashboardCode())%>">
+							<input type="text" class="form-control" name="buildCode"
+								placeholder="Enter Build Code"
+								value="<%=DataUtility.getStringData(dto.getBuildCode())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("dashboardCode", request)%>
+							<%=ServletUtility.getErrorMessage("buildCode", request)%>
 						</font><br>
 
-						<!-- Dashboard Name -->
-						<span><b>Dashboard Name</b><span style="color:red;">*</span></span>
+						<!-- Build Version -->
+						<span><b>Build Version</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="dashboardName"
-								placeholder="Enter Dashboard Name"
-								value="<%=DataUtility.getStringData(dto.getDashboardName())%>">
+							<input type="text" class="form-control" name="buildVersion"
+								placeholder="Enter Build Version"
+								value="<%=DataUtility.getStringData(dto.getBuildVersion())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("dashboardName", request)%>
+							<%=ServletUtility.getErrorMessage("buildVersion", request)%>
 						</font><br>
 
-						<!-- User Name -->
-						<span><b>User Name</b><span style="color:red;">*</span></span>
+						<!-- Triggered By -->
+						<span><b>Triggered By</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="userName"
-								placeholder="Enter User Name"
-								value="<%=DataUtility.getStringData(dto.getUserName())%>">
+							<input type="text" class="form-control" name="triggeredBy"
+								placeholder="Enter Triggered By"
+								value="<%=DataUtility.getStringData(dto.getTriggeredBy())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("userName", request)%>
+							<%=ServletUtility.getErrorMessage("triggeredBy", request)%>
 						</font><br>
 
 						<!-- Status -->
-					<span><b>Status</b><span style="color:red;">*</span></span>
-<div class="col-sm-12">
-    <select name="status" class="form-control">
-        <option value="">--Select Status--</option>
-
-        <option value="Success"
-            <%= "Success".equalsIgnoreCase(dto.getStatus()) ? "selected" : "" %>>
-            Success
-        </option>
-
-        <option value="Failed"
-            <%= "Failed".equalsIgnoreCase(dto.getStatus()) ? "selected" : "" %>>
-            Failed
-        </option>
-
-        <option value="Pending"
-            <%= "Pending".equalsIgnoreCase(dto.getStatus()) ? "selected" : "" %>>
-            Pending
-        </option>
-
-    </select>
-</div>
-
-<font color="red">
-    <%=ServletUtility.getErrorMessage("status", request)%>
-</font><br><br>
+						<span><b>Status</b><span style="color:red;">*</span></span>
+						<div class="col-sm-12">
+							<input type="text" class="form-control" name="status"
+								placeholder="Enter Status"
+								value="<%=DataUtility.getStringData(dto.getStatus())%>">
+						</div>
+						<font color="red">
+							<%=ServletUtility.getErrorMessage("status", request)%>
+						</font><br><br>
 
 						<!-- Buttons -->
 						<div class="text-center">
@@ -161,19 +144,19 @@ h3.text-center {
 						%>
 							<input type="submit" name="operation"
 								class="btn btn-success"
-								value="<%=DashboardCtl.OP_UPDATE%>">
+								value="<%=BuildCtl.OP_UPDATE%>">
 							<input type="submit" name="operation"
 								class="btn btn-warning"
-								value="<%=DashboardCtl.OP_CANCEL%>">
+								value="<%=BuildCtl.OP_CANCEL%>">
 						<%
 							} else {
 						%>
 							<input type="submit" name="operation"
 								class="btn btn-success"
-								value="<%=DashboardCtl.OP_SAVE%>">
+								value="<%=BuildCtl.OP_SAVE%>">
 							<input type="submit" name="operation"
 								class="btn btn-warning"
-								value="<%=DashboardCtl.OP_RESET%>">
+								value="<%=BuildCtl.OP_RESET%>">
 						<%
 							}
 						%>

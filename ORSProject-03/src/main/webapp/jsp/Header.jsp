@@ -297,6 +297,18 @@
                               <i class="fa fa-list"></i> Dashboard List</a>
                           </div>
                     </li>
+                    
+                    <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Build</a>
+
+                              <div class="dropdown-menu">
+                                   <a class="dropdown-item" href="<%=ORSView.BUILD_CTL%>">
+                                   <i class="fa fa-cogs"></i> Add Build</a>
+
+                                   <a class="dropdown-item" href="<%=ORSView.BUILD_LIST_CTL%>">
+                                   <i class="fa fa-list"></i> Build List</a>
+                               </div>
+                    </li>
 
 				<%
 					}

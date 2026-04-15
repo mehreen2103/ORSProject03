@@ -160,5 +160,11 @@ public interface ORSView {
 
 	public String DASHBOARD_VIEW = PAGE_FOLDER + "/DashboardView.jsp";
 	public String DASHBOARD_LIST_VIEW = PAGE_FOLDER + "/DashboardListView.jsp";
+	
+	public String BUILD_CTL = APP_CONTEXT + "/ctl/BuildCtl";
+	public String BUILD_LIST_CTL = APP_CONTEXT + "/ctl/BuildListCtl";
+
+	public String BUILD_VIEW = PAGE_FOLDER + "/BuildView.jsp";
+	public String BUILD_LIST_VIEW = PAGE_FOLDER + "/BuildListView.jsp";
 
 }

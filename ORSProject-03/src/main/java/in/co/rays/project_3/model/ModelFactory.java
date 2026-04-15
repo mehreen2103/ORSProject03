@@ -350,4 +350,23 @@ public final class ModelFactory {
 	return dashboardModel;
 	}
 	
+	public BuildModelInt getBuildModel() {
+		
+		BuildModelInt BuildModel =(BuildModelInt) modelCache.get("BuildModel");
+		
+		if (BuildModel == null) {
+			
+			
+			if ("Hibernate".equals(DATABASE)) {
+				BuildModel = new BuildModelHibIml();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				
+			}
+			modelCache.put("BuildModel", BuildModel);
+			
+		}
+		return BuildModel;
+		}
+	
 }

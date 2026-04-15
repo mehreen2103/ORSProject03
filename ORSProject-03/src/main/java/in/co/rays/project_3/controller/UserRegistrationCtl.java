@@ -153,11 +153,17 @@ public class UserRegistrationCtl extends BaseCtl {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		
 		String op = request.getParameter("operation");
+		
 		long id = DataUtility.getLong(request.getParameter("id"));
+		
 		UserModelInt userModel = ModelFactory.getInstance().getUserModel();
+		
 		if (OP_SIGN_UP.equalsIgnoreCase(op)) {
+			
 			UserDTO dto = (UserDTO) populateDTO(request);
+			
 			try {
 				userModel.add(dto);
 //				long pk = userModel.registerUser(dto);
@@ -172,8 +178,10 @@ public class UserRegistrationCtl extends BaseCtl {
 				ServletUtility.handleDBDown(getView(), request, response);
 				return;
 			}
+			
 			ServletUtility.setSuccessMessage("Registration successfully", request);
 			ServletUtility.forward(ORSView.USER_REGISTRATION_VIEW, request, response);
+			
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 
 			ServletUtility.redirect(ORSView.USER_REGISTRATION_CTL, request, response);
