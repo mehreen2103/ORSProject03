@@ -169,53 +169,7 @@ public final class ModelFactory {
 	
 	//usecases
 	
-	public WatchlistModelInt getWatchlistModel() {
-		WatchlistModelInt watchlistModel = (WatchlistModelInt) modelCache.get("watchlistModel");
-		if (watchlistModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				watchlistModel = new WatchlistModelHibImp();
-			}
-			if ("JDBC".equals(DATABASE)) {
-			}
-		}
-		return watchlistModel;
-	}
 	
-	public EventModelInt getEventModel() {
-		EventModelInt eventModel = (EventModelInt) modelCache.get("eventModel");
-		if (eventModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				eventModel = new EventModelHibImpl();
-			}
-			if ("JDBC".equals(DATABASE)) {
-			}
-		}
-		return eventModel;
-	}
-	
-	public PaymentModelInt getPaymentModel() {
-		PaymentModelInt paymentModel = (PaymentModelInt) modelCache.get("paymentModel");
-		if (paymentModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				paymentModel = new PaymentModelHibImpl();
-			}
-			if ("JDBC".equals(DATABASE)) {
-			}
-		}
-		return paymentModel;
-	}
-	
-	public LocationModelInt getLocationModel() {
-		LocationModelInt locationModel = (LocationModelInt) modelCache.get("locationModel");
-		if (locationModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				locationModel = new LocationModelHibImpl();
-			}
-			if ("JDBC".equals(DATABASE)) {
-			}
-		}
-		return locationModel;
-	}
 	
 	public ProfileModelInt getProfileModel() {
 		ProfileModelInt ProfileModel = (ProfileModelInt) modelCache.get("ProfileModel");
@@ -229,72 +183,10 @@ public final class ModelFactory {
 		return ProfileModel;
 	}
 	
-	public InquiryModelInt getInquiryModel() {
-
-		InquiryModelInt inquiryModel = (InquiryModelInt) modelCache.get("inquiryModel");
-		if (inquiryModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				inquiryModel = new InquiryModelHibImp();
-			}
-			modelCache.put("inquiryModel", inquiryModel);
-		}
-		return inquiryModel;
-	}
+		
 	
-	public TaskModelInt getTaskModel() {
-	    TaskModelInt taskModel =
-	            (TaskModelInt) modelCache.get("taskModel");
-
-	    if (taskModel == null) {
-
-	        if ("Hibernate".equals(DATABASE)) {
-	            taskModel = new TaskModelHibImpl();
-	        }
-
-	        if ("JDBC".equals(DATABASE)) {
-	           
-	        }
-
-	        modelCache.put("taskModel", taskModel);
-	    }
-
-	    return taskModel;
-	}
 	
-	public MaintenanceModelInt getMaintenanceModel() {
 
-	    MaintenanceModelInt maintenanceModel =
-	            (MaintenanceModelInt) modelCache.get("maintenanceModel");
-
-	    if (maintenanceModel == null) {
-
-	        if ("Hibernate".equals(DATABASE)) {
-	            maintenanceModel = new MaintenanceModelHibImpl();
-	        }
-
-	        if ("JDBC".equals(DATABASE)) {
-	        }
-
-	        modelCache.put("maintenanceModel", maintenanceModel);
-	    }
-
-	    return maintenanceModel;
-	}
-	
-	public ClientModelInt getClientModel() {
-		ClientModelInt clientModel = (ClientModelInt) modelCache.get("clientModel");
-
-		if (clientModel == null) {
-
-			if ("Hibernate".equals(DATABASE)) {
-				clientModel = new ClientModelHibImpl();
-			}
-
-			if ("JDBC".equals(DATABASE)) {
-			}
-		}
-		return clientModel;
-	}
 	
 	public BrokerModelInt getBrokeModel() {
 		BrokerModelInt brokerModel = (BrokerModelInt) modelCache.get("brokerModel");

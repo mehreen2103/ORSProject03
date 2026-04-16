@@ -2,6 +2,7 @@ package in.co.rays.project_3.controller;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +12,6 @@ import in.co.rays.project_3.dto.BaseDTO;
 import in.co.rays.project_3.dto.ProfileDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
-import in.co.rays.project_3.model.LocationModelInt;
 import in.co.rays.project_3.model.ModelFactory;
 import in.co.rays.project_3.model.ProfileModelInt;
 import in.co.rays.project_3.util.DataUtility;

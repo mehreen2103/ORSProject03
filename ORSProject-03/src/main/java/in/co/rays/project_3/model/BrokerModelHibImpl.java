@@ -1,15 +1,11 @@
 package in.co.rays.project_3.model;
-
 import java.util.List;
-
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-
 import in.co.rays.project_3.dto.BrokerDTO;
-import in.co.rays.project_3.dto.ClientDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
 import in.co.rays.project_3.util.HibDataSource;
@@ -122,7 +118,7 @@ public class BrokerModelHibImpl implements BrokerModelInt{
 
 	    try {
 	        session = HibDataSource.getSession();
- System.out.println("in Name methods ");
+            System.out.println("in Name methods ");
 	        Criteria criteria = session.createCriteria(BrokerDTO.class);
 	        criteria.add(Restrictions.eq("brokerName", brokerName));
 
@@ -153,7 +149,6 @@ public class BrokerModelHibImpl implements BrokerModelInt{
 	    List list = null;
 	    
 	    try {
-	        
 	        session = HibDataSource.getSession();
 	        Criteria criteria = session.createCriteria(BrokerDTO.class);
 	        

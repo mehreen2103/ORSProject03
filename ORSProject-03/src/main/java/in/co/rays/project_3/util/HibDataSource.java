@@ -1,5 +1,4 @@
 package in.co.rays.project_3.util;
-
 import java.util.ResourceBundle;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 /**
  * Hibernate DataSource is provides the object of session factory and session
+
  * 
  *
  */
@@ -23,6 +23,7 @@ public class HibDataSource {
             ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 
             String jdbcUrl = System.getenv("DATABASE_URL");
+            
             if (jdbcUrl == null || jdbcUrl.trim().isEmpty()) {
                 jdbcUrl = rb.getString("url");
             }
