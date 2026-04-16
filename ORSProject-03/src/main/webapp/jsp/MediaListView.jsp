@@ -68,23 +68,19 @@
 	<!-- Search Panel -->
 	<div class="row mb-3">
 		<div class="col-md-3">
-			<input type="text" name="mediaName" class="form-control"
-				placeholder="Enter Media Name"
+			<input type="text" name="mediaName" class="form-control" placeholder="Enter Media Name"
 				value="<%=ServletUtility.getParameter("mediaName", request)%>">
 		</div>
 
 		<div class="col-md-3">
-			<input type="text" name="reporter" class="form-control"
-				placeholder="Enter Reporter"
-				value="<%=ServletUtility.getParameter("reporter", request)%>">
-		</div>
+			<input type="text" name="reporter" class="form-control" placeholder="Enter Reporter"
+				    value="<%=ServletUtility.getParameter("reporter", request)%>">
+		</div>   
 
 		<div class="col-md-3">
-			<input type="submit" class="btn btn-primary"
-				name="operation" value="<%=MediaListCtl.OP_SEARCH%>">
+			<input type="submit" class="btn btn-primary" name="operation" value="<%=MediaListCtl.OP_SEARCH%>">
 
-			<input type="submit" class="btn btn-dark"
-				name="operation" value="<%=MediaListCtl.OP_RESET%>">
+			<input type="submit" class="btn btn-dark" name="operation" value="<%=MediaListCtl.OP_RESET%>">
 		</div>
 	</div>
 
@@ -115,8 +111,7 @@
 					<td><%=DataUtility.getDateString(dto.getCoverageDate())%></td>
 					<td><%=dto.getReporter()%></td>
 					<td>
-						<a class="btn btn-sm btn-info"
-							href="MediaCtl?id=<%=dto.getId()%>">Edit</a>
+						<a class="btn btn-sm btn-info" href="MediaCtl?id=<%=dto.getId()%>">Edit</a>
 					</td>
 				</tr>
 			<% } %>
@@ -127,29 +122,19 @@
 	<!-- Pagination -->
 	<div class="row mt-3">
 		<div class="col-md-2">
-			<input type="submit" name="operation"
-				class="btn btn-secondary"
-				value="<%=MediaListCtl.OP_PREVIOUS%>"
-				<%=pageNo > 1 ? "" : "disabled"%>>
+			<input type="submit" name="operation" class="btn btn-secondary" value="<%=MediaListCtl.OP_PREVIOUS%>" <%=pageNo > 1 ? "" : "disabled"%>>
 		</div>
 
 		<div class="col-md-2">
-			<input type="submit" name="operation"
-				class="btn btn-primary"
-				value="<%=MediaListCtl.OP_NEW%>">
+			<input type="submit" name="operation" class="btn btn-primary" value="<%=MediaListCtl.OP_NEW%>">
 		</div>
 
 		<div class="col-md-2">
-			<input type="submit" name="operation"
-				class="btn btn-danger"
-				value="<%=MediaListCtl.OP_DELETE%>">
+			<input type="submit" name="operation" class="btn btn-danger" value="<%=MediaListCtl.OP_DELETE%>">
 		</div>
 
 		<div class="col-md-6 text-right">
-			<input type="submit" name="operation"
-				class="btn btn-secondary"
-				value="<%=MediaListCtl.OP_NEXT%>"
-				<%=(nextPageSize != 0) ? "" : "disabled"%>>
+			<input type="submit" name="operation" class="btn btn-secondary" value="<%=MediaListCtl.OP_NEXT%>" <%=(nextPageSize != 0) ? "" : "disabled"%>>
 		</div>
 	</div>
 

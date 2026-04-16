@@ -1,5 +1,4 @@
 package in.co.rays.project_3.util;
-
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
  */
 public class DataUtility {
 
-	// ✅ FIXED FORMAT (HTML date compatible)
+	// FORMAT (HTML date compatible)
 	public static final String APP_DATE_FORMATE = "yyyy-MM-dd";
 	public static final String APP_TIME_FORMATE = "yyyy-MM-dd HH:mm:ss";
 
@@ -67,7 +66,7 @@ public class DataUtility {
 		return date;
 	}
 
-	// ✅ FIXED: Date to String
+	// Date to String
 	public static String getDateString(Date date) {
 		try {
 			if (date != null) {
