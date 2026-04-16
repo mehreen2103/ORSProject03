@@ -166,5 +166,11 @@ public interface ORSView {
 
 	public String BUILD_VIEW = PAGE_FOLDER + "/BuildView.jsp";
 	public String BUILD_LIST_VIEW = PAGE_FOLDER + "/BuildListView.jsp";
+	
+	public String MEDIA_CTL = APP_CONTEXT + "/ctl/MediaCtl";
+	public String MEDIA_LIST_CTL = APP_CONTEXT + "/ctl/MediaListCtl";
+
+	public String MEDIA_VIEW = PAGE_FOLDER + "/MediaView.jsp";
+	public String MEDIA_LIST_VIEW = PAGE_FOLDER + "/MediaListView.jsp";
 
 }

@@ -1,5 +1,4 @@
 <%@page import="in.co.rays.project_3.controller.ProfileCtl"%>
-<%@page import="in.co.rays.project_3.controller.EventCtl"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@page import="in.co.rays.project_3.util.HTMLUtility"%>

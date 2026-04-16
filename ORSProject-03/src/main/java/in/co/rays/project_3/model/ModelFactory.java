@@ -3,6 +3,9 @@ package in.co.rays.project_3.model;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import org.apache.maven.model.Model;
+import org.apache.maven.model.building.ModelCache;
+
 /**
  * ModelFactory decides which model implementation run
  * 
@@ -167,9 +170,7 @@ public final class ModelFactory {
 	}
 	
 	
-	//usecases
-	
-	
+	//usecases	
 	
 	public ProfileModelInt getProfileModel() {
 		ProfileModelInt ProfileModel = (ProfileModelInt) modelCache.get("ProfileModel");
@@ -258,7 +259,25 @@ public final class ModelFactory {
 			modelCache.put("BuildModel", BuildModel);
 			
 		}
+		
 		return BuildModel;
+		
 		}
 	
+	public MediaModelInt getMediaModel() {
+		
+		MediaModelInt MediaModel =(MediaModelInt) modelCache.get("MediaModel");
+		
+		if (MediaModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				MediaModel = new MediaModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				
+			}
+			modelCache.put("MediaModel", MediaModel);
+		}
+		return MediaModel;
+	}
+		
 }

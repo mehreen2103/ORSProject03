@@ -206,64 +206,12 @@
 							class="fa fa-sort-amount-down"></i>Subject List</a>
 					</div></li>
 				<!-- usercase -->
-<!-- 			 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" -->
-<!--                         href="#" data-toggle="dropdown" style="color:white;">Watchlist</a> -->
-<!--                         <div class="dropdown-menu"> -->
-<%--                             <a class="dropdown-item" href="<%=ORSView.WATCHLIST_CTL%>"><i class="fa fa-calculator"></i>Watchlist</a> --%>
-<%--                             <a class="dropdown-item" href="<%=ORSView.WATCHLIST_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>Watchlist List</a> --%>
-<!--                         </div></li> -->
-                        
-<!--                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" -->
-<!--                         href="#" data-toggle="dropdown" style="color:white;">Event</a> -->
-<!--                         <div class="dropdown-menu"> -->
-<%--                             <a class="dropdown-item" href="<%=ORSView.EVENT_CTL%>"><i class="fa fa-calculator"></i>Event</a> --%>
-<%--                             <a class="dropdown-item" href="<%=ORSView.EVENT_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>Event List</a> --%>
-<!--                         </div></li> -->
-                        
-<!--                          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" -->
-<!--                         href="#" data-toggle="dropdown" style="color:white;">Payment</a> -->
-<!--                         <div class="dropdown-menu"> -->
-<%--                             <a class="dropdown-item" href="<%=ORSView.PAYMENT_CTL%>"><i class="fa fa-calculator"></i>Add payment</a> --%>
-<%--                             <a class="dropdown-item" href="<%=ORSView.PAYMENT_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>Payment List</a> --%>
-<!--                         </div></li> -->
-                        
-<!--                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" -->
-<!--                         href="#" data-toggle="dropdown" style="color:white;">Location</a> -->
-<!--                         <div class="dropdown-menu"> -->
-<%--                             <a class="dropdown-item" href="<%=ORSView.LOCATION_CTL%>"><i class="fa fa-calculator"></i>Add location</a> --%>
-<%--                             <a class="dropdown-item" href="<%=ORSView.LOCATION_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>location List</a> --%>
-<!--                         </div></li> -->
-                          
 <!--                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" -->
 <!--                         href="#" data-toggle="dropdown" style="color:white;">Profile</a> -->
 <!--                         <div class="dropdown-menu"> -->
 <%--                             <a class="dropdown-item" href="<%=ORSView.PROFILE_CTL%>"><i class="fa fa-calculator"></i>Add profile</a> --%>
 <%--                             <a class="dropdown-item" href="<%=ORSView.PROFILE_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>profile List</a> --%>
 <!--                         </div></li>  -->
-
-<!-- 			<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;">Maintenance</a> -->
-
-<!-- 					<div class="dropdown-menu"> -->
-<%-- 						<a class="dropdown-item" href="<%=ORSView.MAINTENANCE_CTL%>"> --%>
-<!-- 							<i class="fa fa-calculator"></i>Maintenance -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.MAINTENANCE_LIST_CTL%>"> --%>
-<!-- 							<i class="fa fa-sort-amount-down"></i>Maintenance List -->
-<!-- 						</a> -->
-<!-- 					</div></li> -->
-
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;">Client</a> -->
-
-<!-- 					<div class="dropdown-menu"> -->
-<%-- 						<a class="dropdown-item" href="<%=ORSView.CLIENT_CTL%>"> --%>
-<!-- 							<i class="fa fa-calculator"></i> Add Client -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.CLIENT_LIST_CTL%>"> --%>
-<!-- 							<i class="fa fa-sort-amount-down"></i> Client List -->
-<!-- 						</a> -->
-<!-- 					</div></li> -->
 					
 					<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Broker</a>
@@ -308,6 +256,17 @@
                                    <a class="dropdown-item" href="<%=ORSView.BUILD_LIST_CTL%>">
                                    <i class="fa fa-list"></i> Build List</a>
                                </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Media</a>
+
+                            <div class="dropdown-menu">
+                                 <a class="dropdown-item" href="<%=ORSView.MEDIA_CTL%>">
+                                 <i class="fa fa-photo-video"></i> Add Media</a>
+
+                                 <a class="dropdown-item" href="<%=ORSView.MEDIA_LIST_CTL%>">
+                                 <i class="fa fa-list"></i> Media List</a>
+                            </div>
                     </li>
 
 				<%
