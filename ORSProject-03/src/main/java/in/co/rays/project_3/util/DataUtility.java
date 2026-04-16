@@ -5,31 +5,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * data Uility class to formate data
+ * Data Utility class to format data
  * 
  * @author mehre
- *
  */
 public class DataUtility {
-	/**
-	 * Application time data formate
-	 */
-	public static final String APP_DATE_FORMATE = "MM/dd/yyyy";
 
-	public static final String APP_TIME_FORMATE = "MM/dd/yyyy HH:mm:ss";
+	// ✅ FIXED FORMAT (HTML date compatible)
+	public static final String APP_DATE_FORMATE = "yyyy-MM-dd";
+	public static final String APP_TIME_FORMATE = "yyyy-MM-dd HH:mm:ss";
 
-	/**
-	 * Applicaton time data formate
-	 */
 	public static final SimpleDateFormat formatter = new SimpleDateFormat(APP_DATE_FORMATE);
 	public static final SimpleDateFormat timeFormatter = new SimpleDateFormat(APP_TIME_FORMATE);
 
-	/**
-	 * getString(String s) Trims and trailing and leading spaces of a String
-	 *
-	 * @param val
-	 * @return val
-	 */
+	// Trim String
 	public static String getString(String val) {
 		if (DataValidator.isNotNull(val)) {
 			return val.trim();
@@ -38,13 +27,7 @@ public class DataUtility {
 		}
 	}
 
-	/**
-	 * Converts and Object to String
-	 *
-	 * @param val :value
-	 * @return String
-	 */
-
+	// Object to String
 	public static String getStringData(Object val) {
 		if (val != null) {
 			return val.toString();
@@ -53,14 +36,7 @@ public class DataUtility {
 		}
 	}
 
-	/**
-	 *
-	 * Converts String InTo Integer
-	 *
-	 * @param val :value
-	 * @return int
-	 */
-
+	// String to int
 	public static int getInt(String val) {
 		if (DataValidator.isInteger(val)) {
 			return Integer.parseInt(val);
@@ -69,14 +45,7 @@ public class DataUtility {
 		}
 	}
 
-	/**
-	 *
-	 * Converts String InTo Long
-	 *
-	 * @param val :value
-	 * @return Long
-	 */
-
+	// String to Long
 	public static Long getLong(String val) {
 		if (DataValidator.isLong(val)) {
 			return Long.parseLong(val);
@@ -85,107 +54,69 @@ public class DataUtility {
 		}
 	}
 
-	/**
-	 * Convert String into Date
-	 *
-	 * @param val :value
-	 * @return Date
-	 */
-
+	// ✅ FIXED: String to Date
 	public static Date getDate(String val) {
 		Date date = null;
 		try {
-			date = formatter.parse(val);
-
+			if (val != null && val.trim().length() > 0) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				date = sdf.parse(val);
+			}
 		} catch (Exception e) {
 		}
 		return date;
 	}
 
-	/**
-	 * convert string to date
-	 * 
-	 * @param date
-	 * @return
-	 */
+	// ✅ FIXED: Date to String
 	public static String getDateString(Date date) {
 		try {
-			return formatter.format(date);
+			if (date != null) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				return sdf.format(date);
+			}
 		} catch (Exception e) {
-
 		}
 		return "";
-
 	}
 
-	/**
-	 * convert date and time
-	 * 
-	 * @param date
-	 * @param day
-	 * @return
-	 */
+	// Not used (optional)
 	public static Date getDate(Date date, int day) {
 		return null;
 	}
 
-	/**
-	 * convert timestamp to string
-	 * 
-	 * @param val
-	 * @return
-	 */
+	// String to Timestamp
 	public static Timestamp geTimestamp(String val) {
 		Timestamp timeStamp = null;
 		try {
 			timeStamp = new Timestamp(timeFormatter.parse(val).getTime());
-
 		} catch (Exception e) {
 			return null;
 		}
 		return timeStamp;
-
 	}
 
-	/**
-	 * convert timestamp in to long
-	 * 
-	 * @param l
-	 * @return
-	 */
+	// Long to Timestamp
 	public static Timestamp getTimeStamp(long l) {
 		Timestamp timeStamp = null;
 		try {
 			timeStamp = new Timestamp(l);
-
 		} catch (Exception e) {
 			return null;
 		}
 		return timeStamp;
 	}
 
-	/**
-	 * convert timestamp in to string
-	 * 
-	 * @return Timestamp
-	 */
+	// Current Timestamp
 	public static Timestamp getCurrentTimeStamp() {
 		Timestamp timeStamp = null;
 		try {
 			timeStamp = new Timestamp(new Date().getTime());
 		} catch (Exception e) {
-
 		}
 		return timeStamp;
-
 	}
 
-	/**
-	 * convert timestamp timestamp to long
-	 * 
-	 * @param Timestamp
-	 * @return long
-	 */
+	// Timestamp to long
 	public static long getTimestamp(Timestamp tm) {
 		try {
 			return tm.getTime();
@@ -193,14 +124,14 @@ public class DataUtility {
 			return 0;
 		}
 	}
-	
+
+	// String to Double
 	public static Double getDouble(String val) {
-	    if (DataValidator.isDouble(val)) {
-	        return Double.parseDouble(val);
-	    } else {
-	        return (double) 0;
-	    }
+		if (DataValidator.isDouble(val)) {
+			return Double.parseDouble(val);
+		} else {
+			return (double) 0;
+		}
 	}
 
-	
 }
