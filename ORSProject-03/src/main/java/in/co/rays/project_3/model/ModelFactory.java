@@ -275,5 +275,21 @@ public final class ModelFactory {
 		}
 		return MediaModel;
 	}
+	
+   public DataImportModelInt getDataModel() {
+	   
+	   DataImportModelInt DataModel = (DataImportModelInt) modelCache.get("DataModel");
+	   
+	   if (DataModel == null) {
+		if ("Hibernate".equals(DATABASE)) {
+			DataModel = new DataImportModelHibImpl();
+		}
+		if ("JDBC".equals(DATABASE)) {
+			
+		}
+		modelCache.put("DataModel", DataModel);
+	}
+	return DataModel;
+   }
 		
 }

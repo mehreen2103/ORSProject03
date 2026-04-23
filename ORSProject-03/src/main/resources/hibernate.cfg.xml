@@ -49,7 +49,8 @@
         <mapping resource="in/co/rays/project_3/hbm/PhotographerDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/DashboardDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/BuildDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/MediaDTO.hbm.xml" />        
+        <mapping resource="in/co/rays/project_3/hbm/MediaDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/DataImportDTO.hbm.xml" />        
 
 	</session-factory>
 </hibernate-configuration>

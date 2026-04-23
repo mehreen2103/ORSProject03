@@ -89,59 +89,14 @@ public interface ORSView {
 	
 	
 	// USERCASE
-	public String WATCHLIST_CTL = APP_CONTEXT + "/ctl/WatchlistCtl";
-	public String WATCHLIST_LIST_CTL = APP_CONTEXT + "/ctl/WatchlistListCtl";
 	
-	public String WATCHLIST_VIEW = PAGE_FOLDER + "/WatchlistView.jsp";
-	public String WATCHLIST_LIST_VIEW = PAGE_FOLDER + "/WatchlistListView.jsp";
 	
-	public String EVENT_CTL = APP_CONTEXT + "/ctl/EventCtl";
-	public String EVENT_LIST_CTL = APP_CONTEXT + "/ctl/EventListCtl";
-	
-	public String EVENT_VIEW = PAGE_FOLDER + "/EventView.jsp";
-	public String EVENT_LIST_VIEW = PAGE_FOLDER + "/EventListView.jsp";
-	
-	public String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";
-	public String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";
-	
-	public String PAYMENT_VIEW = PAGE_FOLDER + "/PaymentView.jsp";
-	public String PAYMENT_LIST_VIEW = PAGE_FOLDER + "/PaymentListView.jsp";
-	
-	public String LOCATION_CTL = APP_CONTEXT + "/ctl/LocationCtl";
-	public String LOCATION_LIST_CTL = APP_CONTEXT + "/ctl/LocationListCtl";
-	
-	public String LOCATION_VIEW = PAGE_FOLDER + "/LocationView.jsp";
-	public String LOCATION_LIST_VIEW = PAGE_FOLDER + "/LocationListView.jsp";
 	
 	public String PROFILE_CTL = APP_CONTEXT + "/ctl/ProfileCtl";
 	public String PROFILE_LIST_CTL = APP_CONTEXT + "/ctl/ProfileListCtl";
 	
 	public String PROFILE_VIEW = PAGE_FOLDER + "/ProfileView.jsp";
 	public String PROFILE_LIST_VIEW = PAGE_FOLDER + "/ProfileListView.jsp";
-	
-	public String INQUIRY_CTL = APP_CONTEXT + "/ctl/InquiryCtl";
-	public String INQUIRY_LIST_CTL = APP_CONTEXT + "/ctl/InquiryListCtl";
-
-	public String INQUIRY_VIEW = PAGE_FOLDER + "/InquiryView.jsp";
-	public String INQUIRY_LIST_VIEW = PAGE_FOLDER + "/InquiryListView.jsp";
-	
-	public String TASK_CTL = APP_CONTEXT + "/ctl/TaskCtl";
-	public String TASK_LIST_CTL = APP_CONTEXT + "/ctl/TaskListCtl";
-
-	public String TASK_VIEW = PAGE_FOLDER + "/TaskView.jsp";
-	public String TASK_LIST_VIEW = PAGE_FOLDER + "/TaskListView.jsp";
-	
-	public String MAINTENANCE_CTL = APP_CONTEXT + "/ctl/MaintenanceCtl";
-	public String MAINTENANCE_LIST_CTL = APP_CONTEXT + "/ctl/MaintenanceListCtl";
-
-	public String MAINTENANCE_VIEW = PAGE_FOLDER + "/MaintenanceView.jsp";
-	public String MAINTENANCE_LIST_VIEW = PAGE_FOLDER + "/MaintenanceListView.jsp";
-	
-	public String CLIENT_CTL = APP_CONTEXT + "/ctl/ClientCtl";
-	public String CLIENT_LIST_CTL = APP_CONTEXT + "/ctl/ClientListCtl";
-
-	public String CLIENT_VIEW = PAGE_FOLDER + "/ClientView.jsp";
-	public String CLIENT_LIST_VIEW = PAGE_FOLDER + "/ClientListView.jsp";
 
 	public String BROKER_CTL = APP_CONTEXT + "/ctl/BrokerCtl";
 	public String BROKER_LIST_CTL = APP_CONTEXT + "/ctl/BrokerListCtl";
@@ -172,5 +127,11 @@ public interface ORSView {
 
 	public String MEDIA_VIEW = PAGE_FOLDER + "/MediaView.jsp";
 	public String MEDIA_LIST_VIEW = PAGE_FOLDER + "/MediaListView.jsp";
+	
+	public String DATAIMPORT_CTL = APP_CONTEXT + "/ctl/DataImportCtl";
+	public String DATAIMPORT_LIST_CTL = APP_CONTEXT + "/ctl/DataImportListCtl";
+
+	public String DATAIMPORT_VIEW = PAGE_FOLDER + "/DataImportView.jsp";
+	public String DATAIMPORT_LIST_VIEW = PAGE_FOLDER + "/DataImportListView.jsp";
 
 }

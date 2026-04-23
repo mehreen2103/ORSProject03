@@ -234,38 +234,50 @@
                         </div>
                    </li>
                    
-                   <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Dashboard</a>
+<!--                    <li class="nav-item dropdown"> -->
+<!--                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Dashboard</a> -->
 
-                          <div class="dropdown-menu">
-                              <a class="dropdown-item" href="<%=ORSView.DASHBOARD_CTL%>">
-                              <i class="fa fa-tachometer-alt"></i> Add Dashboard</a> 
+<!--                           <div class="dropdown-menu"> -->
+<%--                               <a class="dropdown-item" href="<%=ORSView.DASHBOARD_CTL%>"> --%>
+<!--                               <i class="fa fa-tachometer-alt"></i> Add Dashboard</a>  -->
 
-                              <a class="dropdown-item" href="<%=ORSView.DASHBOARD_LIST_CTL%>">
-                              <i class="fa fa-list"></i> Dashboard List</a>
-                          </div>
-                    </li>
+<%--                               <a class="dropdown-item" href="<%=ORSView.DASHBOARD_LIST_CTL%>"> --%>
+<!--                               <i class="fa fa-list"></i> Dashboard List</a> -->
+<!--                           </div> -->
+<!--                     </li> -->
+                    
+<!--                     <li class="nav-item dropdown"> -->
+<!--                               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Build</a> -->
+
+<!--                               <div class="dropdown-menu"> -->
+<%--                                    <a class="dropdown-item" href="<%=ORSView.BUILD_CTL%>"> --%>
+<!--                                    <i class="fa fa-cogs"></i> Add Build</a> -->
+
+<%--                                    <a class="dropdown-item" href="<%=ORSView.BUILD_LIST_CTL%>"> --%>
+<!--                                    <i class="fa fa-list"></i> Build List</a> -->
+<!--                                </div> -->
+<!--                     </li> -->
+<!--                     <li class="nav-item dropdown"> -->
+<!--                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Media</a> -->
+
+<!--                             <div class="dropdown-menu"> -->
+<%--                                  <a class="dropdown-item" href="<%=ORSView.MEDIA_CTL%>"> --%>
+<!--                                  <i class="fa fa-photo-video"></i> Add Media</a> -->
+
+<%--                                  <a class="dropdown-item" href="<%=ORSView.MEDIA_LIST_CTL%>"> --%>
+<!--                                  <i class="fa fa-list"></i> Media List</a> -->
+<!--                             </div> -->
+<!--                     </li> -->
                     
                     <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Build</a>
-
-                              <div class="dropdown-menu">
-                                   <a class="dropdown-item" href="<%=ORSView.BUILD_CTL%>">
-                                   <i class="fa fa-cogs"></i> Add Build</a>
-
-                                   <a class="dropdown-item" href="<%=ORSView.BUILD_LIST_CTL%>">
-                                   <i class="fa fa-list"></i> Build List</a>
-                               </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Media</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Data Import</a>
 
                             <div class="dropdown-menu">
-                                 <a class="dropdown-item" href="<%=ORSView.MEDIA_CTL%>">
-                                 <i class="fa fa-photo-video"></i> Add Media</a>
+                                 <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_CTL%>">
+                                 <i class="fa fa-file-import"></i> Add Data Import</a>
 
-                                 <a class="dropdown-item" href="<%=ORSView.MEDIA_LIST_CTL%>">
-                                 <i class="fa fa-list"></i> Media List</a>
+                                 <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_LIST_CTL%>">
+                                 <i class="fa fa-list"></i> Data Import List</a>
                             </div>
                     </li>
 
