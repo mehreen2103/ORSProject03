@@ -120,122 +120,104 @@ h3.text-center {
 
 							<div class="md-form">
 								
-		<span class="pl-sm-5"><b>First Name</b>
-		<span style="color: red;">*</span></span> </br>
-		<div class="col-sm-12">
-          <div class="input-group">
-            <div class="input-group-prepend">
-               <div class="input-group-text"><i class="fa fa-user grey-text" style="font-size: 1rem;"></i> </div>
-            </div>
-              <input type="text" class="form-control" name="firstName" placeholder="First Name" value="<%=DataUtility.getStringData(dto.getFirstName())%>">
-          </div>
-        </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("firstName", request)%></font></br>			
+		                         <span class="pl-sm-5"><b>First Name</b>
+		                         <span style="color: red;">*</span></span> </br>
+		                         <div class="col-sm-12">
+                                 <div class="input-group">
+                                 <div class="input-group-prepend">
+                                 <div class="input-group-text"><i class="fa fa-user grey-text" style="font-size: 1rem;"></i> </div></div>
+                                 <input type="text" class="form-control" name="firstName" placeholder="First Name" value="<%=DataUtility.getStringData(dto.getFirstName())%>">
+                                  </div>
+                                 </div>
+	                             <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("firstName", request)%></font></br>			
 	
-	<span class="pl-sm-5">
-		<b>Last Name</b>
-	    <span style="color: red;">*</span>
-	</span></br> 
-    <div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-user-circle grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="text" class="form-control" name="lastName" placeholder="Last Name" value="<%=DataUtility.getStringData(dto.getLastName())%>">
-      </div>
-    </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("lastName", request)%></font></br>		
+	                             <span class="pl-sm-5">
+		                         <b>Last Name</b>
+	                             <span style="color: red;">*</span></span></br> 
+                                 <div class="col-sm-12">
+                                 <div class="input-group">
+                                 <div class="input-group-prepend">
+                                 <div class="input-group-text"><i class="fa fa-user-circle grey-text" style="font-size: 1rem;"></i> </div>
+                               </div>
+                                 <input type="text" class="form-control" name="lastName" placeholder="Last Name" value="<%=DataUtility.getStringData(dto.getLastName())%>">
+                                </div>
+                                </div>
+	                            <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("lastName", request)%></font></br>		
 	
 								<%
-								if (dto.getFirstName()!=null && id>0) {
+								    if (dto.getFirstName()!=null && id>0) {
 								%>
-								<input type="hidden" name="password" value="<%=DataUtility.getStringData(dto.getPassword()) %>">
-								<input type="hidden"  name="confirmPassword" value="<%=DataUtility.getStringData(dto.getPassword())%>">
+								    <input type="hidden" name="password" value="<%=DataUtility.getStringData(dto.getPassword()) %>">
+								    <input type="hidden"  name="confirmPassword" value="<%=DataUtility.getStringData(dto.getPassword())%>">
 								<%}
 								else 
 										{ %>
-    <span class="pl-sm-5">
-    	<b>Password</b>
-	    <span style="color: red;">*</span>
-	</span> </br>
-    <div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-key grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="password" class="form-control" name="password" placeholder="password" value="<%=DataUtility.getStringData(dto.getPassword())%>">
-      </div>
-    </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("password", request)%></font></br>
+                             <span class="pl-sm-5"><b>Password</b>
+	                         <span style="color: red;">*</span></span> </br>
+                             <div class="col-sm-12">
+                             <div class="input-group">
+                             <div class="input-group-prepend">
+                             <div class="input-group-text"><i class="fa fa-key grey-text" style="font-size: 1rem;"></i> </div> </div>
+                             <input type="password" class="form-control" name="password" placeholder="password" value="<%=DataUtility.getStringData(dto.getPassword())%>">
+                             </div>
+                             </div>
+	                        <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("password", request)%></font></br>
 	
-	<span class="pl-sm-5">
-		<b>Confirm Password</b>
-	    <span style="color: red;">*</span>
-	</span> </br>							
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-key grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="password" class="form-control" name="confirmPassword" placeholder="confirmPassword" value="<%=DataUtility.getStringData(dto.getConfirmPassword())%>">
-      </div>
-    </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("confirmPassword", request)%></font></br>
-							<%
+	                        <span class="pl-sm-5"><b>Confirm Password</b>
+	                        <span style="color: red;">*</span></span> </br>							
+	                        <div class="col-sm-12">
+                            <div class="input-group">
+                           <div class="input-group-prepend">
+                           <div class="input-group-text"><i class="fa fa-key grey-text" style="font-size: 1rem;"></i> </div></div>
+                          <input type="password" class="form-control" name="confirmPassword" placeholder="confirmPassword" value="<%=DataUtility.getStringData(dto.getConfirmPassword())%>">
+                      </div>
+                     </div>
+	                  <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("confirmPassword", request)%></font></br>
+							    <%
 									}
 								%>
 								
-	<span class="pl-sm-5">
-		<b>Email Id</b>
-		<span style="color: red;">*</span>
-	</span> </br>							
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-envelope grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="text" class="form-control" id="defaultForm-email" name="emailId" placeholder="email Id" value="<%=DataUtility.getStringData(dto.getLogin())%>">
-      </div>
-    </div>
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("emailId", request)%></font></br>
+	                      <span class="pl-sm-5"><b>Email Id</b>
+		                  <span style="color: red;">*</span></span> </br>							
+	                      <div class="col-sm-12">
+                          <div class="input-group">
+                          <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-envelope grey-text" style="font-size: 1rem;"></i> </div>
+                          </div>
+                         <input type="text" class="form-control" id="defaultForm-email" name="emailId" placeholder="email Id" value="<%=DataUtility.getStringData(dto.getLogin())%>">
+                         </div>
+                        </div>
+	                     <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("emailId", request)%></font></br>
 								
-	<span class="pl-sm-5">
-		<b>Mobile No</b>
-		<span style="color: red;">*</span>
-	</span> </br>
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-phone-square grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="text" class="form-control" id="defaultForm-email" maxlength="10" name="mobileNo" placeholder="mobile No" value="<%=DataUtility.getStringData(dto.getMobileNo())%>">
-      </div>
-    </div>							
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font></br>
+	                      <span class="pl-sm-5"><b>Mobile No</b>
+		                  <span style="color: red;">*</span></span> </br>
+	                    <div class="col-sm-12">
+                          <div class="input-group">
+                          <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-phone-square grey-text" style="font-size: 1rem;"></i> </div>
+                         </div>
+                         <input type="text" class="form-control" id="defaultForm-email" maxlength="10" name="mobileNo" placeholder="mobile No" value="<%=DataUtility.getStringData(dto.getMobileNo())%>">
+                         </div>
+                        </div>							
+	                    <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font></br>
 							
-	<span class="pl-sm-5">
-		<b>Role</b>
-		<span style="color:red;">*</span>
-	</span></br>
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-user grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <%=HTMLUtility.getList("role", String.valueOf(dto.getRoleId()), list)%>
-      </div>
-    </div>							
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("role", request)%></font></br>							
+	                     <span class="pl-sm-5"><b>Role</b>
+		                 <span style="color:red;">*</span></span></br>
+	                     <div class="col-sm-12">
+                         <div class="input-group">
+                         <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user grey-text" style="font-size: 1rem;"></i> </div>
+                        </div>
+                       <%=HTMLUtility.getList("role", String.valueOf(dto.getRoleId()), list)%>
+                        </div> </div>							
+	                   <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("role", request)%></font></br>							
 								
-	<span class="pl-sm-5">
-		<b>Gender</b>
-		<span style="color: red;">*</span>
-	</span> </br>							 
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-venus-mars grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
+	                   <span class="pl-sm-5"><b>Gender</b>
+		               <span style="color: red;">*</span></span> </br>							 
+	                   <div class="col-sm-12">
+                       <div class="input-group">
+                      <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-venus-mars grey-text" style="font-size: 1rem;"></i> </div></div>
         
 									<%
 										HashMap map = new HashMap();
@@ -246,36 +228,30 @@ h3.text-center {
 									%>
 									<%=htmlList%></div>
       
-    </div>		
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("gender", request)%></font></br>
+                       </div>		
+	                  <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("gender", request)%></font></br>
 							
-	<span class="pl-sm-5">
-		<b>DOB</b>
-		<span style="color: red;">*</span>
-	</span></br>
-	<div class="col-sm-12">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text"><i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i> </div>
-        </div>
-        <input type="text" id="datepicker2" 
-               name="dob" class="form-control" placeholder="Date Of Birth" readonly="readonly" 
-               value="<%=DataUtility.getDateString(dto.getDob()) %>">
-      </div>
-    </div>	
-	<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("dob", request)%></font></br>
-					<%
-							if (dto.getFirstName()!=null && dto.getId() > 0) {
+	                    <span class="pl-sm-5"><b>DOB</b>
+		                <span style="color: red;">*</span></span></br>
+	                    <div class="col-sm-12">
+                        <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i> </div>
+                       </div>
+                        <input type="text" id="datepicker2" name="dob" class="form-control" placeholder="Date Of Birth" readonly="readonly" 
+                                       value="<%=DataUtility.getDateString(dto.getDob()) %>"></div>
+                         </div>	
+	                       <font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("dob", request)%></font></br>
+					        <%
+							    if (dto.getFirstName()!=null && dto.getId() > 0) {
 							%>
 
 							<div class="text-center">
 
 								<input type="submit" name="operation" class="btn btn-success btn-md" 
-								       style="font-size: 17px" 
-								       value="<%=UserCtl.OP_UPDATE%>"> 
+								       style="font-size: 17px" value="<%=UserCtl.OP_UPDATE%>"> 
 								<input type="submit" name="operation" class="btn btn-warning btn-md"
-									   style="font-size: 17px" 
-									   value="<%=UserCtl.OP_CANCEL%>">
+									   style="font-size: 17px" value="<%=UserCtl.OP_CANCEL%>">
 							</div>
 							<%
 								} else {
@@ -283,14 +259,12 @@ h3.text-center {
 							<div class="text-center">
 
 								<input type="submit" name="operation"
-									   class="btn btn-success btn-md" style="font-size: 17px"
-									   value="<%=UserCtl.OP_SAVE%>"> 
+									   class="btn btn-success btn-md" style="font-size: 17px" value="<%=UserCtl.OP_SAVE%>"> 
 								<input type="submit" name="operation" 
-								       class="btn btn-warning btn-md"
-									   style="font-size: 17px" value="<%=UserCtl.OP_RESET%>">
+								       class="btn btn-warning btn-md" style="font-size: 17px" value="<%=UserCtl.OP_RESET%>">
 							</div>
 								<%
-								}
+								      }
 								%>
 						
 

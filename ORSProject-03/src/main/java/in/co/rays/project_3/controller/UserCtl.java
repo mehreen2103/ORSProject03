@@ -171,6 +171,7 @@ public class UserCtl extends BaseCtl {
 			throws IOException, ServletException {
 		log.debug("UserCtl Method doGet Started");
 		String op = DataUtility.getString(request.getParameter("operation"));
+		
 		// get model
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));

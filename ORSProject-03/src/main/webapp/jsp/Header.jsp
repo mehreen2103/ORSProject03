@@ -117,8 +117,8 @@
 					style="color: white;">User</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="<%=ORSView.USER_CTL%>"><i
-							class="fa fa-user-circle"></i>Add User</a> <a class="dropdown-item"
-							href="<%=ORSView.USER_LIST_CTL%>"><i
+							class="fa fa-user-circle"></i>Add User</a>
+							 <a class="dropdown-item" href="<%=ORSView.USER_LIST_CTL%>"><i
 							class="fa fa-user-friends"></i>User List</a>
 					</div></li>
 
