@@ -291,5 +291,21 @@ public final class ModelFactory {
 	}
 	return DataModel;
    }
+   
+   public DeviceModelInt getDeviceModel() {
+	   
+	   DeviceModelInt DeviceModel =(DeviceModelInt) modelCache.get("DeviceModel");
+	   
+	   if (DeviceModel == null) {
+		if ("Hibernate".equals(DATABASE)) {
+			DeviceModel = new DeviceModelHibImpl();
+		}
+		if ("JDBC".equals(DATABASE)) {
+			
+		}
+		modelCache.put("DeviceModel", DeviceModel);
+	}
+	return DeviceModel;
+   }
 		
 }

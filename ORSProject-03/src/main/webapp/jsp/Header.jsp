@@ -280,6 +280,18 @@
                                  <i class="fa fa-list"></i> Data Import List</a>
                             </div>
                     </li>
+                    
+                    <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Device</a>
+
+                         <div class="dropdown-menu">
+                              <a class="dropdown-item" href="<%=ORSView.DEVICE_CTL%>">
+                              <i class="fa fa-mobile-alt"></i> Add Device</a>
+
+                              <a class="dropdown-item" href="<%=ORSView.DEVICE_LIST_CTL%>">
+                              <i class="fa fa-list"></i> Device List</a>
+                         </div>
+                     </li>
 
 				<%
 					}

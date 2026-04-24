@@ -133,5 +133,11 @@ public interface ORSView {
 
 	public String DATAIMPORT_VIEW = PAGE_FOLDER + "/DataImportView.jsp";
 	public String DATAIMPORT_LIST_VIEW = PAGE_FOLDER + "/DataImportListView.jsp";
+	
+	public String DEVICE_CTL = APP_CONTEXT + "/ctl/DeviceCtl";
+	public String DEVICE_LIST_CTL = APP_CONTEXT + "/ctl/DeviceListCtl";
+
+	public String DEVICE_VIEW = PAGE_FOLDER + "/DeviceView.jsp";
+	public String DEVICE_LIST_VIEW = PAGE_FOLDER + "/DeviceListView.jsp";
 
 }
