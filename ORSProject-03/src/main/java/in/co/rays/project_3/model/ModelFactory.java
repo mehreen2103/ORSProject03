@@ -307,5 +307,22 @@ public final class ModelFactory {
 	}
 	return DeviceModel;
    }
+   
+   public BroadcastModelInt getBroadcastModel() {
+	   
+	   BroadcastModelInt BroadcastModel =(BroadcastModelInt) modelCache.get("BroadcastModel"); 
+	   
+	   if (BroadcastModel == null) {
+		   if ("Hibernate".equals(DATABASE)) {
+			   BroadcastModel = new BroadcastModelHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("BroadcastModel", BroadcastModel);
+		
+	}
+	return BroadcastModel;
+   }
 		
 }

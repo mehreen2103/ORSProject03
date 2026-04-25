@@ -1,31 +1,34 @@
 package in.co.rays.project_3.controller;
+
 import java.io.IOException;
 import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import in.co.rays.project_3.dto.BaseDTO;
-import in.co.rays.project_3.dto.BuildDTO;
+import in.co.rays.project_3.dto.BroadcastDTO;
 import in.co.rays.project_3.exception.ApplicationException;
-import in.co.rays.project_3.model.BuildModelInt;
+import in.co.rays.project_3.model.BroadcastModelInt;
 import in.co.rays.project_3.model.ModelFactory;
 import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
-@WebServlet(name = "BuildListCtl", urlPatterns = { "/ctl/BuildListCtl" })
-public class BuildListCtl extends BaseCtl {
+@WebServlet(name = "BroadcastListCtl", urlPatterns = { "/ctl/BroadcastListCtl" })
+public class BroadcastListCtl extends BaseCtl {
 
     @Override
     protected BaseDTO populateDTO(HttpServletRequest request) {
 
-        BuildDTO dto = new BuildDTO();
+        BroadcastDTO dto = new BroadcastDTO();
 
         dto.setId(DataUtility.getLong(request.getParameter("id")));
-        dto.setBuildCode(DataUtility.getString(request.getParameter("buildCode")));
-        dto.setBuildVersion(DataUtility.getString(request.getParameter("buildVersion")));
-        dto.setTriggeredBy(DataUtility.getString(request.getParameter("triggeredBy")));
+        dto.setBroadcastCode(DataUtility.getString(request.getParameter("broadcastCode")));
+        dto.setMessage(DataUtility.getString(request.getParameter("message")));
+        dto.setSentBy(DataUtility.getString(request.getParameter("sentBy")));
         dto.setStatus(DataUtility.getString(request.getParameter("status")));
 
         populateBean(dto, request);
@@ -43,14 +46,14 @@ public class BuildListCtl extends BaseCtl {
         int pageNo = 1;
         int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
 
-        BuildDTO dto = (BuildDTO) populateDTO(request);
+        BroadcastDTO dto = (BroadcastDTO) populateDTO(request);
 
-        BuildModelInt model = ModelFactory.getInstance().getBuildModel();
+        BroadcastModelInt model = ModelFactory.getInstance().getBroadcastModel();
 
         try {
 
-            list = model.search(dto, pageNo, pageSize);
-            next = model.search(dto, pageNo + 1, pageSize);
+            list = model.Search(dto, pageNo, pageSize);
+            next = model.Search(dto, pageNo + 1, pageSize);
 
             if (list == null || list.size() == 0) {
                 ServletUtility.setErrorMessage("No record found", request);
@@ -88,12 +91,12 @@ public class BuildListCtl extends BaseCtl {
                 ? DataUtility.getInt(PropertyReader.getValue("page.size"))
                 : pageSize;
 
-        BuildDTO dto = (BuildDTO) populateDTO(request);
+        BroadcastDTO dto = (BroadcastDTO) populateDTO(request);
 
         String op = DataUtility.getString(request.getParameter("operation"));
         String[] ids = request.getParameterValues("ids");
 
-        BuildModelInt model = ModelFactory.getInstance().getBuildModel();
+        BroadcastModelInt model = ModelFactory.getInstance().getBroadcastModel();
 
         try {
 
@@ -110,12 +113,12 @@ public class BuildListCtl extends BaseCtl {
 
             } else if (OP_NEW.equalsIgnoreCase(op)) {
 
-                ServletUtility.redirect(ORSView.BUILD_CTL, request, response);
+                ServletUtility.redirect(ORSView.BROADCAST_CTL, request, response);
                 return;
 
             } else if (OP_RESET.equalsIgnoreCase(op) || OP_BACK.equalsIgnoreCase(op)) {
 
-                ServletUtility.redirect(ORSView.BUILD_LIST_CTL, request, response);
+                ServletUtility.redirect(ORSView.BROADCAST_LIST_CTL, request, response);
                 return;
 
             } else if (OP_DELETE.equalsIgnoreCase(op)) {
@@ -124,7 +127,7 @@ public class BuildListCtl extends BaseCtl {
 
                 if (ids != null && ids.length > 0) {
 
-                    BuildDTO deleteBean = new BuildDTO();
+                    BroadcastDTO deleteBean = new BroadcastDTO();
 
                     for (String id : ids) {
                         deleteBean.setId(DataUtility.getLong(id));
@@ -138,8 +141,8 @@ public class BuildListCtl extends BaseCtl {
                 }
             }
 
-            list = model.search(dto, pageNo, pageSize);
-            next = model.search(dto, pageNo + 1, pageSize);
+            list = model.Search(dto, pageNo, pageSize);
+            next = model.Search(dto, pageNo + 1, pageSize);
 
             if ((list == null || list.size() == 0) && !OP_DELETE.equalsIgnoreCase(op)) {
                 ServletUtility.setErrorMessage("No record found", request);
@@ -165,6 +168,6 @@ public class BuildListCtl extends BaseCtl {
 
     @Override
     protected String getView() {
-        return ORSView.BUILD_LIST_VIEW;
+        return ORSView.BROADCAST_LIST_VIEW;
     }
 }

@@ -38,7 +38,9 @@ public class UserListCtl extends BaseCtl {
 	private static Logger log = Logger.getLogger(UserListCtl.class);
 
 	protected void preload(HttpServletRequest request) {
+		
 		RoleModelInt model = ModelFactory.getInstance().getRoleModel();
+		
 		try {
 			List list = model.list();
 			request.setAttribute("roleList", list);
@@ -57,6 +59,7 @@ public class UserListCtl extends BaseCtl {
 
 		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 		dto.setRoleId(DataUtility.getLong(request.getParameter("Role")));
+		dto.setDob(DataUtility.getDate(request.getParameter("Dob")));
 		populateBean(dto, request);
 		return dto;
 	}

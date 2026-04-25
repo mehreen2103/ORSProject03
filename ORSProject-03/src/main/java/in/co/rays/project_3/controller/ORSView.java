@@ -89,9 +89,6 @@ public interface ORSView {
 	
 	
 	// USERCASE
-	
-	
-	
 	public String PROFILE_CTL = APP_CONTEXT + "/ctl/ProfileCtl";
 	public String PROFILE_LIST_CTL = APP_CONTEXT + "/ctl/ProfileListCtl";
 	
@@ -139,5 +136,11 @@ public interface ORSView {
 
 	public String DEVICE_VIEW = PAGE_FOLDER + "/DeviceView.jsp";
 	public String DEVICE_LIST_VIEW = PAGE_FOLDER + "/DeviceListView.jsp";
+	
+	public String BROADCAST_CTL = APP_CONTEXT + "/ctl/BroadcastCtl";
+	public String BROADCAST_LIST_CTL = APP_CONTEXT + "/ctl/BroadcastListCtl";
+
+	public String BROADCAST_VIEW = PAGE_FOLDER + "/BroadcastView.jsp";
+	public String BROADCAST_LIST_VIEW = PAGE_FOLDER + "/BroadcastListView.jsp";
 
 }

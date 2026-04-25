@@ -223,16 +223,16 @@
 			               <i class="fa fa-list"></i> Broker List</a>
 	                </div></li>
 	                
-	                <li class="nav-item dropdown">
-	                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Photographer</a>
+<!-- 	                <li class="nav-item dropdown"> -->
+<!-- 	                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Photographer</a> -->
 
-                       <div class="dropdown-menu">
-                         <a class="dropdown-item" href="<%=ORSView.PHOTOGRAPHER_CTL%>">
-                         <i class="fa fa-camera"></i> Add Photographer</a> 
-                         <a class="dropdown-item" href="<%=ORSView.PHOTOGRAPHER_LIST_CTL%>">
-                         <i class="fa fa-list"></i> Photographer List</a>
-                        </div>
-                   </li>
+<!--                        <div class="dropdown-menu"> -->
+<%--                          <a class="dropdown-item" href="<%=ORSView.PHOTOGRAPHER_CTL%>"> --%>
+<!--                          <i class="fa fa-camera"></i> Add Photographer</a>  -->
+<%--                          <a class="dropdown-item" href="<%=ORSView.PHOTOGRAPHER_LIST_CTL%>"> --%>
+<!--                          <i class="fa fa-list"></i> Photographer List</a> -->
+<!--                         </div> -->
+<!--                    </li> -->
                    
 <!--                    <li class="nav-item dropdown"> -->
 <!--                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Dashboard</a> -->
@@ -291,6 +291,17 @@
                               <a class="dropdown-item" href="<%=ORSView.DEVICE_LIST_CTL%>">
                               <i class="fa fa-list"></i> Device List</a>
                          </div>
+                     </li>
+                     <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Broadcast</a>
+
+                               <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="<%=ORSView.BROADCAST_CTL%>">
+                                    <i class="fa fa-bullhorn"></i> Add Broadcast</a>
+
+                                    <a class="dropdown-item" href="<%=ORSView.BROADCAST_LIST_CTL%>">
+                                    <i class="fa fa-list"></i> Broadcast List</a>
+                               </div>
                      </li>
 
 				<%
