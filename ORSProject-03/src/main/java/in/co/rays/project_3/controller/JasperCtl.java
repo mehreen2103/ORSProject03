@@ -53,7 +53,7 @@ public class JasperCtl extends BaseCtl {
 			if (jasperFile == null) {
 				jasperFile = rb.getString("JASPER_REPORT");
 			}
-
+//setp1
 			JasperReport jasperReport = JasperCompileManager.compileReport(jasperFile);
 
 			HttpSession session = request.getSession(true);
@@ -78,9 +78,11 @@ public class JasperCtl extends BaseCtl {
 			}
 
 			/* Filling data into the report */
+			//step2
 			JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, conn);
 
 			/* Export Jasper report */
+			//step3
 			byte[] pdf = JasperExportManager.exportReportToPdf(jasperPrint);
 
 			response.setContentType("application/pdf");

@@ -40,6 +40,7 @@ i.css {
     color: white;
     border-radius: 10px;
 }
+
 h3.text-center {
     color: black !important;
 }
