@@ -303,6 +303,20 @@
                                     <i class="fa fa-list"></i> Broadcast List</a>
                                </div>
                      </li>
+                     
+                     <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> GeoFence</a>
+
+                                <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="<%=ORSView.GEOFENCE_CTL%>">
+                                        <i class="fa fa-map-marker-alt"></i> Add GeoFence
+                                       </a>
+
+                                      <a class="dropdown-item" href="<%=ORSView.GEOFENCE_LIST_CTL%>">
+                                      <i class="fa fa-list"></i> GeoFence List
+                                       </a>
+                                </div>
+                     </li>
 
 				<%
 					}

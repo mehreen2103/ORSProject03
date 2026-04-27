@@ -142,5 +142,11 @@ public interface ORSView {
 
 	public String BROADCAST_VIEW = PAGE_FOLDER + "/BroadcastView.jsp";
 	public String BROADCAST_LIST_VIEW = PAGE_FOLDER + "/BroadcastListView.jsp";
+	
+	public String GEOFENCE_CTL = APP_CONTEXT + "/ctl/GeoFenceCtl";
+	public String GEOFENCE_LIST_CTL = APP_CONTEXT + "/ctl/GeoFenceListCtl";
+
+	public String GEOFENCE_VIEW = PAGE_FOLDER + "/GeoFenceView.jsp";
+	public String GEOFENCE_LIST_VIEW = PAGE_FOLDER + "/GeoFenceListView.jsp";
 
 }

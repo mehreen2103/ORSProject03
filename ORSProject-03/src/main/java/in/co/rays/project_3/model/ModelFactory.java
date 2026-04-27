@@ -324,5 +324,22 @@ public final class ModelFactory {
 	}
 	return BroadcastModel;
    }
+   
+   public GeoFenceModelInt getGeoFenceModel() {
+	   
+	   GeoFenceModelInt GeoFenceModel =(GeoFenceModelInt) modelCache.get("GeoFenceModel");
+	   
+	   if (GeoFenceModel == null) {
+		   if ("Hibernate".equals(DATABASE)) {
+			GeoFenceModel = new GeoFenceHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("GeoFenceModel", GeoFenceModel);
+		
+	}
+	return GeoFenceModel;
+   }
 		
 }
