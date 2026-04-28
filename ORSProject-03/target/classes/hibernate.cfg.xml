@@ -54,6 +54,7 @@
         <mapping resource="in/co/rays/project_3/hbm/DeviceDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/BroadcastDTO.hbm.xml" />        
         <mapping resource="in/co/rays/project_3/hbm/GeoFenceDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/CacheDTO.hbm.xml" />
 
 
 	</session-factory>

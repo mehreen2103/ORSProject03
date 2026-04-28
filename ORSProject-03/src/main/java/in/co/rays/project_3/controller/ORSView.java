@@ -148,5 +148,11 @@ public interface ORSView {
 
 	public String GEOFENCE_VIEW = PAGE_FOLDER + "/GeoFenceView.jsp";
 	public String GEOFENCE_LIST_VIEW = PAGE_FOLDER + "/GeoFenceListView.jsp";
+	
+	public String CACHE_CTL = APP_CONTEXT + "/ctl/CacheCtl";
+	public String CACHE_LIST_CTL = APP_CONTEXT + "/ctl/CacheListCtl";
+
+	public String CACHE_VIEW = PAGE_FOLDER + "/CacheView.jsp";
+	public String CACHE_LIST_VIEW = PAGE_FOLDER + "/CacheListView.jsp";
 
 }

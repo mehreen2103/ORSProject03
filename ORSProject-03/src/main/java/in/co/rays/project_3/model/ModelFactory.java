@@ -29,8 +29,11 @@ public final class ModelFactory {
 
 
 	public MarksheetModelInt getMarksheetModel() {
+		
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");
+		
 		if (marksheetModel == null) {
+			
 			if ("Hibernate".equals(DATABASE)) {
 				marksheetModel = new MarksheetModelHibImp();
 			}
@@ -89,7 +92,9 @@ public final class ModelFactory {
 	}
 
 	public StudentModelInt getStudentModel() {
+		
 		StudentModelInt studentModel = (StudentModelInt) modelCache.get("studentModel");
+		
 		if (studentModel == null) {
 			if ("Hibernate".equals(DATABASE)) {
 				studentModel = new StudentModelHibImp();
@@ -226,7 +231,6 @@ public final class ModelFactory {
 	
 	if (dashboardModel == null) {
 		
-		
 		if ("Hibernate".equals(DATABASE)) {
 			dashboardModel = new DashboardModelHibImpl();
 		}
@@ -244,7 +248,6 @@ public final class ModelFactory {
 		BuildModelInt BuildModel =(BuildModelInt) modelCache.get("BuildModel");
 		
 		if (BuildModel == null) {
-			
 			
 			if ("Hibernate".equals(DATABASE)) {
 				BuildModel = new BuildModelHibIml();
@@ -265,6 +268,7 @@ public final class ModelFactory {
 		MediaModelInt MediaModel =(MediaModelInt) modelCache.get("MediaModel");
 		
 		if (MediaModel == null) {
+			
 			if ("Hibernate".equals(DATABASE)) {
 				MediaModel = new MediaModelHibImpl();
 			}
@@ -281,6 +285,7 @@ public final class ModelFactory {
 	   DataImportModelInt DataModel = (DataImportModelInt) modelCache.get("DataModel");
 	   
 	   if (DataModel == null) {
+		   
 		if ("Hibernate".equals(DATABASE)) {
 			DataModel = new DataImportModelHibImpl();
 		}
@@ -297,6 +302,7 @@ public final class ModelFactory {
 	   DeviceModelInt DeviceModel =(DeviceModelInt) modelCache.get("DeviceModel");
 	   
 	   if (DeviceModel == null) {
+		   
 		if ("Hibernate".equals(DATABASE)) {
 			DeviceModel = new DeviceModelHibImpl();
 		}
@@ -313,6 +319,7 @@ public final class ModelFactory {
 	   BroadcastModelInt BroadcastModel =(BroadcastModelInt) modelCache.get("BroadcastModel"); 
 	   
 	   if (BroadcastModel == null) {
+		   
 		   if ("Hibernate".equals(DATABASE)) {
 			   BroadcastModel = new BroadcastModelHibImpl();
 		}
@@ -330,6 +337,7 @@ public final class ModelFactory {
 	   GeoFenceModelInt GeoFenceModel =(GeoFenceModelInt) modelCache.get("GeoFenceModel");
 	   
 	   if (GeoFenceModel == null) {
+		   
 		   if ("Hibernate".equals(DATABASE)) {
 			GeoFenceModel = new GeoFenceHibImpl();
 		}
@@ -341,5 +349,25 @@ public final class ModelFactory {
 	}
 	return GeoFenceModel;
    }
+   
+ public CacheModelInt getCacheModel() {
+	   
+	   CacheModelInt cachemodel =(CacheModelInt) modelCache.get("cachemodel");
+	   
+	   if (cachemodel == null) {
+		   
+		   if ("Hibernate".equals(DATABASE)) {
+			cachemodel = new CacheModelHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("cachemodel", cachemodel);
+		
+	}
+	return cachemodel;
+   }
+   
+   
 		
 }

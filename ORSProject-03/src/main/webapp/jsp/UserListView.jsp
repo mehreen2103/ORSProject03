@@ -152,10 +152,10 @@
 						</tr>
 					</thead>
 					<%
-					while (it.hasNext()) {
-						dto = it.next();
+					  while (it.hasNext()) {
+						  dto = it.next();
 
-						RoleDTO rbean = rmodel.findByPK(dto.getRoleId());
+						  RoleDTO rbean = rmodel.findByPK(dto.getRoleId());
 					%>
 					<tbody>
 						<tr>

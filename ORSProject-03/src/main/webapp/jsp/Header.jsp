@@ -317,6 +317,20 @@
                                        </a>
                                 </div>
                      </li>
+                     
+                     <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Cache</a>
+
+                               <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="<%=ORSView.CACHE_CTL%>">
+                                      <i class="fa fa-database"></i> Add Cache
+                                     </a>
+
+                                   <a class="dropdown-item" href="<%=ORSView.CACHE_LIST_CTL%>">
+                                    <i class="fa fa-list"></i> Cache List
+                                  </a>
+                                </div>
+                      </li>
 
 				<%
 					}
