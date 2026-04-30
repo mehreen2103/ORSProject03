@@ -213,15 +213,15 @@
 <%--                             <a class="dropdown-item" href="<%=ORSView.PROFILE_LIST_CTL%>"><i class="fa fa-sort-amount-down"></i>profile List</a> --%>
 <!--                         </div></li>  -->
 					
-					<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Broker</a>
+<!-- 					<li class="nav-item dropdown"> -->
+<!-- 					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Broker</a> -->
 
-	                <div class="dropdown-menu">
-		              <a class="dropdown-item" href="<%=ORSView.BROKER_CTL%>">
-			           <i class="fa fa-user-tie"></i> Add Broker</a> 
-		              <a class="dropdown-item" href="<%=ORSView.BROKER_LIST_CTL%>">
-			               <i class="fa fa-list"></i> Broker List</a>
-	                </div></li>
+<!-- 	                <div class="dropdown-menu"> -->
+<%-- 		              <a class="dropdown-item" href="<%=ORSView.BROKER_CTL%>"> --%>
+<!-- 			           <i class="fa fa-user-tie"></i> Add Broker</a>  -->
+<%-- 		              <a class="dropdown-item" href="<%=ORSView.BROKER_LIST_CTL%>"> --%>
+<!-- 			               <i class="fa fa-list"></i> Broker List</a> -->
+<!-- 	                </div></li> -->
 	                
 <!-- 	                <li class="nav-item dropdown"> -->
 <!-- 	                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">Photographer</a> -->
@@ -331,6 +331,18 @@
                                   </a>
                                 </div>
                       </li>
+                      
+                      <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Stock</a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="<%=ORSView.STOCK_CTL%>">
+                                    <i class="fa fa-box"></i> Add Stock </a>
+
+                                   <a class="dropdown-item" href="<%=ORSView.STOCK_LIST_CTL%>">
+                                    <i class="fa fa-list"></i> Stock List </a>
+                                 </div>
+                    </li>
 
 				<%
 					}

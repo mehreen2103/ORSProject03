@@ -8,8 +8,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <style>
 .p4 {
-	background-image:
-		url('<%=ORSView.APP_CONTEXT%>/img/Moon.png');
+	background-image:url('<%=ORSView.APP_CONTEXT%>/img/Moon.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
 }

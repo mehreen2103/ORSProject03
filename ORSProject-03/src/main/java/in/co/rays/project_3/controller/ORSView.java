@@ -155,4 +155,10 @@ public interface ORSView {
 	public String CACHE_VIEW = PAGE_FOLDER + "/CacheView.jsp";
 	public String CACHE_LIST_VIEW = PAGE_FOLDER + "/CacheListView.jsp";
 
+	public String STOCK_CTL = APP_CONTEXT + "/ctl/StockCtl";
+	public String STOCK_LIST_CTL = APP_CONTEXT + "/ctl/StockListCtl";
+
+	public String STOCK_VIEW = PAGE_FOLDER + "/StockView.jsp";
+	public String STOCK_LIST_VIEW = PAGE_FOLDER + "/StockListView.jsp";
+
 }
