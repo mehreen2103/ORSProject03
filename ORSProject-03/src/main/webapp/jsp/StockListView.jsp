@@ -19,12 +19,15 @@
 <script src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
 
 <style>
+
 .bg-img {
+
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 90px;
+	
 }
 </style>
 </head>
@@ -80,7 +83,7 @@
 		<div class="col-md-3">
 			<input type="submit" class="btn btn-primary" name="operation" value="<%=StockListCtl.OP_SEARCH%>">
 
-			<input type="submit" class="btn btn-dark" name="operation" value="<%=StockListCtl.OP_RESET%>">
+			<input type="submit" class="btn btn-warning" name="operation" value="<%=StockListCtl.OP_RESET%>">
 		</div>
 	</div>
 

@@ -269,17 +269,17 @@
 <!--                             </div> -->
 <!--                     </li> -->
                     
-                    <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Data Import</a>
+<!--                     <li class="nav-item dropdown"> -->
+<!--                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Data Import</a> -->
 
-                            <div class="dropdown-menu">
-                                 <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_CTL%>">
-                                 <i class="fa fa-file-import"></i> Add Data Import</a>
+<!--                             <div class="dropdown-menu"> -->
+<%--                                  <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_CTL%>"> --%>
+<!--                                  <i class="fa fa-file-import"></i> Add Data Import</a> -->
 
-                                 <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_LIST_CTL%>">
-                                 <i class="fa fa-list"></i> Data Import List</a>
-                            </div>
-                    </li>
+<%--                                  <a class="dropdown-item" href="<%=ORSView.DATAIMPORT_LIST_CTL%>"> --%>
+<!--                                  <i class="fa fa-list"></i> Data Import List</a> -->
+<!--                             </div> -->
+<!--                     </li> -->
                     
                     <li class="nav-item dropdown">
                          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Device</a>
@@ -342,7 +342,7 @@
                                    <a class="dropdown-item" href="<%=ORSView.STOCK_LIST_CTL%>">
                                     <i class="fa fa-list"></i> Stock List </a>
                                  </div>
-                    </li>
+                        </li>
 
 				<%
 					}
@@ -353,8 +353,8 @@
 				%>
 
 				<!-- ✅ WELCOME DROPDOWN -->
-				<li class="nav-item dropdown ml-3"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+				<li class="nav-item dropdown ml-3">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
 						<span style="color: white;"><b><%=welcomeMsg%></b></span>
 				</a>
 					<div class="dropdown-menu dropdown-menu-right">
