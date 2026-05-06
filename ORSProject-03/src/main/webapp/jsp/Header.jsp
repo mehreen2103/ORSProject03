@@ -304,19 +304,19 @@
 <!--                                </div> -->
 <!--                      </li> -->
                      
-                     <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> GeoFence</a>
+<!--                      <li class="nav-item dropdown"> -->
+<!--                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> GeoFence</a> -->
 
-                                <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="<%=ORSView.GEOFENCE_CTL%>">
-                                        <i class="fa fa-map-marker-alt"></i> Add GeoFence
-                                       </a>
+<!--                                 <div class="dropdown-menu"> -->
+<%--                                       <a class="dropdown-item" href="<%=ORSView.GEOFENCE_CTL%>"> --%>
+<!--                                         <i class="fa fa-map-marker-alt"></i> Add GeoFence -->
+<!--                                        </a> -->
 
-                                      <a class="dropdown-item" href="<%=ORSView.GEOFENCE_LIST_CTL%>">
-                                      <i class="fa fa-list"></i> GeoFence List
-                                       </a>
-                                </div>
-                     </li>
+<%--                                       <a class="dropdown-item" href="<%=ORSView.GEOFENCE_LIST_CTL%>"> --%>
+<!--                                       <i class="fa fa-list"></i> GeoFence List -->
+<!--                                        </a> -->
+<!--                                 </div> -->
+<!--                      </li> -->
                      
                      <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Cache</a>
@@ -342,6 +342,17 @@
                                    <a class="dropdown-item" href="<%=ORSView.STOCK_LIST_CTL%>">
                                     <i class="fa fa-list"></i> Stock List </a>
                                  </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Data</a>
+
+                              <div class="dropdown-menu">
+                                 <a class="dropdown-item" href="<%=ORSView.DATA_CTL%>">
+                                 <i class="fa fa-database"></i> Add Data </a>
+
+                                 <a class="dropdown-item" href="<%=ORSView.DATA_LIST_CTL%>">
+                                 <i class="fa fa-list"></i> Data List</a>
+                              </div>
                         </li>
 
 				<%

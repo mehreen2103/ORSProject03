@@ -1,4 +1,4 @@
-<%@page import="in.co.rays.project_3.controller.DeviceCtl"%>
+<%@page import="in.co.rays.project_3.controller.DataCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Device View</title>
+<title>Data View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
@@ -23,7 +23,6 @@
 }
 
 .card-body {
-
     background-image: linear-gradient(to bottom right, #472372,#e4d0ff);
     box-shadow: 5px 8px 7px #001a33;
     color: white;
@@ -43,7 +42,7 @@ h3.text-center {
 	</div>
 
 	<main>
-	<form action="<%=ORSView.DEVICE_CTL%>" method="post">
+	<form action="<%=ORSView.DATA_CTL%>" method="post">
 
 		<div class="row pt-3 pb-3">
 			<div class="col-md-4 mb-4"></div>
@@ -51,7 +50,7 @@ h3.text-center {
 			<div class="col-md-4 mb-4">
 
 				<jsp:useBean id="dto"
-					class="in.co.rays.project_3.dto.DeviceDTO"
+					class="in.co.rays.project_3.dto.DataDTO"
 					scope="request"></jsp:useBean>
 
 				<div class="card">
@@ -61,11 +60,11 @@ h3.text-center {
 							long id = DataUtility.getLong(request.getParameter("id"));
 							if (dto.getId() != null && dto.getId() > 0) {
 						%>
-						<h3 class="text-center text-primary">Update Device</h3>
+						<h3 class="text-center text-primary">Update Data</h3>
 						<%
 							} else {
 						%>
-						<h3 class="text-center text-primary">Add Device</h3>
+						<h3 class="text-center text-primary">Add Data</h3>
 						<%
 							}
 						%>
@@ -94,37 +93,37 @@ h3.text-center {
 
 						<input type="hidden" name="id" value="<%=dto.getId()%>">
 
-						<!-- Device Session Code -->
-						<span><b>Device Session Code</b><span style="color:red;">*</span></span>
+						<!-- Mapping Code -->
+						<span><b>Mapping Code</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="deviceSessionCode"
-								placeholder="Enter Device Session Code"
-								value="<%=DataUtility.getStringData(dto.getDeviceSessionCode())%>">
+							<input type="text" class="form-control" name="mappingCode"
+								placeholder="Enter Mapping Code"
+								value="<%=DataUtility.getStringData(dto.getMappingCode())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("deviceSessionCode", request)%>
+							<%=ServletUtility.getErrorMessage("mappingCode", request)%>
 						</font><br>
 
-						<!-- Device Name -->
-						<span><b>Device Name</b><span style="color:red;">*</span></span>
+						<!-- Source Field -->
+						<span><b>Source Field</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="deviceName"
-								placeholder="Enter Device Name"
-								value="<%=DataUtility.getStringData(dto.getDeviceName())%>">
+							<input type="text" class="form-control" name="sourceField"
+								placeholder="Enter Source Field"
+								value="<%=DataUtility.getStringData(dto.getSourceField())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("deviceName", request)%>
+							<%=ServletUtility.getErrorMessage("sourceField", request)%>
 						</font><br>
 
-						<!-- User Name -->
-						<span><b>User Name</b><span style="color:red;">*</span></span>
+						<!-- Target Field -->
+						<span><b>Target Field</b><span style="color:red;">*</span></span>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" name="userName"
-								placeholder="Enter User Name"
-								value="<%=DataUtility.getStringData(dto.getUserName())%>">
+							<input type="text" class="form-control" name="targetField"
+								placeholder="Enter Target Field"
+								value="<%=DataUtility.getStringData(dto.getTargetField())%>">
 						</div>
 						<font color="red">
-							<%=ServletUtility.getErrorMessage("userName", request)%>
+							<%=ServletUtility.getErrorMessage("targetField", request)%>
 						</font><br>
 
 						<!-- Status -->
@@ -145,19 +144,19 @@ h3.text-center {
 						%>
 							<input type="submit" name="operation"
 								class="btn btn-success"
-								value="<%=DeviceCtl.OP_UPDATE%>">
+								value="<%=DataCtl.OP_UPDATE%>">
 							<input type="submit" name="operation"
 								class="btn btn-warning"
-								value="<%=DeviceCtl.OP_CANCEL%>">
+								value="<%=DataCtl.OP_CANCEL%>">
 						<%
 							} else {
 						%>
 							<input type="submit" name="operation"
 								class="btn btn-success"
-								value="<%=DeviceCtl.OP_SAVE%>">
+								value="<%=DataCtl.OP_SAVE%>">
 							<input type="submit" name="operation"
 								class="btn btn-warning"
-								value="<%=DeviceCtl.OP_RESET%>">
+								value="<%=DataCtl.OP_RESET%>">
 						<%
 							}
 						%>

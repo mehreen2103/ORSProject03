@@ -160,5 +160,11 @@ public interface ORSView {
 
 	public String STOCK_VIEW = PAGE_FOLDER + "/StockView.jsp";
 	public String STOCK_LIST_VIEW = PAGE_FOLDER + "/StockListView.jsp";
+	
+	public String DATA_CTL = APP_CONTEXT + "/ctl/DataCtl";
+	public String DATA_LIST_CTL = APP_CONTEXT + "/ctl/DataListCtl";
+
+	public String DATA_VIEW = PAGE_FOLDER + "/DataView.jsp";
+	public String DATA_LIST_VIEW = PAGE_FOLDER + "/DataListView.jsp";
 
 }

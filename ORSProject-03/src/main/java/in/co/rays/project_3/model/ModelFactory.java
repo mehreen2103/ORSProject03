@@ -386,6 +386,24 @@ public final class ModelFactory {
 	return stockmodel;
  }
    
+ public DataModelInt getDataModel1() {
+	   
+	   DataModelInt datamodel =(DataModelInt) modelCache.get("datamodel");
+	   
+	   if (datamodel == null) {
+		   
+		   if ("Hibernate".equals(DATABASE)) {
+			   datamodel = new DataModelHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("datamodel", datamodel);
+		
+	}
+	return datamodel;
+}
+ 
    
 		
 }
