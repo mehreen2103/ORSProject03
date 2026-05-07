@@ -11,6 +11,7 @@ package in.co.rays.project_3.controller;
  *
  */
 public interface ORSView {
+	
 	public String APP_CONTEXT = "/ORSProject-03";
 
 	public String PAGE_FOLDER = "/jsp";
@@ -166,5 +167,11 @@ public interface ORSView {
 
 	public String DATA_VIEW = PAGE_FOLDER + "/DataView.jsp";
 	public String DATA_LIST_VIEW = PAGE_FOLDER + "/DataListView.jsp";
+	
+	public String USERPROFILE_CTL = APP_CONTEXT + "/ctl/UserProfileCtl";
+	public String USERPROFILE_LIST_CTL = APP_CONTEXT + "/ctl/UserProfileListCtl";
+
+	public String USERPROFILE_VIEW = PAGE_FOLDER + "/UserProfileView.jsp";
+	public String USERPROFILE_LIST_VIEW = PAGE_FOLDER + "/UserProfileListView.jsp";
 
 }

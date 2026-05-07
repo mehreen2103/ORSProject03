@@ -238,6 +238,20 @@ public class DataValidator {
 		    }
 		}
 	 
+	// General Code Validation (AB-101, NT-102, XY-999 ...)
+		public static boolean isCode(String val) {
+			String codeReg = "^[A-Z]{2}-\\d{3}$";
+			if (isNotNull(val)) {
+				try {
+					return val.matches(codeReg);
+				} catch (Exception e) {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		}
+	 
 	
 	public static void main(String[] args) {
 		System.out.println("Not Null 2"+isNotNull("ABC"));

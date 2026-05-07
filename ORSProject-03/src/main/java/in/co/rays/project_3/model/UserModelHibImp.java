@@ -34,6 +34,7 @@ public class UserModelHibImp implements UserModelInt {
 
 		UserDTO existDto = null;
 		existDto = findByLogin(dto.getLogin());
+		
 		if (existDto != null) {
 			throw new DuplicateRecordException("login id already exist");
 		}

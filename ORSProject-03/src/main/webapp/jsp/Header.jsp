@@ -292,6 +292,7 @@
                               <i class="fa fa-list"></i> Device List</a>
                          </div>
                      </li>
+                     
 <!--                      <li class="nav-item dropdown"> -->
 <!--                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Broadcast</a> -->
 
@@ -332,17 +333,17 @@
                                 </div>
                       </li>
                       
-                      <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Stock</a>
+<!--                       <li class="nav-item dropdown"> -->
+<!--                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Stock</a> -->
 
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="<%=ORSView.STOCK_CTL%>">
-                                    <i class="fa fa-box"></i> Add Stock </a>
+<!--                                 <div class="dropdown-menu"> -->
+<%--                                     <a class="dropdown-item" href="<%=ORSView.STOCK_CTL%>"> --%>
+<!--                                     <i class="fa fa-box"></i> Add Stock </a> -->
 
-                                   <a class="dropdown-item" href="<%=ORSView.STOCK_LIST_CTL%>">
-                                    <i class="fa fa-list"></i> Stock List </a>
-                                 </div>
-                        </li>
+<%--                                    <a class="dropdown-item" href="<%=ORSView.STOCK_LIST_CTL%>"> --%>
+<!--                                     <i class="fa fa-list"></i> Stock List </a> -->
+<!--                                  </div> -->
+<!--                         </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Data</a>
 
@@ -354,6 +355,19 @@
                                  <i class="fa fa-list"></i> Data List</a>
                               </div>
                         </li>
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> User Profile </a>
+
+                             <div class="dropdown-menu">
+
+                                 <a class="dropdown-item" href="<%=ORSView.USERPROFILE_CTL%>">
+
+                                  <i class="fa fa-id-badge"></i> Add User Profile </a>
+
+                                   <a class="dropdown-item"href="<%=ORSView.USERPROFILE_LIST_CTL%>">
+                                    <i class="fa fa-list"></i>User Profile List </a>
+                              </div>
+                       </li>
 
 				<%
 					}

@@ -404,6 +404,23 @@ public final class ModelFactory {
 	return datamodel;
 }
  
+public UserProfileModelInt getUserProfileModel() {
+	   
+	   UserProfileModelInt userprofilemodel =(UserProfileModelInt) modelCache.get("userprofilemodel");
+	   
+	   if (userprofilemodel == null) {
+		   
+		   if ("Hibernate".equals(DATABASE)) {
+			   userprofilemodel = new UserProfileModelHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("userprofilemodel", userprofilemodel);
+		
+	}
+	return userprofilemodel;
+}
    
 		
 }
