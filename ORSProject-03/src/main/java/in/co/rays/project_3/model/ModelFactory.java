@@ -421,6 +421,23 @@ public UserProfileModelInt getUserProfileModel() {
 	}
 	return userprofilemodel;
 }
-   
+ 
+public HostelModelInt getHostelModel() {
+	   
+	HostelModelInt hostelmodel =(HostelModelInt) modelCache.get("hostelmodel");
+	   
+	   if (hostelmodel == null) {
+		   
+		   if ("Hibernate".equals(DATABASE)) {
+			   hostelmodel = new HostelModelHibImpl();
+		}
+		   if ("JDBC".equals(DATABASE)) {
+			
+		}
+		   modelCache.put("hostelmodel", hostelmodel);
+		
+	}
+	return hostelmodel;
+}
 		
 }

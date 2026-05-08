@@ -97,7 +97,7 @@ h3.text-center {
 							<%
 								long id =DataUtility.getLong(request.getParameter("id"));
 
-								if (dto.getUserName() != null&& dto.getId() > 0) {
+								if (dto.getUserName() != null  && dto.getId() > 0) {
 							%>
 
 							<h3 class="text-center default-text text-primary">UPDATE USER PROFILE</h3>
@@ -326,14 +326,6 @@ h3.text-center {
                       <font color="red" class="pl-sm-5"><%=ServletUtility.getErrorMessage("status", request)%></font>
 
                         <br>
-
-							<font color="red" class="pl-sm-5">
-
-								<%=ServletUtility.getErrorMessage("status", request)%>
-
-							</font>
-
-							<br>
 
 							<%
 								if (dto.getUserName() != null && dto.getId() > 0) {

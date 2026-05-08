@@ -43,6 +43,7 @@
 }
 
 .text {
+
 	text-align: center;
 }
 
@@ -229,9 +230,7 @@
 
 						<tr>
 
-							<td align="center">
-
-								<input type="checkbox"class="checkbox"name="ids" value="<%=dto.getId()%>">
+							<td align="center"><input type="checkbox" class="checkbox"name="ids" value="<%=dto.getId()%>">
 
 							</td>
 

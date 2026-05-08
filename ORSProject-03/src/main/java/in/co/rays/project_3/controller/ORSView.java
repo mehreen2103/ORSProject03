@@ -173,5 +173,11 @@ public interface ORSView {
 
 	public String USERPROFILE_VIEW = PAGE_FOLDER + "/UserProfileView.jsp";
 	public String USERPROFILE_LIST_VIEW = PAGE_FOLDER + "/UserProfileListView.jsp";
+	
+	public String HOSTEL_CTL = APP_CONTEXT + "/ctl/HostelCtl";
+	public String HOSTEL_LIST_CTL = APP_CONTEXT + "/ctl/HostelListCtl";
+
+	public String HOSTEL_VIEW = PAGE_FOLDER + "/HostelView.jsp";
+	public String HOSTEL_LIST_VIEW = PAGE_FOLDER + "/HostelListView.jsp";
 
 }

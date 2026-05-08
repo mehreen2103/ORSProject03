@@ -368,6 +368,23 @@
                                     <i class="fa fa-list"></i>User Profile List </a>
                               </div>
                        </li>
+                       <li class="nav-item dropdown">
+
+                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Hostel</a>
+
+                              <div class="dropdown-menu">
+
+                                <a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>">
+
+                                   <i class="fa fa-home"></i> Add Hostel</a>
+
+                                     <a class="dropdown-item" href="<%=ORSView.HOSTEL_LIST_CTL%>">
+
+                                      <i class="fa fa-list"></i>Hostel List </a>
+
+                                </div>
+
+                         </li>
 
 				<%
 					}
