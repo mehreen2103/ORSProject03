@@ -32,7 +32,6 @@
 </script>
 
 <style>
-
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
