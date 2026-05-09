@@ -1,3 +1,4 @@
+
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
@@ -153,6 +154,7 @@ public class HostelCtl extends BaseCtl {
 					model.update(dto);
 
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 
 				} else {
 
@@ -161,7 +163,7 @@ public class HostelCtl extends BaseCtl {
 					ServletUtility.setSuccessMessage("Data is successfully Saved", request);
 				}
 
-				ServletUtility.setDto(dto, request);
+//				ServletUtility.setDto(dto, request);
 
 			} catch (ApplicationException e) {
 

@@ -85,7 +85,7 @@ h3.text-center {
 							<%
 								long id = DataUtility.getLong(request.getParameter("id"));
 
-								if (dto != null && dto.getId() != null && dto.getId() > 0) {
+								if (dto.getUsername() != null && dto.getId() > 0) {
 							%>
 
 							<h3 class="text-center default-text text-primary">UPDATE

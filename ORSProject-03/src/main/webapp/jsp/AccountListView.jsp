@@ -5,6 +5,8 @@
 <%@page import="in.co.rays.project_3.controller.AccountListCtl"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -30,6 +32,7 @@
 </script>
 
 <style>
+
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
@@ -174,6 +177,21 @@
 						value="<%=ServletUtility.getParameter("accountType", request)%>">
 
 				</div>
+				<div class="col-sm-2">
+
+					<%
+						HashMap map = new HashMap();
+
+							map.put("Active", "Active");
+
+							map.put("Inactive", "Inactive");
+
+							String statusList = HTMLUtility.getList("status", ServletUtility.getParameter("status", request), map);
+					%>
+
+					<%=statusList%>
+
+				</div>
 
 				<div class="col-sm-2">
 
@@ -275,9 +293,7 @@
 					<td align="right"><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
 						value="<%=AccountListCtl.OP_NEXT%>"
-						<%=(nextPageSize != 0) ? "" : "disabled"%>>
-
-					</td>
+						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 
 				</tr>
 

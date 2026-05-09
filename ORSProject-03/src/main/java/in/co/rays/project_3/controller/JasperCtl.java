@@ -24,6 +24,7 @@ import net.sf.jasperreports.engine.JasperReport;
 
 /**
  * Jasper functionality Controller. Performs operation for Print pdf of
+ * 
  * MarksheetMeriteList
  *
  * 
@@ -53,7 +54,7 @@ public class JasperCtl extends BaseCtl {
 			if (jasperFile == null) {
 				jasperFile = rb.getString("JASPER_REPORT");
 			}
-//setp1
+            //step1
 			JasperReport jasperReport = JasperCompileManager.compileReport(jasperFile);
 
 			HttpSession session = request.getSession(true);

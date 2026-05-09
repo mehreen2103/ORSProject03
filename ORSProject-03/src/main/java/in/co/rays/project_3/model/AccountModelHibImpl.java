@@ -160,7 +160,7 @@ public class AccountModelHibImpl implements AccountModelInt {
 				}
 
 				if (dto.getUsername() != null && dto.getUsername().length() > 0) {
-					criteria.add(Restrictions.like("userName", dto.getUsername() + "%"));
+					criteria.add(Restrictions.like("username", dto.getUsername() + "%"));
 				}
 				if (dto.getAccountType() != null && dto.getAccountType().length() > 0) {
 					criteria.add(Restrictions.like("accountType", dto.getAccountType() + "%"));
