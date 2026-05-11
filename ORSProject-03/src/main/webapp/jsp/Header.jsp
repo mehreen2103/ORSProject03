@@ -281,17 +281,17 @@
 				<!--                             </div> -->
 				<!--                     </li> -->
 
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> Device</a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Device</a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
-<%-- 						<a class="dropdown-item" href="<%=ORSView.DEVICE_CTL%>"> <i --%>
-<!-- 							class="fa fa-mobile-alt"></i> Add Device -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DEVICE_LIST_CTL%>"> --%>
-<!-- 							<i class="fa fa-list"></i> Device List -->
-<!-- 						</a> -->
-<!-- 					</div></li> -->
+				<!-- 					<div class="dropdown-menu"> -->
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.DEVICE_CTL%>"> <i --%>
+				<!-- 							class="fa fa-mobile-alt"></i> Add Device -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DEVICE_LIST_CTL%>"> --%>
+				<!-- 							<i class="fa fa-list"></i> Device List -->
+				<!-- 						</a> -->
+				<!-- 					</div></li> -->
 
 				<!--                      <li class="nav-item dropdown"> -->
 				<!--                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Broadcast</a> -->
@@ -319,17 +319,17 @@
 				<!--                                 </div> -->
 				<!--                      </li> -->
 
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> Cache</a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Cache</a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
-<%-- 						<a class="dropdown-item" href="<%=ORSView.CACHE_CTL%>"> <i --%>
-<!-- 							class="fa fa-database"></i> Add Cache -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.CACHE_LIST_CTL%>"> --%>
-<!-- 							<i class="fa fa-list"></i> Cache List -->
-<!-- 						</a> -->
-<!-- 					</div></li> -->
+				<!-- 					<div class="dropdown-menu"> -->
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.CACHE_CTL%>"> <i --%>
+				<!-- 							class="fa fa-database"></i> Add Cache -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.CACHE_LIST_CTL%>"> --%>
+				<!-- 							<i class="fa fa-list"></i> Cache List -->
+				<!-- 						</a> -->
+				<!-- 					</div></li> -->
 
 				<!--                       <li class="nav-item dropdown"> -->
 				<!--                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;"> Stock</a> -->
@@ -366,20 +366,20 @@
 							<i class="fa fa-list"></i>User Profile List
 						</a>
 					</div></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Hostel</a>
+<!-- 				<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;"> Hostel</a> -->
 
-					<div class="dropdown-menu">
+<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>"> <i
-							class="fa fa-home"></i> Add Hostel
-						</a> <a class="dropdown-item" href="<%=ORSView.HOSTEL_LIST_CTL%>">
+<%-- 						<a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>"> <i --%>
+<!-- 							class="fa fa-home"></i> Add Hostel -->
+<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.HOSTEL_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i>Hostel List
-						</a>
+<!-- 							<i class="fa fa-list"></i>Hostel List -->
+<!-- 						</a> -->
 
-					</div></li>
+<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Account </a>
@@ -392,6 +392,22 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.ACCOUNT_LIST_CTL%>">
 
 							<i class="fa fa-list"></i> Account List
+
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Location </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.LOCATION_CTL%>"> <i
+							class="fa fa-map-marker-alt"></i> Add Location
+
+						</a> <a class="dropdown-item" href="<%=ORSView.LOCATION_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Location List
 
 						</a>
 

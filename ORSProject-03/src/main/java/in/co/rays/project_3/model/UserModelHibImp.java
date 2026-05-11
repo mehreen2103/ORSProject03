@@ -257,6 +257,7 @@ public class UserModelHibImp implements UserModelInt {
 
 			}			
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new ApplicationException("Database Server Down");
 		}
 		return dto;

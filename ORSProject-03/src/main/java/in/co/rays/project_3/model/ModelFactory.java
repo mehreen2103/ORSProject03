@@ -451,5 +451,23 @@ public final class ModelFactory {
 		}
 		return accountmodel;
 	}
+	
+	public LocationModelInt getLocationModel() {
+
+		LocationModelInt locationmodel = (LocationModelInt) modelCache.get("locationmodel");
+
+		if (locationmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				locationmodel = new LocationModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("locationmodel", locationmodel);
+
+		}
+		return locationmodel;
+	}
 
 }

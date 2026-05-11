@@ -185,5 +185,10 @@ public interface ORSView {
 
 	public String ACCOUNT_VIEW = PAGE_FOLDER + "/AccountView.jsp";
 	public String ACCOUNT_LIST_VIEW = PAGE_FOLDER + "/AccountListView.jsp";
+	
+	public String LOCATION_CTL = APP_CONTEXT + "/ctl/LocationCtl";
+	public String LOCATION_LIST_CTL = APP_CONTEXT + "/ctl/LocationListCtl";
 
+	public String LOCATION_VIEW = "/jsp/LocationView.jsp";
+	public String LOCATION_LIST_VIEW = "/jsp/LocationListView.jsp";
 }

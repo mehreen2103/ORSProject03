@@ -1,239 +1,369 @@
-<%@page import="in.co.rays.project_3.dto.LocationDTO"%>
-<%@page import="in.co.rays.project_3.controller.LocationListCtl"%>
-<%@page import="java.util.HashMap"%>
-<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="java.util.List"%>
+<%@page import="in.co.rays.project_3.dto.LocationDTO"%>
+<%@page import="in.co.rays.project_3.util.DataUtility"%>
+<%@page import="in.co.rays.project_3.controller.LocationListCtl"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Event List View</title>
-<script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
-<script type="text/javascript"
-	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
-<style>
-.text {
-	text-align: center;
-}
 
-.p4 {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/wallp.jpg');
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Location List</title>
+
+<script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
+
+<script type="text/javascript"
+	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js">
+	
+</script>
+
+<style>
+.hm {
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 85px;
+}
 
-	/* background-size: 100%; */
+.text {
+	text-align: center;
 }
 </style>
+
 </head>
-<body class="p4">
+
+<%@include file="Header.jsp"%>
+
+<body class="hm">
+
 	<div>
-		<%@include file="Header.jsp"%>
-	</div>
-	<div>
-		<form action="<%=ORSView.LOCATION_LIST_CTL%>" method="post">
 
-
-
+		<form class="pb-5" action="<%=ORSView.LOCATION_LIST_CTL%>"
+			method="post">
 
 			<jsp:useBean id="dto" class="in.co.rays.project_3.dto.LocationDTO"
-				scope="request"></jsp:useBean>
-			
+				scope="request">
+			</jsp:useBean>
+
 			<%
 				int pageNo = ServletUtility.getPageNo(request);
+
 				int pageSize = ServletUtility.getPageSize(request);
+
 				int index = ((pageNo - 1) * pageSize) + 1;
+
 				int nextPageSize = DataUtility.getInt(request.getAttribute("nextListSize").toString());
+
 				List list = ServletUtility.getList(request);
+
 				Iterator<LocationDTO> it = list.iterator();
+			%>
+
+			<%
 				if (list.size() != 0) {
 			%>
+
 			<center>
-				<h1 class="text-light font-weight-bold pt-2">
-					<font color="white"> Event List 
+
+				<h1 style="color: white;">
+
+					<b>Location List</b>
+
 				</h1>
-				</font>
-				<center>
 
-					<div class="row">
-						<div class="col-md-4"></div>
+			</center>
 
-						<%
-							if (!ServletUtility.getSuccessMessage(request).equals("")) {
-						%>
+			<div class="row">
 
-						<div class="col-md-4 alert alert-success alert-dismissible"
-							style="background-color: #80ff80">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
-							<h4>
-								<font color="#008000"><%=ServletUtility.getSuccessMessage(request)%></font>
-							</h4>
-						</div>
-						<%
-							}
-						%>
+				<div class="col-md-4"></div>
 
-						<div class="col-md-4"></div>
-					</div>
-					<div class="row">
-						<div class="col-md-4"></div>
+				<%
+					if (!ServletUtility.getSuccessMessage(request).equals("")) {
+				%>
 
-						<%
-							if (!ServletUtility.getErrorMessage(request).equals("")) {
-						%>
-						<div class=" col-md-4 alert alert-danger alert-dismissible">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
-							<h4>
-								<font color="red"> <%=ServletUtility.getErrorMessage(request)%></font>
-							</h4>
-						</div>
-						<%
-							}
-						%>
-						<div class="col-md-4"></div>
-					</div>
-					<div class="row">
+				<div class="col-md-4 alert alert-success alert-dismissible"
+					style="background-color: #80ff80">
 
-						<div class="col-sm-2"></div>
-						<div class="col-sm-2">
-							<input type="text" name="city" placeholder="Enter city Name"
-								class="form-control"
-								value="<%=ServletUtility.getParameter("city", request)%>">
-						</div>
-						&emsp;
-						<div class="col-sm-2">
-							<input type="submit" class="btn btn-primary btn-md"
-								style="font-size: 17px" name="operation"
-								value="<%=LocationListCtl.OP_SEARCH%>">&emsp; <input
-								type="submit" class="btn btn-dark btn-md"
-								style="font-size: 17px" name="operation"
-								value="<%=LocationListCtl.OP_RESET%>">
-						</div>
-						<div class="col-sm-3"></div>
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
 
-						
+					<h4>
 
-						<div class="col-sm-2"></div>
-					</div>
+						<font color="#008000"> <%=ServletUtility.getSuccessMessage(request)%>
 
+						</font>
 
+					</h4>
 
+				</div>
 
+				<%
+					}
+				%>
 
+				<div class="col-md-4"></div>
 
+			</div>
 
-					</br>
-					<div style="margin-bottom: 20px;" class="table-responsive">
-						<table class="table table-dark table-bordered">
-							<thead>
-								<tr style="background-color: #8C8C8C;">
+			<div class="row">
 
-									<th width="10%"><input type="checkbox" id="select_all"
-										name="Select" class="text"> Select All</th>
-									<th class="text">S.NO</th>
-									<th class="text">city</th>
-									<th class="text">state</th>
-									<th class="text">country</th>
-									<th class="text">status</th>
-									<th class="text">Edit</th>
-								</tr>
-							</thead>
-							<%
-								while (it.hasNext()) {
-										dto = it.next();
-							%>
+				<div class="col-md-4"></div>
 
-							<tbody>
-								<tr>
-									<td align="center"><input type="checkbox" class="checkbox"
-										name="ids" value="<%=dto.getId()%>"></td>
-									<td align="center"><%=index++%></td>
-									<td align="center"><%=dto.getCity()%></td>
-									<td align="center"><%=dto.getState()%></td>
-									<td align="center"><%=dto.getCountry()%></td>
-									<td align="center"><%=dto.getStatus()%></td>
-									<td align="center"><a href="LocationCtl?id=<%=dto.getId()%>">Edit</a></td>
-								</tr>
-							</tbody>
-							<%
-								}
-							%>
-						</table>
+				<%
+					if (!ServletUtility.getErrorMessage(request).equals("")) {
+				%>
 
+				<div class="col-md-4 alert alert-danger alert-dismissible">
 
-					</div>
-					<table width="100%">
-						<tr>
-							<td><input type="submit" name="operation"
-								class="btn btn-secondary btn-md" style="font-size: 17px"
-								value="<%=LocationListCtl.OP_PREVIOUS%>"
-								<%=pageNo > 1 ? "" : "disabled"%>></td>
-							<td><input type="submit" name="operation"
-								class="btn btn-primary btn-md" style="font-size: 17px"
-								value="<%=LocationListCtl.OP_NEW%>"></td>
-							<td><input type="submit" name="operation"
-								class="btn btn-danger btn-md" style="font-size: 17px"
-								value="<%=LocationListCtl.OP_DELETE%>"></td>
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
 
-							<td align="right"><input type="submit" name="operation"
-								class="btn btn-secondary btn-md" style="font-size: 17px"
-								style="padding: 5px;" value="<%=LocationListCtl.OP_NEXT%>"
-								<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
+					<h4>
+
+						<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
+
+						</font>
+
+					</h4>
+
+				</div>
+
+				<%
+					}
+				%>
+
+				<div class="col-md-4"></div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-2"></div>
+
+				<div class="col-sm-2">
+
+					<input type="text" name="city" placeholder="Enter City"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("city", request)%>">
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<input type="text" name="state" placeholder="Enter State"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("state", request)%>">
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<input type="text" name="country" placeholder="Enter Country"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("country", request)%>">
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<%
+						    HashMap map = new HashMap();
+
+							map.put("Active", "Active");
+
+							map.put("Inactive", "Inactive");
+
+							String statusList = HTMLUtility.getList("locationstatus",ServletUtility.getParameter("locationstatus", request), map);
+					%>
+
+					<%=statusList%>
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<input type="submit" class="btn btn-primary btn-md"
+						style="font-size: 15px" name="operation"
+						value="<%=LocationListCtl.OP_SEARCH%>"> <input
+						type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
+						name="operation" value="<%=LocationListCtl.OP_RESET%>">
+
+				</div>
+
+			</div>
+
+			<br>
+
+			<div class="table-responsive" style="margin-bottom: 20px;">
+
+				<table class="table table-bordered table-dark table-hover">
+
+					<thead>
+
+						<tr style="background-color: #8C8C8C;">
+
+							<th width="10%"><input type="checkbox" id="select_all"
+								name="Select" class="text"> Select All</th>
+
+							<th width="5%" class="text">S.NO</th>
+
+							<th width="20%" class="text">City</th>
+
+							<th width="20%" class="text">State</th>
+
+							<th width="20%" class="text">Country</th>
+
+							<th width="15%" class="text">Status</th>
+
+							<th width="10%" class="text">Edit</th>
+
 						</tr>
-						<tr></tr>
-					</table>
-					</br>
+
+					</thead>
+
 					<%
-						}
-						if (list.size() == 0) {
-							System.out.println("user list view list.size==0");
+						while (it.hasNext()) {
+
+								dto = it.next();
 					%>
-					<center>
-						<h1 class="text-primary font-weight-bold pt-3">Location List</h1>
-					</center>
 
-					</br>
-					<div class="row">
-						<div class="col-md-4"></div>
+					<tbody>
 
-						<%
-							if (!ServletUtility.getErrorMessage(request).equals("")) {
-						%>
-						<div class=" col-md-4 alert alert-danger alert-dismissible">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
-							<h4>
-								<font color="red"> <%=ServletUtility.getErrorMessage(request)%></font>
-							</h4>
-						</div>
-						<%
-							}
-						%>
-						<div class="col-md-4"></div>
-					</div>
-					</br>
-					<div style="padding-left: 48%;">
-						<input type="submit" name="operation"
-							class="btn btn-primary btn-md" style="font-size: 17px"
-							value="<%=LocationListCtl.OP_BACK%>">
-					</div>
+						<tr>
+
+							<td align="center"><input type="checkbox" class="checkbox"
+								name="ids" value="<%=dto.getId()%>"></td>
+
+							<td class="text"><%=index++%></td>
+
+							<td class="text"><%=dto.getCity()%></td>
+
+							<td class="text"><%=dto.getState()%></td>
+
+							<td class="text"><%=dto.getCountry()%></td>
+
+							<td class="text"><%=dto.getLocationstatus()%></td>
+
+							<td class="text"><a href="LocationCtl?id=<%=dto.getId()%>">Edit
+							</a></td>
+
+						</tr>
+
+					</tbody>
+
 					<%
 						}
 					%>
-					<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
-						type="hidden" name="pageSize" value="<%=pageSize%>">
+
+				</table>
+
+			</div>
+
+			<table width="100%">
+
+				<tr>
+
+					<td><input type="submit" name="operation"
+						class="btn btn-warning btn-md" style="font-size: 17px"
+						value="<%=LocationListCtl.OP_PREVIOUS%>"
+						<%=pageNo > 1 ? "" : "disabled"%>></td>
+
+					<td><input type="submit" name="operation"
+						class="btn btn-primary btn-md" style="font-size: 17px"
+						value="<%=LocationListCtl.OP_NEW%>"></td>
+
+					<td><input type="submit" name="operation"
+						class="btn btn-danger btn-md" style="font-size: 17px"
+						value="<%=LocationListCtl.OP_DELETE%>"></td>
+
+					<td align="right"><input type="submit" name="operation"
+						class="btn btn-warning btn-md" style="font-size: 17px"
+						value="<%=LocationListCtl.OP_NEXT%>"
+						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
+
+				</tr>
+
+			</table>
+
+			<%
+				}
+
+				if (list.size() == 0) {
+			%>
+
+			<center>
+
+				<h1 style="font-size: 40px; color: #162390;">Location List</h1>
+
+			</center>
+
+			<br>
+
+			<div class="row">
+
+				<div class="col-md-4"></div>
+
+				<%
+					if (!ServletUtility.getErrorMessage(request).equals("")) {
+				%>
+
+				<div class="col-md-4 alert alert-danger alert-dismissible">
+
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+
+					<h4>
+
+						<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
+
+						</font>
+
+					</h4>
+
+				</div>
+
+				<%
+					}
+				%>
+
+				<div class="col-md-4"></div>
+
+			</div>
+
+			<br>
+
+			<div style="padding-left: 48%;">
+
+				<input type="submit" name="operation" class="btn btn-primary btn-md"
+					style="font-size: 17px" value="<%=LocationListCtl.OP_BACK%>">
+
+			</div>
+
+			<%
+				}
+			%>
+
+			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
+				type="hidden" name="pageSize" value="<%=pageSize%>">
+
 		</form>
 
 	</div>
 
 </body>
+
 <%@include file="FooterView.jsp"%>
 
 </html>

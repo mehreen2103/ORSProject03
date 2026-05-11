@@ -58,8 +58,9 @@
         <mapping resource="in/co/rays/project_3/hbm/StockDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/DataDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/UserProfileDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/HostelDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" />
+       <!--  <mapping resource="in/co/rays/project_3/hbm/HostelDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" /> -->
+        <mapping resource="in/co/rays/project_3/hbm/LocationDTO.hbm.xml" /> 
 
 
 	</session-factory>

@@ -18,8 +18,8 @@
 		<property name="country" type="java.lang.String">
 			<column name="COUNTRY" />
 		</property>
-		<property name="status" type="java.lang.String">
-			<column name="STATUS" />
+		<property name="locationstatus" type="java.lang.String">
+			<column name="LOCATIONSTATUS" />
 		</property>
 		<property name="createdBy" type="java.lang.String"
 			length="50">

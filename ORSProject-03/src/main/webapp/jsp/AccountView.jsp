@@ -22,6 +22,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
+
 i.css {
 	border: 2px solid #8080803b;
 	padding-left: 10px;
