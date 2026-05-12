@@ -47,7 +47,7 @@ public class RegistrationModelHibImpl implements RegistrationModelInt {
 		
 		RegistrationDTO existDto = findByCode(dto.getRegistrationCode());
 		
-		if (existDto!= null && existDto.getId() != dto.getId() ) {
+		if (existDto != null && existDto.getId() != dto.getId()) {
 			throw new DuplicateRecordException("Registration Already exists");
 		}
 		
@@ -109,18 +109,37 @@ public class RegistrationModelHibImpl implements RegistrationModelInt {
 
 	@Override
 	public RegistrationDTO findByCode(String registrationCode) throws ApplicationException {
-	
+
 		RegistrationDTO dto = null;
 		Session session = null;
-		
+
 		try {
+
 			session = HibDataSource.getSession();
+
 			Criteria criteria = session.createCriteria(RegistrationDTO.class);
-			
+
+			criteria.add(Restrictions.eq("registrationCode", registrationCode));
+
+			List list = criteria.list();
+
+			if (list.size() > 0) {
+				dto = (RegistrationDTO) list.get(0);
+			}
+
 		} catch (Exception e) {
+
 			e.printStackTrace();
-			throw new ApplicationException("Exception in Registration by code" + e.getMessage());
+
+			throw new ApplicationException("Exception in Registration By Code " + e.getMessage());
+
+		} finally {
+
+			if (session != null) {
+				session.close();
+			}
 		}
+
 		return dto;
 	}
 
@@ -159,7 +178,7 @@ public class RegistrationModelHibImpl implements RegistrationModelInt {
 				}
 				
 				if (dto.getStatus() != null && dto.getStatus().length() > 0) {
-					criteria.add(Restrictions.like("locationstatus", dto.getStatus()));
+					criteria.add(Restrictions.like("status", dto.getStatus()));
 				}
 
 			}
