@@ -12,6 +12,8 @@ public class StudentDTO extends BaseDTO {
 
 	/**
 	 * 
+	 * 
+	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private String firstName;

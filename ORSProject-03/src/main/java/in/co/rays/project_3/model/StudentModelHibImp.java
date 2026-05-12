@@ -28,6 +28,7 @@ public class StudentModelHibImp implements StudentModelInt {
 
 		CollegeModelInt collegemod = ModelFactory.getInstance().getCollegeModel();
 		CollegeDTO collegedto = collegemod.findByPK(dto.getCollegeId());
+		
 		dto.setCollegeName(collegedto.getName());
 		long pk = 0;
 		try {

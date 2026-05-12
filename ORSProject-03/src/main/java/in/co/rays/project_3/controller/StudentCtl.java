@@ -91,8 +91,8 @@ public class StudentCtl extends BaseCtl {
 			request.setAttribute("emailId", PropertyReader.getValue("error.email", "Email "));
 			pass = false;
 		}
-		if (DataValidator.isNull(request.getParameter("college"))) {
-			request.setAttribute("college", PropertyReader.getValue("error.require", "College Name"));
+		if (DataValidator.isNull(request.getParameter("collegeId"))) {
+			request.setAttribute("collegeId", PropertyReader.getValue("error.require", "College Name"));
 			pass = false;
 		}
 		if (DataValidator.isNull(dob)) {
