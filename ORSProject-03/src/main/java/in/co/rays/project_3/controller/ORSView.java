@@ -191,4 +191,10 @@ public interface ORSView {
 
 	public String LOCATION_VIEW = "/jsp/LocationView.jsp";
 	public String LOCATION_LIST_VIEW = "/jsp/LocationListView.jsp";
+	
+	public String REGISTRATION_CTL = APP_CONTEXT + "/ctl/RegistrationCtl";
+	public String REGISTRATION_LIST_CTL = APP_CONTEXT + "/ctl/RegistrationListCtl";
+
+	public String REGISTRATION_VIEW = "/jsp/RegistrationView.jsp";
+	public String REGISTRATION_LIST_VIEW = "/jsp/RegistrationListView.jsp";
 }

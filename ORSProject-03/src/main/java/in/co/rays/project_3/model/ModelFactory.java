@@ -469,5 +469,23 @@ public final class ModelFactory {
 		}
 		return locationmodel;
 	}
+	
+	public RegistrationModelInt getRegistrationModel() {
+
+		RegistrationModelInt registrationmodel = (RegistrationModelInt) modelCache.get("registrationmodel");
+
+		if (registrationmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				registrationmodel = new RegistrationModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("registrationmodel", registrationmodel);
+
+		}
+		return registrationmodel;
+	}
 
 }

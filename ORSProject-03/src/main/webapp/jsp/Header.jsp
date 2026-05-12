@@ -342,17 +342,17 @@
 				<!--                                     <i class="fa fa-list"></i> Stock List </a> -->
 				<!--                                  </div> -->
 				<!--                         </li> -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Data</a>
+<!-- 				<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;"> Data</a> -->
 
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="<%=ORSView.DATA_CTL%>"> <i
-							class="fa fa-database"></i> Add Data
-						</a> <a class="dropdown-item" href="<%=ORSView.DATA_LIST_CTL%>"> <i
-							class="fa fa-list"></i> Data List
-						</a>
-					</div></li>
+<!-- 					<div class="dropdown-menu"> -->
+<%-- 						<a class="dropdown-item" href="<%=ORSView.DATA_CTL%>"> <i --%>
+<!-- 							class="fa fa-database"></i> Add Data -->
+<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DATA_LIST_CTL%>"> <i --%>
+<!-- 							class="fa fa-list"></i> Data List -->
+<!-- 						</a> -->
+<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> User Profile </a>
@@ -366,20 +366,20 @@
 							<i class="fa fa-list"></i>User Profile List
 						</a>
 					</div></li>
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> Hostel</a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Hostel</a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
+				<!-- 					<div class="dropdown-menu"> -->
 
-<%-- 						<a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>"> <i --%>
-<!-- 							class="fa fa-home"></i> Add Hostel -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.HOSTEL_LIST_CTL%>"> --%>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>"> <i --%>
+				<!-- 							class="fa fa-home"></i> Add Hostel -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.HOSTEL_LIST_CTL%>"> --%>
 
-<!-- 							<i class="fa fa-list"></i>Hostel List -->
-<!-- 						</a> -->
+				<!-- 							<i class="fa fa-list"></i>Hostel List -->
+				<!-- 						</a> -->
 
-<!-- 					</div></li> -->
+				<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Account </a>
@@ -408,6 +408,23 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.LOCATION_LIST_CTL%>">
 
 							<i class="fa fa-list"></i> Location List
+
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Registration </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.REGISTRATION_CTL%>">
+
+							<i class="fa fa-id-card"></i> Add Registration
+
+						</a> <a class="dropdown-item"
+							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i
+							class="fa fa-list"></i> Registration List
 
 						</a>
 
