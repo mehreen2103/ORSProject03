@@ -488,4 +488,21 @@ public final class ModelFactory {
 		return registrationmodel;
 	}
 
+	public WeatherModelInt getWeatherModel() {
+
+		WeatherModelInt weathermodel = (WeatherModelInt) modelCache.get("weathermodel");
+
+		if (weathermodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				weathermodel = new WeatherModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("weathermodel", weathermodel);
+
+		}
+		return weathermodel;
+	}
 }

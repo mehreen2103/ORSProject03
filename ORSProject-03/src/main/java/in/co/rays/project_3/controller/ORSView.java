@@ -197,4 +197,10 @@ public interface ORSView {
 
 	public String REGISTRATION_VIEW = "/jsp/RegistrationView.jsp";
 	public String REGISTRATION_LIST_VIEW = "/jsp/RegistrationListView.jsp";
+	
+	public String WEATHER_CTL = APP_CONTEXT + "/ctl/WeatherCtl";
+	public String WEATHER_LIST_CTL = APP_CONTEXT + "/ctl/WeatherListCtl";
+
+	public String WEATHER_VIEW = "/jsp/WeatherView.jsp";
+	public String WEATHER_LIST_VIEW = "/jsp/WeatherListView.jsp";
 }

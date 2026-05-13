@@ -342,17 +342,17 @@
 				<!--                                     <i class="fa fa-list"></i> Stock List </a> -->
 				<!--                                  </div> -->
 				<!--                         </li> -->
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> Data</a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Data</a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
-<%-- 						<a class="dropdown-item" href="<%=ORSView.DATA_CTL%>"> <i --%>
-<!-- 							class="fa fa-database"></i> Add Data -->
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DATA_LIST_CTL%>"> <i --%>
-<!-- 							class="fa fa-list"></i> Data List -->
-<!-- 						</a> -->
-<!-- 					</div></li> -->
+				<!-- 					<div class="dropdown-menu"> -->
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.DATA_CTL%>"> <i --%>
+				<!-- 							class="fa fa-database"></i> Add Data -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DATA_LIST_CTL%>"> <i --%>
+				<!-- 							class="fa fa-list"></i> Data List -->
+				<!-- 						</a> -->
+				<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> User Profile </a>
@@ -380,22 +380,22 @@
 				<!-- 						</a> -->
 
 				<!-- 					</div></li> -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Account </a>
+<!-- 				<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;"> Account </a> -->
 
-					<div class="dropdown-menu">
+<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.ACCOUNT_CTL%>"> <i
-							class="fa fa-user-circle"></i> Add Account
+<%-- 						<a class="dropdown-item" href="<%=ORSView.ACCOUNT_CTL%>"> <i --%>
+<!-- 							class="fa fa-user-circle"></i> Add Account -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.ACCOUNT_LIST_CTL%>">
+<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.ACCOUNT_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Account List
+<!-- 							<i class="fa fa-list"></i> Account List -->
 
-						</a>
+<!-- 						</a> -->
 
-					</div></li>
+<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Location </a>
@@ -412,6 +412,7 @@
 						</a>
 
 					</div></li>
+					
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Registration </a>
@@ -425,6 +426,23 @@
 						</a> <a class="dropdown-item"
 							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i
 							class="fa fa-list"></i> Registration List
+
+						</a>
+
+					</div></li>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Weather </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.WEATHER_CTL%>"> <i
+							class="fa fa-cloud-sun"></i> Add Weather
+
+						</a> <a class="dropdown-item" href="<%=ORSView.WEATHER_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Weather List
 
 						</a>
 
