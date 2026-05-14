@@ -505,4 +505,23 @@ public final class ModelFactory {
 		}
 		return weathermodel;
 	}
+	
+	public PasswordModelInt getPasswordModel() {
+
+		PasswordModelInt passwordmodel = (PasswordModelInt) modelCache.get("passwordmodel");
+
+		if (passwordmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				passwordmodel = new PasswordModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("passwordmodel", passwordmodel);
+
+		}
+		return passwordmodel;
+	}
+
 }

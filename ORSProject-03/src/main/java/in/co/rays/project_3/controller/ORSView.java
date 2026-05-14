@@ -203,4 +203,10 @@ public interface ORSView {
 
 	public String WEATHER_VIEW = "/jsp/WeatherView.jsp";
 	public String WEATHER_LIST_VIEW = "/jsp/WeatherListView.jsp";
+	
+	public String PASSWORD_CTL = APP_CONTEXT + "/ctl/PasswordCtl";
+	public String PASSWORD_LIST_CTL = APP_CONTEXT + "/ctl/PasswordListCtl";
+
+	public String PASSWORD_VIEW = "/jsp/PasswordView.jsp";
+	public String PASSWORD_LIST_VIEW = "/jsp/PasswordListView.jsp";
 }

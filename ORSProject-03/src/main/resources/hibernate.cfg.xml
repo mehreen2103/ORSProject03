@@ -62,7 +62,8 @@
         <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/LocationDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/RegistrationDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/WeatherDTO.hbm.xml" /> 
+        <mapping resource="in/co/rays/project_3/hbm/WeatherDTO.hbm.xml" />
+        <mapping resource="in/co/rays/project_3/hbm/PasswordDTO.hbm.xml" /> 
         
         
 	</session-factory>
