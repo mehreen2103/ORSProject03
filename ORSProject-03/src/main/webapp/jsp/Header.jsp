@@ -396,22 +396,22 @@
 				<!-- 						</a> -->
 
 				<!-- 					</div></li> -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Location </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Location </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.LOCATION_CTL%>"> <i
-							class="fa fa-map-marker-alt"></i> Add Location
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.LOCATION_CTL%>"> <i --%>
+				<!-- 							class="fa fa-map-marker-alt"></i> Add Location -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.LOCATION_LIST_CTL%>">
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.LOCATION_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Location List
+				<!-- 							<i class="fa fa-list"></i> Location List -->
 
-						</a>
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -458,6 +458,22 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.PASSWORD_LIST_CTL%>">
 
 							<i class="fa fa-list"></i> Password List
+
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Podcast </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.PODCAST_CTL%>"> <i
+							class="fa fa-podcast"></i> Add Podcast
+
+						</a> <a class="dropdown-item" href="<%=ORSView.PODCAST_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Podcast List
 
 						</a>
 

@@ -1,13 +1,10 @@
 package in.co.rays.project_3.model;
-
 import java.util.List;
-
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-
 import in.co.rays.project_3.dto.PasswordDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
@@ -61,6 +58,7 @@ public class PasswordModelHibImpl implements PasswordModelInt{
 			tx.commit();
 			
 		} catch (Exception e) {
+			
 			e.printStackTrace();
 			tx.rollback();
 			throw new ApplicationException("Exception in update password" + e.getMessage());
@@ -102,16 +100,19 @@ public class PasswordModelHibImpl implements PasswordModelInt{
 		try {
 			session = HibDataSource.getSession();
 			dto = (PasswordDTO)  session.get(PasswordDTO.class, pk);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new ApplicationException("Exception in password by pk" + e.getMessage());
+			
 		}finally {
 			session.close();
 		}
 		return dto;
-
 		
 	}
+	
+	
 
 	@Override
 	public PasswordDTO findByCode(String passwordCode) throws ApplicationException {

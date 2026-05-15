@@ -209,4 +209,10 @@ public interface ORSView {
 
 	public String PASSWORD_VIEW = "/jsp/PasswordView.jsp";
 	public String PASSWORD_LIST_VIEW = "/jsp/PasswordListView.jsp";
+	
+	public String PODCAST_CTL = APP_CONTEXT + "/ctl/PodcastCtl";
+	public String PODCAST_LIST_CTL = APP_CONTEXT + "/ctl/PodcastListCtl";
+
+	public String PODCAST_VIEW = "/jsp/PodcastView.jsp";
+	public String PODCAST_LIST_VIEW = "/jsp/PodcastListView.jsp";
 }

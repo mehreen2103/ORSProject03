@@ -523,5 +523,23 @@ public final class ModelFactory {
 		}
 		return passwordmodel;
 	}
+	
+	public PodcastModelInt getPodcastModel() {
+
+		PodcastModelInt podcastmodel = (PodcastModelInt) modelCache.get("podcastmodel");
+
+		if (podcastmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				podcastmodel = new PodcastModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("podcastmodel", podcastmodel);
+
+		}
+		return podcastmodel;
+	}
 
 }

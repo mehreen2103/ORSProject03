@@ -1,14 +1,11 @@
 package in.co.rays.project_3.util;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import in.co.rays.project_3.controller.BaseCtl;
 import in.co.rays.project_3.controller.ORSView;
 import in.co.rays.project_3.dto.BaseDTO;
