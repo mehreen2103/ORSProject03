@@ -215,4 +215,10 @@ public interface ORSView {
 
 	public String PODCAST_VIEW = "/jsp/PodcastView.jsp";
 	public String PODCAST_LIST_VIEW = "/jsp/PodcastListView.jsp";
+	
+	public String NFTASSET_CTL = APP_CONTEXT + "/ctl/NFTAssetCtl";
+	public String NFTASSET_LIST_CTL = APP_CONTEXT + "/ctl/NFTAssetListCtl";
+
+	public String NFTASSET_VIEW = "/jsp/NFTAssetView.jsp";
+	public String NFTASSET_LIST_VIEW = "/jsp/NFTAssetListView.jsp";
 }

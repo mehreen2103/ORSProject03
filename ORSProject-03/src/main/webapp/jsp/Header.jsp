@@ -413,22 +413,22 @@
 
 				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Registration </a>
+<!-- 				<li class="nav-item dropdown"><a -->
+<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+<!-- 					style="color: white;"> Registration </a> -->
 
-					<div class="dropdown-menu">
+<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.REGISTRATION_CTL%>">
+<%-- 						<a class="dropdown-item" href="<%=ORSView.REGISTRATION_CTL%>"> --%>
 
-							<i class="fa fa-id-card"></i> Add Registration
+<!-- 							<i class="fa fa-id-card"></i> Add Registration -->
 
-						</a> <a class="dropdown-item"
-							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i
-							class="fa fa-list"></i> Registration List
-						</a>
+<!-- 						</a> <a class="dropdown-item" -->
+<%-- 							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i --%>
+<!-- 							class="fa fa-list"></i> Registration List -->
+<!-- 						</a> -->
 
-					</div></li>
+<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -479,6 +479,22 @@
 
 					</div></li>
 
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> NFT Asset </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.NFTASSET_CTL%>"> <i
+							class="fa fa-gem"></i> Add NFT Asset
+
+						</a> <a class="dropdown-item" href="<%=ORSView.NFTASSET_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> NFT Asset List
+
+						</a>
+
+					</div></li>
 				<%
 					}
 				%>

@@ -541,5 +541,23 @@ public final class ModelFactory {
 		}
 		return podcastmodel;
 	}
+	
+	public NFTAssetModelInt getNFTAssetModel() {
+
+		NFTAssetModelInt nftassetmodel = (NFTAssetModelInt) modelCache.get("nftassetmodel");
+
+		if (nftassetmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				nftassetmodel = new NFTAssetModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("nftassetmodel", nftassetmodel);
+
+		}
+		return nftassetmodel;
+	}
 
 }
