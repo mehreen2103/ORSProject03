@@ -221,4 +221,11 @@ public interface ORSView {
 
 	public String NFTASSET_VIEW = "/jsp/NFTAssetView.jsp";
 	public String NFTASSET_LIST_VIEW = "/jsp/NFTAssetListView.jsp";
+	
+	
+	public String COURIER_CTL = APP_CONTEXT + "/ctl/CourierCtl";
+	public String COURIER_LIST_CTL = APP_CONTEXT + "/ctl/CourierListCtl";
+
+	public String COURIER_VIEW = "/jsp/CourierView.jsp";
+	public String COURIER_LIST_VIEW = "/jsp/CourierListView.jsp";
 }

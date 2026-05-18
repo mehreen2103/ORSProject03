@@ -413,39 +413,39 @@
 
 				<!-- 					</div></li> -->
 
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> Registration </a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Registration </a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
+				<!-- 					<div class="dropdown-menu"> -->
 
-<%-- 						<a class="dropdown-item" href="<%=ORSView.REGISTRATION_CTL%>"> --%>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.REGISTRATION_CTL%>"> --%>
 
-<!-- 							<i class="fa fa-id-card"></i> Add Registration -->
+				<!-- 							<i class="fa fa-id-card"></i> Add Registration -->
 
-<!-- 						</a> <a class="dropdown-item" -->
-<%-- 							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i --%>
-<!-- 							class="fa fa-list"></i> Registration List -->
-<!-- 						</a> -->
+				<!-- 						</a> <a class="dropdown-item" -->
+				<%-- 							href="<%=ORSView.REGISTRATION_LIST_CTL%>"> <i --%>
+				<!-- 							class="fa fa-list"></i> Registration List -->
+				<!-- 						</a> -->
 
-<!-- 					</div></li> -->
+				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Weather </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Weather </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.WEATHER_CTL%>"> <i
-							class="fa fa-cloud-sun"></i> Add Weather
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.WEATHER_CTL%>"> <i --%>
+				<!-- 							class="fa fa-cloud-sun"></i> Add Weather -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.WEATHER_LIST_CTL%>">
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.WEATHER_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Weather List
+				<!-- 							<i class="fa fa-list"></i> Weather List -->
 
-						</a>
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Password </a>
@@ -462,22 +462,22 @@
 						</a>
 
 					</div></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Podcast </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Podcast </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.PODCAST_CTL%>"> <i
-							class="fa fa-podcast"></i> Add Podcast
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.PODCAST_CTL%>"> <i --%>
+				<!-- 							class="fa fa-podcast"></i> Add Podcast -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.PODCAST_LIST_CTL%>">
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.PODCAST_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Podcast List
+				<!-- 							<i class="fa fa-list"></i> Podcast List -->
 
-						</a>
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -491,6 +491,23 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.NFTASSET_LIST_CTL%>">
 
 							<i class="fa fa-list"></i> NFT Asset List
+
+						</a>
+
+					</div></li>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Courier </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.COURIER_CTL%>"> <i
+							class="fa fa-truck"></i> Add Courier
+
+						</a> <a class="dropdown-item" href="<%=ORSView.COURIER_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Courier List
 
 						</a>
 

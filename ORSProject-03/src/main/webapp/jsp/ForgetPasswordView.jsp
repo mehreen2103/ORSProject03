@@ -22,7 +22,7 @@ i.css {
 }
 
 .p4 {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/Linkme.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/stars.jpeg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	padding-top: 120px;
@@ -36,6 +36,12 @@ i.css {
 	7px
 	#001a33;
 }
+}
+.card-body {
+    background-image: linear-gradient(to bottom right, #472372,#e4d0ff);
+    box-shadow: 5px 8px 7px #001a33;
+    color: white;
+    border-radius: 10px;
 }
 </style>
 </head>
@@ -54,9 +60,9 @@ i.css {
 				<div class="col-md-4">
 					<div class="card input-group-addon">
 						<div class="card-body">
-							<h3 class="text-center default-text text-primary">Forget
+							<h3 class="text-center default-text text-purple">Forget
 								Your Password?</h3>
-							<p class="text-center default-text text-info"
+							<p class="text-center default-text text-purple"
 								style="font-size: 11px;">Submit your Email Address and we
 								will Send You password</p>
 

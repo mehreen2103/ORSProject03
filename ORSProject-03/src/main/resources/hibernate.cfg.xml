@@ -66,6 +66,7 @@
         <mapping resource="in/co/rays/project_3/hbm/PasswordDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/PodcastDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/NFTAssetDTO.hbm.xml" /> 
+        <mapping resource="in/co/rays/project_3/hbm/CourierDTO.hbm.xml" /> 
         
         
 	</session-factory>

@@ -560,4 +560,22 @@ public final class ModelFactory {
 		return nftassetmodel;
 	}
 
+	public CourierModelInt getCourierModel() {
+
+		CourierModelInt couriermodel = (CourierModelInt) modelCache.get("couriermodel");
+
+		if (couriermodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				couriermodel = new CourierModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("couriermodel", couriermodel);
+
+		}
+		return couriermodel;
+	}
+
 }
