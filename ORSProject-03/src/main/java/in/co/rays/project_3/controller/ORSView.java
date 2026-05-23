@@ -11,7 +11,7 @@ package in.co.rays.project_3.controller;
  *
  */
 public interface ORSView {
-	
+
 	public String APP_CONTEXT = "/ORSProject-03";
 
 	public String PAGE_FOLDER = "/jsp";
@@ -21,9 +21,8 @@ public interface ORSView {
 	public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView404.jsp";
 
 	public String MARKSHEET_VIEW = PAGE_FOLDER + "/MarksheetView.jsp";
-	
-	public String JASPER_CTL = APP_CONTEXT + "/ctl/JasperCtl";
 
+	public String JASPER_CTL = APP_CONTEXT + "/ctl/JasperCtl";
 
 	public String MARKSHEET_LIST_VIEW = PAGE_FOLDER + "/MarksheetListView.jsp";
 	public String GET_MARKSHEET_VIEW = PAGE_FOLDER + "/GetMarksheetView.jsp";
@@ -53,7 +52,6 @@ public interface ORSView {
 	public String SUBJECT_LIST_VIEW = PAGE_FOLDER + "/SubjectListView.jsp";
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -87,12 +85,11 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
-	
-	
+
 	// USERCASE
 	public String PROFILE_CTL = APP_CONTEXT + "/ctl/ProfileCtl";
 	public String PROFILE_LIST_CTL = APP_CONTEXT + "/ctl/ProfileListCtl";
-	
+
 	public String PROFILE_VIEW = PAGE_FOLDER + "/ProfileView.jsp";
 	public String PROFILE_LIST_VIEW = PAGE_FOLDER + "/ProfileListView.jsp";
 
@@ -101,55 +98,55 @@ public interface ORSView {
 
 	public String BROKER_VIEW = PAGE_FOLDER + "/BrokerView.jsp";
 	public String BROKER_LIST_VIEW = PAGE_FOLDER + "/BrokerListView.jsp";
-	
+
 	public String PHOTOGRAPHER_CTL = APP_CONTEXT + "/ctl/PhotographerCtl";
 	public String PHOTOGRAPHER_LIST_CTL = APP_CONTEXT + "/ctl/PhotographerListCtl";
 
 	public String PHOTOGRAPHER_VIEW = PAGE_FOLDER + "/PhotographerView.jsp";
 	public String PHOTOGRAPHER_LIST_VIEW = PAGE_FOLDER + "/PhotographerListView.jsp";
-	
+
 	public String DASHBOARD_CTL = APP_CONTEXT + "/ctl/DashboardCtl";
 	public String DASHBOARD_LIST_CTL = APP_CONTEXT + "/ctl/DashboardListCtl";
 
 	public String DASHBOARD_VIEW = PAGE_FOLDER + "/DashboardView.jsp";
 	public String DASHBOARD_LIST_VIEW = PAGE_FOLDER + "/DashboardListView.jsp";
-	
+
 	public String BUILD_CTL = APP_CONTEXT + "/ctl/BuildCtl";
 	public String BUILD_LIST_CTL = APP_CONTEXT + "/ctl/BuildListCtl";
 
 	public String BUILD_VIEW = PAGE_FOLDER + "/BuildView.jsp";
 	public String BUILD_LIST_VIEW = PAGE_FOLDER + "/BuildListView.jsp";
-	
+
 	public String MEDIA_CTL = APP_CONTEXT + "/ctl/MediaCtl";
 	public String MEDIA_LIST_CTL = APP_CONTEXT + "/ctl/MediaListCtl";
 
 	public String MEDIA_VIEW = PAGE_FOLDER + "/MediaView.jsp";
 	public String MEDIA_LIST_VIEW = PAGE_FOLDER + "/MediaListView.jsp";
-	
+
 	public String DATAIMPORT_CTL = APP_CONTEXT + "/ctl/DataImportCtl";
 	public String DATAIMPORT_LIST_CTL = APP_CONTEXT + "/ctl/DataImportListCtl";
 
 	public String DATAIMPORT_VIEW = PAGE_FOLDER + "/DataImportView.jsp";
 	public String DATAIMPORT_LIST_VIEW = PAGE_FOLDER + "/DataImportListView.jsp";
-	
+
 	public String DEVICE_CTL = APP_CONTEXT + "/ctl/DeviceCtl";
 	public String DEVICE_LIST_CTL = APP_CONTEXT + "/ctl/DeviceListCtl";
 
 	public String DEVICE_VIEW = PAGE_FOLDER + "/DeviceView.jsp";
 	public String DEVICE_LIST_VIEW = PAGE_FOLDER + "/DeviceListView.jsp";
-	
+
 	public String BROADCAST_CTL = APP_CONTEXT + "/ctl/BroadcastCtl";
 	public String BROADCAST_LIST_CTL = APP_CONTEXT + "/ctl/BroadcastListCtl";
 
 	public String BROADCAST_VIEW = PAGE_FOLDER + "/BroadcastView.jsp";
 	public String BROADCAST_LIST_VIEW = PAGE_FOLDER + "/BroadcastListView.jsp";
-	
+
 	public String GEOFENCE_CTL = APP_CONTEXT + "/ctl/GeoFenceCtl";
 	public String GEOFENCE_LIST_CTL = APP_CONTEXT + "/ctl/GeoFenceListCtl";
 
 	public String GEOFENCE_VIEW = PAGE_FOLDER + "/GeoFenceView.jsp";
 	public String GEOFENCE_LIST_VIEW = PAGE_FOLDER + "/GeoFenceListView.jsp";
-	
+
 	public String CACHE_CTL = APP_CONTEXT + "/ctl/CacheCtl";
 	public String CACHE_LIST_CTL = APP_CONTEXT + "/ctl/CacheListCtl";
 
@@ -161,74 +158,73 @@ public interface ORSView {
 
 	public String STOCK_VIEW = PAGE_FOLDER + "/StockView.jsp";
 	public String STOCK_LIST_VIEW = PAGE_FOLDER + "/StockListView.jsp";
-	
+
 	public String DATA_CTL = APP_CONTEXT + "/ctl/DataCtl";
 	public String DATA_LIST_CTL = APP_CONTEXT + "/ctl/DataListCtl";
 
 	public String DATA_VIEW = PAGE_FOLDER + "/DataView.jsp";
 	public String DATA_LIST_VIEW = PAGE_FOLDER + "/DataListView.jsp";
-	
+
 	public String USERPROFILE_CTL = APP_CONTEXT + "/ctl/UserProfileCtl";
 	public String USERPROFILE_LIST_CTL = APP_CONTEXT + "/ctl/UserProfileListCtl";
 
 	public String USERPROFILE_VIEW = PAGE_FOLDER + "/UserProfileView.jsp";
 	public String USERPROFILE_LIST_VIEW = PAGE_FOLDER + "/UserProfileListView.jsp";
-	
+
 	public String HOSTEL_CTL = APP_CONTEXT + "/ctl/HostelCtl";
 	public String HOSTEL_LIST_CTL = APP_CONTEXT + "/ctl/HostelListCtl";
 
 	public String HOSTEL_VIEW = PAGE_FOLDER + "/HostelView.jsp";
 	public String HOSTEL_LIST_VIEW = PAGE_FOLDER + "/HostelListView.jsp";
-	
+
 	public String ACCOUNT_CTL = APP_CONTEXT + "/ctl/AccountCtl";
 	public String ACCOUNT_LIST_CTL = APP_CONTEXT + "/ctl/AccountListCtl";
 
 	public String ACCOUNT_VIEW = PAGE_FOLDER + "/AccountView.jsp";
 	public String ACCOUNT_LIST_VIEW = PAGE_FOLDER + "/AccountListView.jsp";
-	
+
 	public String LOCATION_CTL = APP_CONTEXT + "/ctl/LocationCtl";
 	public String LOCATION_LIST_CTL = APP_CONTEXT + "/ctl/LocationListCtl";
 
 	public String LOCATION_VIEW = "/jsp/LocationView.jsp";
 	public String LOCATION_LIST_VIEW = "/jsp/LocationListView.jsp";
-	
+
 	public String REGISTRATION_CTL = APP_CONTEXT + "/ctl/RegistrationCtl";
 	public String REGISTRATION_LIST_CTL = APP_CONTEXT + "/ctl/RegistrationListCtl";
 
 	public String REGISTRATION_VIEW = "/jsp/RegistrationView.jsp";
 	public String REGISTRATION_LIST_VIEW = "/jsp/RegistrationListView.jsp";
-	
+
 	public String WEATHER_CTL = APP_CONTEXT + "/ctl/WeatherCtl";
 	public String WEATHER_LIST_CTL = APP_CONTEXT + "/ctl/WeatherListCtl";
 
 	public String WEATHER_VIEW = "/jsp/WeatherView.jsp";
 	public String WEATHER_LIST_VIEW = "/jsp/WeatherListView.jsp";
-	
+
 	public String PASSWORD_CTL = APP_CONTEXT + "/ctl/PasswordCtl";
 	public String PASSWORD_LIST_CTL = APP_CONTEXT + "/ctl/PasswordListCtl";
 
 	public String PASSWORD_VIEW = "/jsp/PasswordView.jsp";
 	public String PASSWORD_LIST_VIEW = "/jsp/PasswordListView.jsp";
-	
+
 	public String PODCAST_CTL = APP_CONTEXT + "/ctl/PodcastCtl";
 	public String PODCAST_LIST_CTL = APP_CONTEXT + "/ctl/PodcastListCtl";
 
 	public String PODCAST_VIEW = "/jsp/PodcastView.jsp";
 	public String PODCAST_LIST_VIEW = "/jsp/PodcastListView.jsp";
-	
+
 	public String NFTASSET_CTL = APP_CONTEXT + "/ctl/NFTAssetCtl";
 	public String NFTASSET_LIST_CTL = APP_CONTEXT + "/ctl/NFTAssetListCtl";
 
 	public String NFTASSET_VIEW = "/jsp/NFTAssetView.jsp";
 	public String NFTASSET_LIST_VIEW = "/jsp/NFTAssetListView.jsp";
-	
-	
+
 	public String COURIER_CTL = APP_CONTEXT + "/ctl/CourierCtl";
 	public String COURIER_LIST_CTL = APP_CONTEXT + "/ctl/CourierListCtl";
 
 	public String COURIER_VIEW = "/jsp/CourierView.jsp";
 	public String COURIER_LIST_VIEW = "/jsp/CourierListView.jsp";
-	
+
 	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
 	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
 
