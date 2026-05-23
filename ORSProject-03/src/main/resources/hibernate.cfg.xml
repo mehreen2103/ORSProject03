@@ -59,14 +59,8 @@
         <mapping resource="in/co/rays/project_3/hbm/DataDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/UserProfileDTO.hbm.xml" />
         <mapping resource="in/co/rays/project_3/hbm/HostelDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/LocationDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/RegistrationDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/WeatherDTO.hbm.xml" />
-        <mapping resource="in/co/rays/project_3/hbm/PasswordDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/PodcastDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/NFTAssetDTO.hbm.xml" /> 
-        <mapping resource="in/co/rays/project_3/hbm/CourierDTO.hbm.xml" /> 
+        <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" />  
+        <mapping resource="in/co/rays/project_3/hbm/EmployeeDTO.hbm.xml" /> 
         
         
 	</session-factory>

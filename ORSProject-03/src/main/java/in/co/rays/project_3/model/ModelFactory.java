@@ -577,5 +577,23 @@ public final class ModelFactory {
 		}
 		return couriermodel;
 	}
+	
+	public EmployeeModelInt getEmployeeModel() {
+
+		EmployeeModelInt employeemodel = (EmployeeModelInt) modelCache.get("employeemodel");
+
+		if (employeemodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				employeemodel = new EmployeeModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("employeemodel", employeemodel);
+
+		}
+		return employeemodel;
+	}
 
 }

@@ -228,4 +228,10 @@ public interface ORSView {
 
 	public String COURIER_VIEW = "/jsp/CourierView.jsp";
 	public String COURIER_LIST_VIEW = "/jsp/CourierListView.jsp";
+	
+	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
+	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
+
+	public String EMPLOYEE_VIEW = "/jsp/EmployeeView.jsp";
+	public String EMPLOYEE_LIST_VIEW = "/jsp/EmployeeListView.jsp";
 }
