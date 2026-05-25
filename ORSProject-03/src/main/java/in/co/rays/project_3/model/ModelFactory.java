@@ -595,5 +595,23 @@ public final class ModelFactory {
 		}
 		return employeemodel;
 	}
+	
+	public CryptoWalletModelInt getCryptoWalletModel() {
+
+		CryptoWalletModelInt cryptowalletmodel = (CryptoWalletModelInt) modelCache.get("cryptowalletmodel");
+
+		if (cryptowalletmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				cryptowalletmodel = new CyptoWalletModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("cryptowalletmodel", cryptowalletmodel);
+
+		}
+		return cryptowalletmodel;
+	}
 
 }

@@ -193,11 +193,15 @@ public class UserCtl extends BaseCtl {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		
 		String op = DataUtility.getString(request.getParameter("operation"));
 		// get model
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
+		
 		long id = DataUtility.getLong(request.getParameter("id"));
+		
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
+			
 			UserDTO dto = (UserDTO) populateDTO(request);
 			try {
 				if (id > 0) {
@@ -219,6 +223,7 @@ public class UserCtl extends BaseCtl {
 					}
 
 				}
+				ServletUtility.setDto(dto, request);
 			//	
 
 			} catch (ApplicationException e) {

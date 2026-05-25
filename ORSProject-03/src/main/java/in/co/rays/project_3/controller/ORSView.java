@@ -230,4 +230,11 @@ public interface ORSView {
 
 	public String EMPLOYEE_VIEW = "/jsp/EmployeeView.jsp";
 	public String EMPLOYEE_LIST_VIEW = "/jsp/EmployeeListView.jsp";
+
+	public String CRYPTOWALLET_CTL = APP_CONTEXT + "/ctl/CryptoWalletCtl";
+	public String CRYPTOWALLET_LIST_CTL = APP_CONTEXT + "/ctl/CryptoWalletListCtl";
+
+	public String CRYPTOWALLET_VIEW = "/jsp/CryptoWalletView.jsp";
+	public String CRYPTOWALLET_LIST_VIEW = "/jsp/CryptoWalletListView.jsp";
+
 }

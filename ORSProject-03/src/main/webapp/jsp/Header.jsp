@@ -479,22 +479,22 @@
 
 				<!-- 					</div></li> -->
 
-<!-- 				<li class="nav-item dropdown"><a -->
-<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
-<!-- 					style="color: white;"> NFT Asset </a> -->
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> NFT Asset </a> -->
 
-<!-- 					<div class="dropdown-menu"> -->
+				<!-- 					<div class="dropdown-menu"> -->
 
-<%-- 						<a class="dropdown-item" href="<%=ORSView.NFTASSET_CTL%>"> <i --%>
-<!-- 							class="fa fa-gem"></i> Add NFT Asset -->
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.NFTASSET_CTL%>"> <i --%>
+				<!-- 							class="fa fa-gem"></i> Add NFT Asset -->
 
-<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.NFTASSET_LIST_CTL%>"> --%>
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.NFTASSET_LIST_CTL%>"> --%>
 
-<!-- 							<i class="fa fa-list"></i> NFT Asset List -->
+				<!-- 							<i class="fa fa-list"></i> NFT Asset List -->
 
-<!-- 						</a> -->
+				<!-- 						</a> -->
 
-<!-- 					</div></li> -->
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -522,6 +522,20 @@
 							class="fa fa-user-tie"></i> Add Employee
 						</a> <a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>">
 							<i class="fa fa-list"></i> Employee List
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Crypto Wallet </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.CRYPTOWALLET_CTL%>">
+							<i class="fa fa-wallet"></i> Add Crypto Wallet
+						</a> <a class="dropdown-item"
+							href="<%=ORSView.CRYPTOWALLET_LIST_CTL%>"> <i
+							class="fa fa-list"></i> Crypto Wallet List
 						</a>
 
 					</div></li>
