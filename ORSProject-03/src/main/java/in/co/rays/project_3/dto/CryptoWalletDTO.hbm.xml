@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-May-2026, 11:02:47 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="in.co.rays.project_3.dto.CryptoWalletDTO" table="ST_CRYPTOWALLET">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="coinName" type="java.lang.String">
+            <column name="COINNAME" />
+        </property>
+        <property name="quantity" type="java.lang.String">
+            <column name="QUANTITY" />
+        </property>
+        <property name="currentPrice" type="java.lang.String">
+            <column name="CURRENTPRICE" />
+        </property>
+        <property name="totalValue" type="java.lang.String">
+            <column name="TOTALVALUE" />
+        </property>
+        <property name="createdBy" type="java.lang.String">
+			<column name="CREATEDBY" />
+		</property>
+		<property name="modifiedBy" type="java.lang.String">
+			<column name="MODIFIEDBY" />
+		</property>
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATEDDATETIME" />
+		</property>
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIEDDATETIME" />
+		</property>
+    </class>
+</hibernate-mapping>

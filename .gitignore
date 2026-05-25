@@ -1,0 +1,21 @@
+# MySQL Data Folder
+mysql-data/
+ORSProject-03/mysql-data/
+
+# MySQL Files
+*.sock
+*.pid
+*.err
+*.ibd
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build Files
+target/
+bin/
+
+# Logs
+*.log
