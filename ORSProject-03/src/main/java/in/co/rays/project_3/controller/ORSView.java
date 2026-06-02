@@ -236,5 +236,11 @@ public interface ORSView {
 
 	public String CRYPTOWALLET_VIEW = "/jsp/CryptoWalletView.jsp";
 	public String CRYPTOWALLET_LIST_VIEW = "/jsp/CryptoWalletListView.jsp";
+	
+	public String REPORT_CTL = APP_CONTEXT + "/ctl/ReportCtl";
+	public String REPORT_LIST_CTL = APP_CONTEXT + "/ctl/ReportListCtl";
+
+	public String REPORT_VIEW = "/jsp/ReportView.jsp";
+	public String REPORT_LIST_VIEW = "/jsp/ReportListView.jsp";
 
 }

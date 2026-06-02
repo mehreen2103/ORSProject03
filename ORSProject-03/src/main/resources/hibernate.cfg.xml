@@ -62,6 +62,7 @@
         <mapping resource="in/co/rays/project_3/hbm/AccountDTO.hbm.xml" />  
         <mapping resource="in/co/rays/project_3/hbm/EmployeeDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/CryptoWalletDTO.hbm.xml" /> 
+        <mapping resource="in/co/rays/project_3/hbm/ReportDTO.hbm.xml" /> 
         
         
 	</session-factory>

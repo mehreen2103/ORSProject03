@@ -496,22 +496,22 @@
 
 				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Courier </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Courier </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.COURIER_CTL%>"> <i
-							class="fa fa-truck"></i> Add Courier
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.COURIER_CTL%>"> <i --%>
+				<!-- 							class="fa fa-truck"></i> Add Courier -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.COURIER_LIST_CTL%>">
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.COURIER_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Courier List
+				<!-- 							<i class="fa fa-list"></i> Courier List -->
 
-						</a>
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Employee </a>
@@ -536,6 +536,19 @@
 						</a> <a class="dropdown-item"
 							href="<%=ORSView.CRYPTOWALLET_LIST_CTL%>"> <i
 							class="fa fa-list"></i> Crypto Wallet List
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Report </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.REPORT_CTL%>"> <i
+							class="fa fa-file-alt"></i> Add Report
+						</a> <a class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>">
+							<i class="fa fa-list"></i> Report List
 						</a>
 
 					</div></li>

@@ -613,5 +613,24 @@ public final class ModelFactory {
 		}
 		return cryptowalletmodel;
 	}
+	
+	public ReportModelInt getReportModel() {
+
+		ReportModelInt reportmodel = (ReportModelInt) modelCache.get("reportmodel");
+
+		if (reportmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				reportmodel = new ReportModelHibImpl();
+			}
+			
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("reportmodel", reportmodel);
+
+		}
+		return reportmodel;
+	}
 
 }

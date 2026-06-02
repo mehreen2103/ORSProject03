@@ -28,7 +28,9 @@ public class HibDataSource {
             }
             System.out.println("Hibernate using DB URL = " + jdbcUrl);
             
-            sessionFactory = new Configuration().configure().buildSessionFactory();		}
+            sessionFactory = new Configuration().configure().buildSessionFactory();		
+            
+		}
 		return sessionFactory;
 	}
 
