@@ -243,4 +243,10 @@ public interface ORSView {
 	public String REPORT_VIEW = "/jsp/ReportView.jsp";
 	public String REPORT_LIST_VIEW = "/jsp/ReportListView.jsp";
 
+	public String DISPATCH_CTL = APP_CONTEXT + "/ctl/DispatchCtl";
+	public String DISPATCH_LIST_CTL = APP_CONTEXT + "/ctl/DispatchListCtl";
+
+	public String DISPATCH_VIEW = "/jsp/DispatchView.jsp";
+	public String DISPATCH_LIST_VIEW = "/jsp/DispatchListView.jsp";
+
 }

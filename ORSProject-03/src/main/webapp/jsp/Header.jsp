@@ -446,22 +446,22 @@
 				<!-- 						</a> -->
 
 				<!-- 					</div></li> -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Password </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Password </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.PASSWORD_CTL%>"> <i
-							class="fa fa-key"></i> Add Password
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.PASSWORD_CTL%>"> <i --%>
+				<!-- 							class="fa fa-key"></i> Add Password -->
 
-						</a> <a class="dropdown-item" href="<%=ORSView.PASSWORD_LIST_CTL%>">
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.PASSWORD_LIST_CTL%>"> --%>
 
-							<i class="fa fa-list"></i> Password List
+				<!-- 							<i class="fa fa-list"></i> Password List -->
 
-						</a>
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 				<!-- 				<li class="nav-item dropdown"><a -->
 				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
 				<!-- 					style="color: white;"> Podcast </a> -->
@@ -512,19 +512,20 @@
 				<!-- 						</a> -->
 
 				<!-- 					</div></li> -->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Employee </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Employee </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>"> <i
-							class="fa fa-user-tie"></i> Add Employee
-						</a> <a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>">
-							<i class="fa fa-list"></i> Employee List
-						</a>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>"> <i --%>
+				<!-- 							class="fa fa-user-tie"></i> Add Employee -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>"> --%>
+				<!-- 							<i class="fa fa-list"></i> Employee List -->
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
+
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Crypto Wallet </a>
@@ -536,9 +537,9 @@
 						</a> <a class="dropdown-item"
 							href="<%=ORSView.CRYPTOWALLET_LIST_CTL%>"> <i
 							class="fa fa-list"></i> Crypto Wallet List
-						</a>
-
+						</a> <br>
 					</div></li>
+
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
 					style="color: white;"> Report </a>
@@ -549,6 +550,19 @@
 							class="fa fa-file-alt"></i> Add Report
 						</a> <a class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>">
 							<i class="fa fa-list"></i> Report List
+						</a>
+					</div></li>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Dispatch </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.DISPATCH_CTL%>"> <i
+							class="fa fa-truck"></i> Add Dispatch
+						</a> <a class="dropdown-item" href="<%=ORSView.DISPATCH_LIST_CTL%>">
+							<i class="fa fa-list"></i> Dispatch List
 						</a>
 
 					</div></li>

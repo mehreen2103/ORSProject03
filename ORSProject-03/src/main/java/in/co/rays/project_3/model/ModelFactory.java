@@ -632,5 +632,25 @@ public final class ModelFactory {
 		}
 		return reportmodel;
 	}
+	
+
+	public DispatchModelInt getDispatchModel() {
+
+		DispatchModelInt dispatchmodel = (DispatchModelInt) modelCache.get("dispatchmodel");
+
+		if (dispatchmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				dispatchmodel = new DispatchModelHibImpl();
+			}
+			
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("dispatchmodel", dispatchmodel);
+
+		}
+		return dispatchmodel;
+	}
 
 }

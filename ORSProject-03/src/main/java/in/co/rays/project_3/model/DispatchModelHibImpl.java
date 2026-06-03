@@ -1,144 +1,137 @@
 package in.co.rays.project_3.model;
-
 import java.util.List;
-
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-
-import in.co.rays.project_3.dto.ReportDTO;
+import in.co.rays.project_3.dto.DispatchDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
 import in.co.rays.project_3.util.HibDataSource;
 
-public class ReportModelHibImpl implements ReportModelInt{
+public class DispatchModelHibImpl implements DispatchModelInt {
 
 	@Override
-	public void add(ReportDTO dto) throws ApplicationException, DuplicateRecordException {
-		
-		ReportDTO existsDto = findByName(dto.getReportType());
-		
+	public void add(DispatchDTO dto) throws ApplicationException, DuplicateRecordException {
+
+		DispatchDTO existsDto = findByName(dto.getCourierName());
+
 		if (existsDto != null) {
-			throw new DuplicateRecordException("Report type  Already exists");
+			throw new DuplicateRecordException("Courier Name  Already exists");
 		}
-		
-		
+
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
-		
-		 try {
+
+		try {
 			tx = session.beginTransaction();
 			session.save(dto);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
-			throw new ApplicationException("Exception in add report" + e.getMessage());
-			
-		}finally {
+			throw new ApplicationException("Exception in add dispatch" + e.getMessage());
+		} finally {
 			session.close();
 		}
-		
+
 	}
 
 	@Override
-	public void update(ReportDTO dto) throws ApplicationException, DuplicateRecordException {
+	public void update(DispatchDTO dto) throws ApplicationException, DuplicateRecordException {
 
+		DispatchDTO existDto = findByName(dto.getCourierName());
 
-		ReportDTO existDto = findByName(dto.getReportType());
-		
 		if (existDto != null && existDto.getId() != dto.getId()) {
-			throw new DuplicateRecordException("Report type  Already exists");
+			throw new DuplicateRecordException("courier name  Already exists");
 		}
-		
+
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
-		
-		 try {
+
+		try {
 			tx = session.beginTransaction();
 			session.update(dto);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
-			throw new ApplicationException("Exception in update report" + e.getMessage());
-			
-		}finally {
+			throw new ApplicationException("Exception in update dispatch" + e.getMessage());
+		} finally {
 			session.close();
 		}
-		
+
 	}
 
 	@Override
-	public void delete(ReportDTO dto) throws ApplicationException {
-		
+	public void delete(DispatchDTO dto) throws ApplicationException {
+
 		Session session = HibDataSource.getSession();
 		Transaction tx = null;
-		
-		 try {
+
+		try {
 			tx = session.beginTransaction();
 			session.delete(dto);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
-			throw new ApplicationException("Exception in delete report" + e.getMessage());
-			
-		}finally {
+			throw new ApplicationException("Exception in delete dispatch" + e.getMessage());
+		} finally {
 			session.close();
 		}
+
 	}
 
 	@Override
-	public ReportDTO findByPk(long pk) throws ApplicationException {
-		
-		ReportDTO dto = null;
+	public DispatchDTO findByPk(long pk) throws ApplicationException {
+
+		DispatchDTO dto = null;
 		Session session = null;
-		
+
 		try {
 			session = HibDataSource.getSession();
-			dto = (ReportDTO)  session.get(ReportDTO.class, pk);
-			
+			dto = (DispatchDTO) session.get(DispatchDTO.class, pk);
+
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new ApplicationException("Exception in report by pk" + e.getMessage());
-			
-		}finally {
+			throw new ApplicationException("Exception in dispatch by pk" + e.getMessage());
+
+		} finally {
 			session.close();
 		}
 		return dto;
 	}
 
 	@Override
-	public ReportDTO findByName(String reportType) throws ApplicationException {
-		
-		ReportDTO dto = null;
+	public DispatchDTO findByName(String courierName) throws ApplicationException {
+
+		DispatchDTO dto = null;
 		Session session = null;
 
 		try {
 
 			session = HibDataSource.getSession();
 
-			Criteria criteria = session.createCriteria(ReportDTO.class);
+			Criteria criteria = session.createCriteria(DispatchDTO.class);
 
-			criteria.add(Restrictions.eq("reportType", reportType));
+			criteria.add(Restrictions.eq("courierName", courierName));
 
 			List list = criteria.list();
 
 			if (list.size() > 0) {
-				dto = (ReportDTO) list.get(0);
+				dto = (DispatchDTO) list.get(0);
 			}
 
 		} catch (Exception e) {
 
 			e.printStackTrace();
 
-			throw new ApplicationException("Exception in report By Code " + e.getMessage());
+			throw new ApplicationException("Exception in dispatch By Code " + e.getMessage());
 
 		} finally {
 
@@ -148,42 +141,42 @@ public class ReportModelHibImpl implements ReportModelInt{
 		}
 
 		return dto;
+
 	}
 
 	@Override
 	public List list() throws ApplicationException {
-		
+
 		return search(null, 0, 0);
 	}
 
 	@Override
-	public List search(ReportDTO dto, int pageNo, int pageSize) throws ApplicationException {
-		
+	public List search(DispatchDTO dto, int pageNo, int pageSize) throws ApplicationException {
+
 		Session session = null;
 		List list = null;
 
 		try {
 			session = HibDataSource.getSession();
-			Criteria criteria = session.createCriteria(ReportDTO.class);
+			Criteria criteria = session.createCriteria(DispatchDTO.class);
 
 			if (dto != null) {
 
 				if (dto.getId() != null && dto.getId() > 0) {
 					criteria.add(Restrictions.eq("id", dto.getId()));
 				}
-				
-				if (dto.getReportType() != null && dto.getReportType().length() > 0) {
-					criteria.add(Restrictions.like("reportType", dto.getReportType() + "%"));
-				}
-				
-				if (dto.getGeneratedDate() != null) {
-				    criteria.add(Restrictions.eq("generatedDate", dto.getGeneratedDate()));
+
+				if (dto.getDispatchDate() != null) {
+					criteria.add(Restrictions.eq("dispatchDate", dto.getDispatchDate()));
 				}
 
-				if (dto.getRemarks() != null && dto.getRemarks().length() > 0) {
-					criteria.add(Restrictions.like("remarks", dto.getRemarks() + "%"));
+				if (dto.getStatus() != null && dto.getStatus().length() > 0) {
+					criteria.add(Restrictions.like("status", dto.getStatus() + "%"));
 				}
-				
+
+				if (dto.getCourierName() != null && dto.getCourierName().length() > 0) {
+					criteria.add(Restrictions.like("courierName", dto.getCourierName() + "%"));
+				}
 
 			}
 
@@ -196,7 +189,7 @@ public class ReportModelHibImpl implements ReportModelInt{
 			list = criteria.list();
 
 		} catch (HibernateException e) {
-			throw new ApplicationException("Exception in Report Search: " + e.getMessage());
+			throw new ApplicationException("Exception in dipatch Search: " + e.getMessage());
 
 		} finally {
 			if (session != null) {
@@ -206,7 +199,5 @@ public class ReportModelHibImpl implements ReportModelInt{
 
 		return list;
 	}
-	
-	
 
 }

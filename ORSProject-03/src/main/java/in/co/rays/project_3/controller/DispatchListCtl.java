@@ -1,7 +1,9 @@
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,32 +12,45 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import in.co.rays.project_3.dto.BaseDTO;
-import in.co.rays.project_3.dto.ReportDTO;
+import in.co.rays.project_3.dto.DispatchDTO;
 import in.co.rays.project_3.exception.ApplicationException;
+import in.co.rays.project_3.model.DispatchModelInt;
 import in.co.rays.project_3.model.ModelFactory;
-import in.co.rays.project_3.model.ReportModelInt;
 import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
-@WebServlet(name = "ReportListCtl", urlPatterns = { "/ctl/ReportListCtl" })
+@WebServlet(name = "DispatchListCtl", urlPatterns = { "/ctl/DispatchListCtl" })
 
-public class ReportListCtl extends BaseCtl {
+public class DispatchListCtl extends BaseCtl {
 
 	private static final long serialVersionUID = 1L;
 
-	private static Logger log = Logger.getLogger(ReportListCtl.class);
+	private static Logger log = Logger.getLogger(DispatchListCtl.class);
+	
+	@Override
+	protected void preload(HttpServletRequest request) {
+
+		HashMap<String, String> map = new HashMap<String, String>();
+
+		map.put("Pending", "Pending");
+		map.put("Dispatched", "Dispatched");
+		map.put("Delivered", "Delivered");
+		map.put("Cancelled", "Cancelled");
+
+		request.setAttribute("statusMap", map);
+	}
 
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 
-		ReportDTO dto = new ReportDTO();
+		DispatchDTO dto = new DispatchDTO();
 
-		dto.setReportType(DataUtility.getString(request.getParameter("reportType")));
+		dto.setDispatchDate(DataUtility.getDate(request.getParameter("dispatchDate")));
 
-		dto.setGeneratedDate(DataUtility.getDate(request.getParameter("generatedDate")));
+		dto.setStatus(DataUtility.getString(request.getParameter("status")));
 
-		dto.setRemarks(DataUtility.getString(request.getParameter("remarks")));
+		dto.setCourierName(DataUtility.getString(request.getParameter("courierName")));
 
 		populateBean(dto, request);
 
@@ -46,7 +61,7 @@ public class ReportListCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("ReportListCtl doGet Start");
+		log.debug("DispatchListCtl doGet Start");
 
 		List list = null;
 		List next = null;
@@ -55,9 +70,9 @@ public class ReportListCtl extends BaseCtl {
 
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
 
-		ReportDTO dto = (ReportDTO) populateDTO(request);
+		DispatchDTO dto = (DispatchDTO) populateDTO(request);
 
-		ReportModelInt model = ModelFactory.getInstance().getReportModel();
+		DispatchModelInt model = ModelFactory.getInstance().getDispatchModel();
 
 		try {
 
@@ -96,14 +111,14 @@ public class ReportListCtl extends BaseCtl {
 			return;
 		}
 
-		log.debug("ReportListCtl doGet End");
+		log.debug("DispatchListCtl doGet End");
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("ReportListCtl doPost Start");
+		log.debug("DispatchListCtl doPost Start");
 
 		List list = null;
 		List next = null;
@@ -116,13 +131,13 @@ public class ReportListCtl extends BaseCtl {
 
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 
-		ReportDTO dto = (ReportDTO) populateDTO(request);
+		DispatchDTO dto = (DispatchDTO) populateDTO(request);
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		String[] ids = request.getParameterValues("ids");
 
-		ReportModelInt model = ModelFactory.getInstance().getReportModel();
+		DispatchModelInt model = ModelFactory.getInstance().getDispatchModel();
 
 		try {
 
@@ -143,13 +158,13 @@ public class ReportListCtl extends BaseCtl {
 
 			} else if (OP_NEW.equalsIgnoreCase(op)) {
 
-				ServletUtility.redirect(ORSView.REPORT_CTL, request, response);
+				ServletUtility.redirect(ORSView.DISPATCH_CTL, request, response);
 
 				return;
 
 			} else if (OP_RESET.equalsIgnoreCase(op)) {
 
-				ServletUtility.redirect(ORSView.REPORT_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.DISPATCH_LIST_CTL, request, response);
 
 				return;
 
@@ -159,7 +174,7 @@ public class ReportListCtl extends BaseCtl {
 
 				if (ids != null && ids.length > 0) {
 
-					ReportDTO deleteDto = new ReportDTO();
+					DispatchDTO deleteDto = new DispatchDTO();
 
 					for (String id : ids) {
 
@@ -178,12 +193,12 @@ public class ReportListCtl extends BaseCtl {
 
 			if (OP_BACK.equalsIgnoreCase(op)) {
 
-				ServletUtility.redirect(ORSView.REPORT_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.DISPATCH_LIST_CTL, request, response);
 
 				return;
 			}
 
-			dto = (ReportDTO) populateDTO(request);
+			dto = (DispatchDTO) populateDTO(request);
 
 			list = model.search(dto, pageNo, pageSize);
 
@@ -229,12 +244,12 @@ public class ReportListCtl extends BaseCtl {
 			e.printStackTrace();
 		}
 
-		log.debug("ReportListCtl doPost End");
+		log.debug("DispatchListCtl doPost End");
 	}
 
 	@Override
 	protected String getView() {
 
-		return ORSView.REPORT_LIST_VIEW;
+		return ORSView.DISPATCH_LIST_VIEW;
 	}
 }

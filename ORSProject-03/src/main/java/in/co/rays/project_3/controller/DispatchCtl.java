@@ -6,46 +6,46 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import in.co.rays.project_3.dto.BaseDTO;
-import in.co.rays.project_3.dto.ReportDTO;
+import in.co.rays.project_3.dto.DispatchDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
+import in.co.rays.project_3.model.DispatchModelInt;
 import in.co.rays.project_3.model.ModelFactory;
-import in.co.rays.project_3.model.ReportModelInt;
 import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.DataValidator;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
-@WebServlet(urlPatterns = { "/ctl/ReportCtl" })
+@WebServlet(urlPatterns = { "/ctl/DispatchCtl" })
 
-public class ReportCtl extends BaseCtl {
+public class DispatchCtl extends BaseCtl {
 
 	private static final long serialVersionUID = 1L;
 
-	private static Logger log = Logger.getLogger(ReportCtl.class);
+	private static Logger log = Logger.getLogger(DispatchCtl.class);
 
 	@Override
 	protected boolean validate(HttpServletRequest request) {
 
 		boolean pass = true;
 
-		if (DataValidator.isNull(request.getParameter("reportType"))) {
+		if (DataValidator.isNull(request.getParameter("dispatchDate"))) {
 
-			request.setAttribute("reportType", PropertyReader.getValue("error.require", "Report Type"));
-
-			pass = false;
-		}
-
-		if (DataValidator.isNull(request.getParameter("generatedDate"))) {
-
-			request.setAttribute("generatedDate", PropertyReader.getValue("error.require", "Generated Date"));
+			request.setAttribute("dispatchDate", PropertyReader.getValue("error.require", "Dispatch Date"));
 
 			pass = false;
 		}
 
-		if (DataValidator.isNull(request.getParameter("remarks"))) {
+		if (DataValidator.isNull(request.getParameter("status"))) {
 
-			request.setAttribute("remarks", PropertyReader.getValue("error.require", "Remarks"));
+			request.setAttribute("status", PropertyReader.getValue("error.require", "Status"));
+
+			pass = false;
+		}
+
+		if (DataValidator.isNull(request.getParameter("courierName"))) {
+
+			request.setAttribute("courierName", PropertyReader.getValue("error.require", "Courier Name"));
 
 			pass = false;
 		}
@@ -56,15 +56,15 @@ public class ReportCtl extends BaseCtl {
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 
-		ReportDTO dto = new ReportDTO();
+		DispatchDTO dto = new DispatchDTO();
 
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
 
-		dto.setReportType(DataUtility.getString(request.getParameter("reportType")));
+		dto.setDispatchDate(DataUtility.getDate(request.getParameter("dispatchDate")));
 
-		dto.setGeneratedDate(DataUtility.getDate(request.getParameter("generatedDate")));
+		dto.setStatus(DataUtility.getString(request.getParameter("status")));
 
-		dto.setRemarks(DataUtility.getString(request.getParameter("remarks")));
+		dto.setCourierName(DataUtility.getString(request.getParameter("courierName")));
 
 		populateBean(dto, request);
 
@@ -75,17 +75,17 @@ public class ReportCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		log.debug("ReportCtl doGet Started");
+		log.debug("DispatchCtl doGet Started");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-		ReportModelInt model = ModelFactory.getInstance().getReportModel();
+		DispatchModelInt model = ModelFactory.getInstance().getDispatchModel();
 
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		if (id > 0 || op != null) {
 
-			ReportDTO dto;
+			DispatchDTO dto;
 
 			try {
 
@@ -112,17 +112,17 @@ public class ReportCtl extends BaseCtl {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		log.debug("ReportCtl doPost Started");
+		log.debug("DispatchCtl doPost Started");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-		ReportModelInt model = ModelFactory.getInstance().getReportModel();
+		DispatchModelInt model = ModelFactory.getInstance().getDispatchModel();
 
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
 
-			ReportDTO dto = (ReportDTO) populateDTO(request);
+			DispatchDTO dto = (DispatchDTO) populateDTO(request);
 
 			try {
 
@@ -155,18 +155,18 @@ public class ReportCtl extends BaseCtl {
 
 				ServletUtility.setDto(dto, request);
 
-				ServletUtility.setErrorMessage("Report Type already exists", request);
+				ServletUtility.setErrorMessage("Dispatch already exists", request);
 			}
 
 		} else if (OP_DELETE.equalsIgnoreCase(op)) {
 
-			ReportDTO dto = (ReportDTO) populateDTO(request);
+			DispatchDTO dto = (DispatchDTO) populateDTO(request);
 
 			try {
 
 				model.delete(dto);
 
-				ServletUtility.redirect(ORSView.REPORT_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.DISPATCH_LIST_CTL, request, response);
 
 				return;
 
@@ -183,25 +183,25 @@ public class ReportCtl extends BaseCtl {
 
 		} else if (OP_CANCEL.equalsIgnoreCase(op)) {
 
-			ServletUtility.redirect(ORSView.REPORT_LIST_CTL, request, response);
+			ServletUtility.redirect(ORSView.DISPATCH_LIST_CTL, request, response);
 
 			return;
 
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 
-			ServletUtility.redirect(ORSView.REPORT_CTL, request, response);
+			ServletUtility.redirect(ORSView.DISPATCH_CTL, request, response);
 
 			return;
 		}
 
 		ServletUtility.forward(getView(), request, response);
 
-		log.debug("ReportCtl doPost Ended");
+		log.debug("DispatchCtl doPost Ended");
 	}
 
 	@Override
 	protected String getView() {
 
-		return ORSView.REPORT_VIEW;
+		return ORSView.DISPATCH_VIEW;
 	}
 }

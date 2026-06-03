@@ -17,8 +17,8 @@ import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
-
 /**
+ * 
  * Jasper functionality Controller. Performs operation for Print pdf of
  * 
  * MarksheetMeriteList
@@ -26,7 +26,8 @@ import net.sf.jasperreports.engine.JasperReport;
  * 
  */
 /**
- * @author mehre
+ * 
+ * @author mehreen
  *
  */
 @WebServlet(name = "JasperCtl", urlPatterns = { "/ctl/JasperCtl" })
@@ -81,7 +82,7 @@ public class JasperCtl extends BaseCtl {
 			/* Export Jasper report */
 			//step3
 			byte[] pdf = JasperExportManager.exportReportToPdf(jasperPrint);
-
+			
 			response.setContentType("application/pdf");
 			response.getOutputStream().write(pdf);
 			response.getOutputStream().flush();
