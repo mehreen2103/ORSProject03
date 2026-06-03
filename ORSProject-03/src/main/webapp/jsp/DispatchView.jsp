@@ -48,6 +48,7 @@ i.css {
 }
 
 h3.text-center {
+
 	color: black !important;
 }
 </style>
