@@ -213,8 +213,6 @@ h3.text-center {
 
 										map.put("Dispatched", "Dispatched");
 
-										map.put("In Transit", "In Transit");
-
 										map.put("Delivered", "Delivered");
 
 										map.put("Returned", "Returned");

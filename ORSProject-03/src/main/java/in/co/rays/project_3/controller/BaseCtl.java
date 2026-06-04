@@ -1,13 +1,10 @@
 package in.co.rays.project_3.controller;
-
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import in.co.rays.project_3.dto.BaseDTO;
 import in.co.rays.project_3.dto.UserDTO;
 import in.co.rays.project_3.util.DataUtility;
