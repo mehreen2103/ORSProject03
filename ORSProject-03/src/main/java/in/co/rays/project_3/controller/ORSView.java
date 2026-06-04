@@ -248,5 +248,11 @@ public interface ORSView {
 
 	public String DISPATCH_VIEW = "/jsp/DispatchView.jsp";
 	public String DISPATCH_LIST_VIEW = "/jsp/DispatchListView.jsp";
+	
+	public String CYBERSECURITY_CTL = APP_CONTEXT + "/ctl/CyberSecurityCtl";
+	public String CYBERSECURITY_LIST_CTL = APP_CONTEXT + "/ctl/CyberSecurityListCtl";
+
+	public String CYBERSECURITY_VIEW = "/jsp/CyberSecurityView.jsp";
+	public String CYBERSECURITY_LIST_VIEW = "/jsp/CyberSecurityListView.jsp";
 
 }

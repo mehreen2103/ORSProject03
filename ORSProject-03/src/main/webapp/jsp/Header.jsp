@@ -526,19 +526,19 @@
 
 				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Crypto Wallet </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Crypto Wallet </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.CRYPTOWALLET_CTL%>">
-							<i class="fa fa-wallet"></i> Add Crypto Wallet
-						</a> <a class="dropdown-item"
-							href="<%=ORSView.CRYPTOWALLET_LIST_CTL%>"> <i
-							class="fa fa-list"></i> Crypto Wallet List
-						</a> <br>
-					</div></li>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.CRYPTOWALLET_CTL%>"> --%>
+				<!-- 							<i class="fa fa-wallet"></i> Add Crypto Wallet -->
+				<!-- 						</a> <a class="dropdown-item" -->
+				<%-- 							href="<%=ORSView.CRYPTOWALLET_LIST_CTL%>"> <i --%>
+				<!-- 							class="fa fa-list"></i> Crypto Wallet List -->
+				<!-- 						</a> <br> -->
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -563,6 +563,24 @@
 							class="fa fa-truck"></i> Add Dispatch
 						</a> <a class="dropdown-item" href="<%=ORSView.DISPATCH_LIST_CTL%>">
 							<i class="fa fa-list"></i> Dispatch List
+						</a>
+
+					</div></li>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Cyber Security </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.CYBERSECURITY_CTL%>">
+
+							<i class="fa fa-shield-alt"></i> Add Cyber Security
+
+						</a> <a class="dropdown-item"
+							href="<%=ORSView.CYBERSECURITY_LIST_CTL%>"> <i
+							class="fa fa-list"></i> Cyber Security List
+
 						</a>
 
 					</div></li>

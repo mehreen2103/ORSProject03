@@ -652,5 +652,24 @@ public final class ModelFactory {
 		}
 		return dispatchmodel;
 	}
+	
+	public CyberSecurityModelInt getCyberSecurityModel() {
+
+		CyberSecurityModelInt cybersecuritymodel = (CyberSecurityModelInt) modelCache.get("cybersecuritymodel");
+
+		if (cybersecuritymodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				cybersecuritymodel = new CyberSecurityModelHibImpl();
+			}
+			
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("cybersecuritymodel", cybersecuritymodel);
+
+		}
+		return cybersecuritymodel;
+	}
 
 }
