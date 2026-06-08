@@ -1,13 +1,10 @@
-```jsp
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.project_3.dto.CyberSecurityDTO"%>
+<%@page import="in.co.rays.project_3.dto.HospitalDTO"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
-<%@page import="in.co.rays.project_3.controller.CyberSecurityListCtl"%>
+<%@page import="in.co.rays.project_3.controller.HospitalListCtl"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
-<%@page import="java.util.HashMap"%>
-<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -23,7 +20,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Cyber Security List</title>
+<title>Hospital List</title>
 
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 
@@ -55,11 +52,11 @@
 
 	<div>
 
-		<form class="pb-5" action="<%=ORSView.CYBERSECURITY_LIST_CTL%>"
+		<form class="pb-5" action="<%=ORSView.HOSPITAL_LIST_CTL%>"
 			method="post">
 
-			<jsp:useBean id="dto"
-				class="in.co.rays.project_3.dto.CyberSecurityDTO" scope="request">
+			<jsp:useBean id="dto" class="in.co.rays.project_3.dto.HospitalDTO"
+				scope="request">
 			</jsp:useBean>
 
 			<%
@@ -73,7 +70,7 @@
 
 				List list = ServletUtility.getList(request);
 
-				Iterator<CyberSecurityDTO> it = list.iterator();
+				Iterator<HospitalDTO> it = list.iterator();
 			%>
 
 			<%
@@ -82,7 +79,9 @@
 
 			<center>
 
-				<h1 style="color: white;"><b>Cyber Security List</b></h1>
+				<h1 style="color: white;">
+					<b>Hospital List</b>
+				</h1>
 
 			</center>
 
@@ -100,8 +99,10 @@
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 
 					<h4>
+
 						<font color="#008000"> <%=ServletUtility.getSuccessMessage(request)%>
 						</font>
+
 					</h4>
 
 				</div>
@@ -127,8 +128,10 @@
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 
 					<h4>
+
 						<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
 						</font>
+
 					</h4>
 
 				</div>
@@ -147,41 +150,42 @@
 
 				<div class="col-sm-2">
 
-					<input type="text" name="threatType" placeholder="Threat Type"
+					<input type="text" name="patientName" placeholder="Patient Name"
 						class="form-control"
-						value="<%=ServletUtility.getParameter("threatType", request)%>">
+						value="<%=ServletUtility.getParameter("patientName", request)%>">
 
 				</div>
 
 				<div class="col-sm-2">
 
-					<%=HTMLUtility.getList("severity", String.valueOf(dto.getSeverity()),
-						(HashMap) request.getAttribute("severityMap"))%>
+					<input type="text" name="doctorName" placeholder="Doctor Name"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("doctorName", request)%>">
 
 				</div>
 
 				<div class="col-sm-2">
 
-					<input type="text" name="detectedTime" id="udate6"
-						placeholder="Detected Time" class="form-control"
-						value="<%=ServletUtility.getParameter("detectedTime", request)%>">
+					<input type="text" name="disease" placeholder="Disease"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("disease", request)%>">
 
 				</div>
 
 				<div class="col-sm-2">
 
-					<%=HTMLUtility.getList("status", String.valueOf(dto.getStatus()),
-						(HashMap) request.getAttribute("statusMap"))%>
+					<input type="text" name="roomNumber" placeholder="Room Number"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("roomNumber", request)%>">
 
 				</div>
 
 				<div class="col-sm-3">
 
 					<input type="submit" class="btn btn-primary btn-md"
-						name="operation" value="<%=CyberSecurityListCtl.OP_SEARCH%>">
-
-					<input type="submit" class="btn btn-dark btn-md" name="operation"
-						value="<%=CyberSecurityListCtl.OP_RESET%>">
+						name="operation" value="<%=HospitalListCtl.OP_SEARCH%>"> <input
+						type="submit" class="btn btn-dark btn-md" name="operation"
+						value="<%=HospitalListCtl.OP_RESET%>">
 
 				</div>
 
@@ -202,13 +206,13 @@
 
 							<th class="text">S.NO</th>
 
-							<th class="text">Threat Type</th>
+							<th class="text">Patient Name</th>
 
-							<th class="text">Severity</th>
+							<th class="text">Doctor Name</th>
 
-							<th class="text">Detected Time</th>
+							<th class="text">Disease</th>
 
-							<th class="text">Status</th>
+							<th class="text">Room Number</th>
 
 							<th class="text">Edit</th>
 
@@ -231,16 +235,16 @@
 
 							<td class="text"><%=index++%></td>
 
-							<td class="text"><%=dto.getThreatType()%></td>
+							<td class="text"><%=dto.getPatientName()%></td>
 
-							<td class="text"><%=dto.getSeverity()%></td>
+							<td class="text"><%=dto.getDoctorName()%></td>
 
-							<td class="text"><%=DataUtility.getDateString(dto.getDetectedTime())%></td>
+							<td class="text"><%=dto.getDisease()%></td>
 
-							<td class="text"><%=dto.getStatus()%></td>
+							<td class="text"><%=dto.getRoomNumber()%></td>
 
-							<td class="text"><a
-								href="CyberSecurityCtl?id=<%=dto.getId()%>"> Edit </a></td>
+							<td class="text"><a href="HospitalCtl?id=<%=dto.getId()%>">
+									Edit </a></td>
 
 						</tr>
 
@@ -260,20 +264,20 @@
 
 					<td><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_PREVIOUS%>"
+						value="<%=HospitalListCtl.OP_PREVIOUS%>"
 						<%=pageNo > 1 ? "" : "disabled"%>></td>
 
 					<td><input type="submit" name="operation"
 						class="btn btn-primary btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_NEW%>"></td>
+						value="<%=HospitalListCtl.OP_NEW%>"></td>
 
 					<td><input type="submit" name="operation"
 						class="btn btn-danger btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_DELETE%>"></td>
+						value="<%=HospitalListCtl.OP_DELETE%>"></td>
 
 					<td align="right"><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_NEXT%>"
+						value="<%=HospitalListCtl.OP_NEXT%>"
 						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 
 				</tr>
@@ -288,8 +292,7 @@
 
 			<center>
 
-				<h1 style="font-size: 40px; color: #162390;">Cyber Security
-					List</h1>
+				<h1 style="font-size: 40px; color: #162390;">Hospital List</h1>
 
 			</center>
 
@@ -330,7 +333,7 @@
 			<div style="padding-left: 48%;">
 
 				<input type="submit" name="operation" class="btn btn-primary btn-md"
-					style="font-size: 17px" value="<%=CyberSecurityListCtl.OP_BACK%>">
+					style="font-size: 17px" value="<%=HospitalListCtl.OP_BACK%>">
 
 			</div>
 
@@ -350,4 +353,3 @@
 <%@include file="FooterView.jsp"%>
 
 </html>
-```

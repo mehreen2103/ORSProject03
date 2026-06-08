@@ -254,5 +254,11 @@ public interface ORSView {
 
 	public String CYBERSECURITY_VIEW = "/jsp/CyberSecurityView.jsp";
 	public String CYBERSECURITY_LIST_VIEW = "/jsp/CyberSecurityListView.jsp";
+	
+	public String HOSPITAL_CTL = APP_CONTEXT + "/ctl/HospitalCtl";
+	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
+
+	public String HOSPITAL_VIEW = "/jsp/HospitalView.jsp";
+	public String HOSPITAL_LIST_VIEW = "/jsp/HospitalListView.jsp";
 
 }

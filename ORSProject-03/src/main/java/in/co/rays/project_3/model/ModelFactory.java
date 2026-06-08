@@ -671,5 +671,24 @@ public final class ModelFactory {
 		}
 		return cybersecuritymodel;
 	}
+	
+	public HospitalModelInt getHospitalModel() {
+
+		HospitalModelInt hospitalmodel = (HospitalModelInt) modelCache.get("hospitalmodel");
+
+		if (hospitalmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				hospitalmodel = new HospitalModelHibImpl();
+			}
+			
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("hospitalmodel", hospitalmodel);
+
+		}
+		return hospitalmodel;
+	}
 
 }

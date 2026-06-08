@@ -540,18 +540,18 @@
 				<!-- 						</a> <br> -->
 				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Report </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Report </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.REPORT_CTL%>"> <i
-							class="fa fa-file-alt"></i> Add Report
-						</a> <a class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>">
-							<i class="fa fa-list"></i> Report List
-						</a>
-					</div></li>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.REPORT_CTL%>"> <i --%>
+				<!-- 							class="fa fa-file-alt"></i> Add Report -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>"> --%>
+				<!-- 							<i class="fa fa-list"></i> Report List -->
+				<!-- 						</a> -->
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -580,6 +580,22 @@
 						</a> <a class="dropdown-item"
 							href="<%=ORSView.CYBERSECURITY_LIST_CTL%>"> <i
 							class="fa fa-list"></i> Cyber Security List
+
+						</a>
+
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Hospital </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.HOSPITAL_CTL%>"> <i
+							class="fa fa-hospital"></i> Add Hospital
+
+						</a> <a class="dropdown-item" href="<%=ORSView.HOSPITAL_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Hospital List
 
 						</a>
 
