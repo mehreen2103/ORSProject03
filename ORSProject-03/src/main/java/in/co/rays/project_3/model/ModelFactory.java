@@ -451,7 +451,7 @@ public final class ModelFactory {
 		}
 		return accountmodel;
 	}
-	
+
 	public LocationModelInt getLocationModel() {
 
 		LocationModelInt locationmodel = (LocationModelInt) modelCache.get("locationmodel");
@@ -469,7 +469,7 @@ public final class ModelFactory {
 		}
 		return locationmodel;
 	}
-	
+
 	public RegistrationModelInt getRegistrationModel() {
 
 		RegistrationModelInt registrationmodel = (RegistrationModelInt) modelCache.get("registrationmodel");
@@ -505,7 +505,7 @@ public final class ModelFactory {
 		}
 		return weathermodel;
 	}
-	
+
 	public PasswordModelInt getPasswordModel() {
 
 		PasswordModelInt passwordmodel = (PasswordModelInt) modelCache.get("passwordmodel");
@@ -523,7 +523,7 @@ public final class ModelFactory {
 		}
 		return passwordmodel;
 	}
-	
+
 	public PodcastModelInt getPodcastModel() {
 
 		PodcastModelInt podcastmodel = (PodcastModelInt) modelCache.get("podcastmodel");
@@ -541,7 +541,7 @@ public final class ModelFactory {
 		}
 		return podcastmodel;
 	}
-	
+
 	public NFTAssetModelInt getNFTAssetModel() {
 
 		NFTAssetModelInt nftassetmodel = (NFTAssetModelInt) modelCache.get("nftassetmodel");
@@ -577,7 +577,7 @@ public final class ModelFactory {
 		}
 		return couriermodel;
 	}
-	
+
 	public EmployeeModelInt getEmployeeModel() {
 
 		EmployeeModelInt employeemodel = (EmployeeModelInt) modelCache.get("employeemodel");
@@ -595,7 +595,7 @@ public final class ModelFactory {
 		}
 		return employeemodel;
 	}
-	
+
 	public CryptoWalletModelInt getCryptoWalletModel() {
 
 		CryptoWalletModelInt cryptowalletmodel = (CryptoWalletModelInt) modelCache.get("cryptowalletmodel");
@@ -613,7 +613,7 @@ public final class ModelFactory {
 		}
 		return cryptowalletmodel;
 	}
-	
+
 	public ReportModelInt getReportModel() {
 
 		ReportModelInt reportmodel = (ReportModelInt) modelCache.get("reportmodel");
@@ -623,7 +623,7 @@ public final class ModelFactory {
 			if ("Hibernate".equals(DATABASE)) {
 				reportmodel = new ReportModelHibImpl();
 			}
-			
+
 			if ("JDBC".equals(DATABASE)) {
 
 			}
@@ -632,7 +632,6 @@ public final class ModelFactory {
 		}
 		return reportmodel;
 	}
-	
 
 	public DispatchModelInt getDispatchModel() {
 
@@ -643,7 +642,7 @@ public final class ModelFactory {
 			if ("Hibernate".equals(DATABASE)) {
 				dispatchmodel = new DispatchModelHibImpl();
 			}
-			
+
 			if ("JDBC".equals(DATABASE)) {
 
 			}
@@ -652,7 +651,7 @@ public final class ModelFactory {
 		}
 		return dispatchmodel;
 	}
-	
+
 	public CyberSecurityModelInt getCyberSecurityModel() {
 
 		CyberSecurityModelInt cybersecuritymodel = (CyberSecurityModelInt) modelCache.get("cybersecuritymodel");
@@ -662,7 +661,7 @@ public final class ModelFactory {
 			if ("Hibernate".equals(DATABASE)) {
 				cybersecuritymodel = new CyberSecurityModelHibImpl();
 			}
-			
+
 			if ("JDBC".equals(DATABASE)) {
 
 			}
@@ -671,7 +670,7 @@ public final class ModelFactory {
 		}
 		return cybersecuritymodel;
 	}
-	
+
 	public HospitalModelInt getHospitalModel() {
 
 		HospitalModelInt hospitalmodel = (HospitalModelInt) modelCache.get("hospitalmodel");
@@ -681,7 +680,7 @@ public final class ModelFactory {
 			if ("Hibernate".equals(DATABASE)) {
 				hospitalmodel = new HospitalModelHibImpl();
 			}
-			
+
 			if ("JDBC".equals(DATABASE)) {
 
 			}
@@ -689,6 +688,25 @@ public final class ModelFactory {
 
 		}
 		return hospitalmodel;
+	}
+	
+	public SmartDeviceModelInt getSmartDeviceModel() {
+
+		SmartDeviceModelInt smartdevicemodel = (SmartDeviceModelInt) modelCache.get("smartdevicemodel");
+
+		if (smartdevicemodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				smartdevicemodel = new SmartDeviceModelHibImpl();
+			}
+
+			if ("JDBC".equals(DATABASE)) {
+
+			}
+			modelCache.put("smartdevicemodel", smartdevicemodel);
+
+		}
+		return smartdevicemodel;
 	}
 
 }

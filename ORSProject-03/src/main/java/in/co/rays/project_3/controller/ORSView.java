@@ -260,5 +260,11 @@ public interface ORSView {
 
 	public String HOSPITAL_VIEW = "/jsp/HospitalView.jsp";
 	public String HOSPITAL_LIST_VIEW = "/jsp/HospitalListView.jsp";
+	
+	public String SMARTDEVICE_CTL = APP_CONTEXT + "/ctl/SmartDeviceCtl";
+	public String SMARTDEVICE_LIST_CTL = APP_CONTEXT + "/ctl/SmartDeviceListCtl";
+
+	public String SMARTDEVICE_VIEW = "/jsp/SmartDeviceView.jsp";
+	public String SMARTDEVICE_LIST_VIEW = "/jsp/SmartDeviceListView.jsp";
 
 }

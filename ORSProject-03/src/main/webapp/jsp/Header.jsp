@@ -553,19 +553,19 @@
 				<!-- 						</a> -->
 				<!-- 					</div></li> -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-					style="color: white;"> Dispatch </a>
+				<!-- 				<li class="nav-item dropdown"><a -->
+				<!-- 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" -->
+				<!-- 					style="color: white;"> Dispatch </a> -->
 
-					<div class="dropdown-menu">
+				<!-- 					<div class="dropdown-menu"> -->
 
-						<a class="dropdown-item" href="<%=ORSView.DISPATCH_CTL%>"> <i
-							class="fa fa-truck"></i> Add Dispatch
-						</a> <a class="dropdown-item" href="<%=ORSView.DISPATCH_LIST_CTL%>">
-							<i class="fa fa-list"></i> Dispatch List
-						</a>
+				<%-- 						<a class="dropdown-item" href="<%=ORSView.DISPATCH_CTL%>"> <i --%>
+				<!-- 							class="fa fa-truck"></i> Add Dispatch -->
+				<%-- 						</a> <a class="dropdown-item" href="<%=ORSView.DISPATCH_LIST_CTL%>"> --%>
+				<!-- 							<i class="fa fa-list"></i> Dispatch List -->
+				<!-- 						</a> -->
 
-					</div></li>
+				<!-- 					</div></li> -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -596,6 +596,24 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.HOSPITAL_LIST_CTL%>">
 
 							<i class="fa fa-list"></i> Hospital List
+
+						</a>
+
+					</div></li>
+
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;"> Smart Device </a>
+
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="<%=ORSView.SMARTDEVICE_CTL%>">
+
+							<i class="fa fa-microchip"></i> Add Smart Device
+
+						</a> <a class="dropdown-item" href="<%=ORSView.SMARTDEVICE_LIST_CTL%>">
+
+							<i class="fa fa-list"></i> Smart Device List
 
 						</a>
 

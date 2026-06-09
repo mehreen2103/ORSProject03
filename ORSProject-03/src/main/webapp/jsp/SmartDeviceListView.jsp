@@ -1,8 +1,8 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.project_3.dto.CyberSecurityDTO"%>
+<%@page import="in.co.rays.project_3.dto.SmartDeviceDTO"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
-<%@page import="in.co.rays.project_3.controller.CyberSecurityListCtl"%>
+<%@page import="in.co.rays.project_3.controller.SmartDeviceListCtl"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
 <%@page import="java.util.HashMap"%>
@@ -22,7 +22,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Cyber Security List</title>
+<title>Smart Device List</title>
 
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 
@@ -54,11 +54,11 @@
 
 	<div>
 
-		<form class="pb-5" action="<%=ORSView.CYBERSECURITY_LIST_CTL%>"
+		<form class="pb-5" action="<%=ORSView.SMARTDEVICE_LIST_CTL%>"
 			method="post">
 
-			<jsp:useBean id="dto"
-				class="in.co.rays.project_3.dto.CyberSecurityDTO" scope="request">
+			<jsp:useBean id="dto" class="in.co.rays.project_3.dto.SmartDeviceDTO"
+				scope="request">
 			</jsp:useBean>
 
 			<%
@@ -72,7 +72,7 @@
 
 				List list = ServletUtility.getList(request);
 
-				Iterator<CyberSecurityDTO> it = list.iterator();
+				Iterator<SmartDeviceDTO> it = list.iterator();
 			%>
 
 			<%
@@ -80,9 +80,9 @@
 			%>
 
 			<center>
-
-				<h1 style="color: white;"><b>Cyber Security List</b></h1>
-
+				<h1 style="color: white;">
+					<b>Smart Device List</b>
+				</h1>
 			</center>
 
 			<div class="row">
@@ -96,7 +96,8 @@
 				<div class="col-md-4 alert alert-success alert-dismissible"
 					style="background-color: #80ff80">
 
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<button type="button" class="close" data-dismiss="alert">
+						&times;</button>
 
 					<h4>
 						<font color="#008000"> <%=ServletUtility.getSuccessMessage(request)%>
@@ -123,7 +124,8 @@
 
 				<div class="col-md-4 alert alert-danger alert-dismissible">
 
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<button type="button" class="close" data-dismiss="alert">
+						&times;</button>
 
 					<h4>
 						<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
@@ -146,24 +148,24 @@
 
 				<div class="col-sm-2">
 
-					<input type="text" name="threatType" placeholder="Threat Type"
+					<input type="text" name="deviceName" placeholder="Device Name"
 						class="form-control"
-						value="<%=ServletUtility.getParameter("threatType", request)%>">
+						value="<%=ServletUtility.getParameter("deviceName", request)%>">
 
 				</div>
 
 				<div class="col-sm-2">
 
-					<%=HTMLUtility.getList("severity", String.valueOf(dto.getSeverity()),
-						(HashMap) request.getAttribute("severityMap"))%>
+					<%=HTMLUtility.getList("room", String.valueOf(dto.getRoom()),
+						(HashMap) request.getAttribute("roomMap"))%>
 
 				</div>
 
 				<div class="col-sm-2">
 
-					<input type="text" name="detectedTime" id="udate6"
-						placeholder="Detected Time" class="form-control"
-						value="<%=ServletUtility.getParameter("detectedTime", request)%>">
+					<input type="text" name="doubleUsage" placeholder=" Device Usage"
+						class="form-control"
+						value="<%=ServletUtility.getParameter("doubleUsage", request)%>">
 
 				</div>
 
@@ -177,10 +179,10 @@
 				<div class="col-sm-3">
 
 					<input type="submit" class="btn btn-primary btn-md"
-						name="operation" value="<%=CyberSecurityListCtl.OP_SEARCH%>">
+						name="operation" value="<%=SmartDeviceListCtl.OP_SEARCH%>">
 
 					<input type="submit" class="btn btn-dark btn-md" name="operation"
-						value="<%=CyberSecurityListCtl.OP_RESET%>">
+						value="<%=SmartDeviceListCtl.OP_RESET%>">
 
 				</div>
 
@@ -201,11 +203,11 @@
 
 							<th class="text">S.NO</th>
 
-							<th class="text">Threat Type</th>
+							<th class="text">Device Name</th>
 
-							<th class="text">Severity</th>
+							<th class="text">Room</th>
 
-							<th class="text">Detected Time</th>
+							<th class="text">Device Usage</th>
 
 							<th class="text">Status</th>
 
@@ -230,16 +232,16 @@
 
 							<td class="text"><%=index++%></td>
 
-							<td class="text"><%=dto.getThreatType()%></td>
+							<td class="text"><%=dto.getDeviceName()%></td>
 
-							<td class="text"><%=dto.getSeverity()%></td>
+							<td class="text"><%=dto.getRoom()%></td>
 
-							<td class="text"><%=DataUtility.getDateString(dto.getDetectedTime())%></td>
+							<td class="text"><%=dto.getDoubleUsage()%></td>
 
 							<td class="text"><%=dto.getStatus()%></td>
 
 							<td class="text"><a
-								href="CyberSecurityCtl?id=<%=dto.getId()%>"> Edit </a></td>
+								href="SmartDeviceCtl?id=<%=dto.getId()%>"> Edit </a></td>
 
 						</tr>
 
@@ -259,20 +261,20 @@
 
 					<td><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_PREVIOUS%>"
+						value="<%=SmartDeviceListCtl.OP_PREVIOUS%>"
 						<%=pageNo > 1 ? "" : "disabled"%>></td>
 
 					<td><input type="submit" name="operation"
 						class="btn btn-primary btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_NEW%>"></td>
+						value="<%=SmartDeviceListCtl.OP_NEW%>"></td>
 
 					<td><input type="submit" name="operation"
 						class="btn btn-danger btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_DELETE%>"></td>
+						value="<%=SmartDeviceListCtl.OP_DELETE%>"></td>
 
 					<td align="right"><input type="submit" name="operation"
 						class="btn btn-warning btn-md" style="font-size: 17px"
-						value="<%=CyberSecurityListCtl.OP_NEXT%>"
+						value="<%=SmartDeviceListCtl.OP_NEXT%>"
 						<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 
 				</tr>
@@ -287,8 +289,8 @@
 
 			<center>
 
-				<h1 style="font-size: 40px; color: #162390;">Cyber Security
-					List</h1>
+				<h1 style="font-size: 40px; color: #162390;">Smart Device List
+				</h1>
 
 			</center>
 
@@ -304,7 +306,8 @@
 
 				<div class="col-md-4 alert alert-danger alert-dismissible">
 
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<button type="button" class="close" data-dismiss="alert">
+						&times;</button>
 
 					<h4>
 
@@ -329,7 +332,7 @@
 			<div style="padding-left: 48%;">
 
 				<input type="submit" name="operation" class="btn btn-primary btn-md"
-					style="font-size: 17px" value="<%=CyberSecurityListCtl.OP_BACK%>">
+					style="font-size: 17px" value="<%=SmartDeviceListCtl.OP_BACK%>">
 
 			</div>
 
@@ -349,4 +352,3 @@
 <%@include file="FooterView.jsp"%>
 
 </html>
-```

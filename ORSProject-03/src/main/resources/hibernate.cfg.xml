@@ -65,6 +65,7 @@
         <mapping resource="in/co/rays/project_3/hbm/DispatchDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/CyberSecurityDTO.hbm.xml" /> 
         <mapping resource="in/co/rays/project_3/hbm/HospitalDTO.hbm.xml" /> 
+        <mapping resource="in/co/rays/project_3/hbm/SmartDeviceDTO.hbm.xml" /> 
         
         
 	</session-factory>
